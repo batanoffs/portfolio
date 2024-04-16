@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.1.0",
   "description": "My portfolio website",
-  "homepage": "https://batanoffs.github.io/portfolio/",
   "author": "Daniel Batanoff",
   "type": "module",
   "scripts": {
