@@ -12,17 +12,11 @@ export default {
       lg: '976px',
       xl: '1440px',
     },
-    colors: {
-      'blue': '#020921',
-      'white': '#e5e5e5',
-      'gray-blue': '#808AA9',
-    },
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
       serif: ['Merriweather', 'serif'],
     },
     fontSize: {
-
       'small': ['1rem', { //20
         lineHeight: '2rem',
         letterSpacing: '-0.01em',
@@ -55,7 +49,13 @@ export default {
       },
       borderRadius: {
         '4xl': '2rem',
-      }
+      },
+      colors: {
+        'blue': '#020921',
+        'white': '#e5e5e5',
+        'gray-blue': '#808AA9',
+        "pink": '#a251db',
+      },
     }
   },
   plugins: [],
