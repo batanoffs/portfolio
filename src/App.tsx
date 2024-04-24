@@ -18,7 +18,7 @@ export const App: FC<Props> = () => {
     return (
         <div className={`h-dvh`}>
             <StickyMenu styles={'flex flex-col justify-between h-dvh flex-none max-w-lg fixed pt-28 pl-28'}/>
-            <MainContent styles={'w-[1000px] absolute right-0 flex right-20 flex-col pt-28 pl-80 pr-32'}/>
+            <MainContent styles={'w-[1000px] absolute right-0 flex right-0 flex-col pt-28 pl-64 pr-28'}/>
         </div>
     )
 }

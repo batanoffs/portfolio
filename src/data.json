@@ -1,0 +1,46 @@
+{
+    "work": [
+        {
+            "id": "1",
+            "date": "2022 - 2024",
+            "position": "Architect - BIM architect",
+            "company": "IPA architecture and more",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora doloremque enim ducimus quidem culpa molestiae ipsa pariatur maiores, autem, doloribus quod quos."
+        },
+        {
+            "id": "2",
+            "date": "2022 - 2024",
+            "position": "Architect - IPA",
+            "company": "Integra Consult Project",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora doloremque enim ducimus quidem culpa molestiae ipsa pariatur maiores, autem, doloribus quod quos."
+        },
+        {
+            "id": "3",
+            "date": "2022 - 2024",
+            "position": "Quality Assurance",
+            "company": "Gameloft",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora doloremque enim ducimus quidem culpa molestiae ipsa pariatur maiores, autem, doloribus quod quos."
+        }
+    ],
+    "projects": [
+        {
+            "id": "1",
+            "title": "Mini Finance Innovations",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora doloremque enim ducimus quidem culpa molestiae ipsa pariatur maiores, autem, doloribus quod quos.",
+            "image": "https://camo.githubusercontent.com/c0128d5c9f0515dc90c3960b0e5e2951c79bbd5d17809b0a8efb25a66c848ac5/68747470733a2f2f6e6f7461626c6570656e2e6261636b656e646c6573732e6170702f6170692f66696c65732f6170702f417070446174612f686f6d652f686f6d65706167652e706e67"
+        },
+        {
+            "id": "2",
+            "title": "Ra-auth-ui",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora doloremque enim ducimus quidem culpa molestiae ipsa pariatur maiores, autem, doloribus quod quos.",
+            "image": "https://via.placeholder.com/300x200"
+        },
+        {
+            "id": "3",
+            "title": "Personal portfolio",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora doloremque enim ducimus quidem culpa molestiae ipsa pariatur maiores, autem, doloribus quod quos.",
+            "image": "https://via.placeholder.com/300x200"
+        }
+    ]
+}
+
