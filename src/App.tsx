@@ -17,8 +17,8 @@ interface MainContent {
 export const App: FC<Props> = () => {
     return (
         <div className={`bg-blue flex h-dvh`}>
-            <StickyMenu styles={'flex-col flex-0 shrink-0 w-246 sticky pt-28 pl-24'}/>
-            <MainContent styles={'flex-col pt-28 pl-64 pr-24'}/>
+            <StickyMenu styles={'flex flex-col justify-between flex-none max-w-lg sticky pt-28 pl-28'}/>
+            <MainContent styles={'flex-col pt-28 pl-80 pr-32'}/>
         </div>
     )
 }

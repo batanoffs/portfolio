@@ -1,15 +1,21 @@
 import type { FC } from 'react'
 
 interface Props {
-    className?: string
+    styles?: string
 }
 
-export const SocialIcons: FC<Props> = (props = {}) => {
+export const SocialIcons: FC<Props> = ( {styles} ) => {
     return (
-        <div className="">
-            <i className=""></i>
-            <i className=""></i>
-            <i className=""></i>
+        <div className={styles}>
+            <a href="">
+                <img src="./components/assets/github.svg" alt="" className="w-6" />
+            </a>
+            <a href="">
+                <img src="./components/assets/instagram.svg" alt="" className="w-6" />
+            </a>
+            <a href="">
+                <img src="./components/assets/linkedin.svg" alt="" className="w-6" />
+            </a>
         </div>
     )
 }

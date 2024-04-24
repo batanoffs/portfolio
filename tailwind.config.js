@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: [
     "./index.html",
@@ -21,6 +22,12 @@ export default {
       serif: ['Merriweather', 'serif'],
     },
     fontSize: {
+
+      'small': ['1rem', { //20
+        lineHeight: '2rem',
+        letterSpacing: '-0.01em',
+        fontWeight: '600',
+      }],
       'base': ['1.25rem', { //20
         lineHeight: '2rem',
         letterSpacing: '-0.01em',
@@ -37,6 +44,10 @@ export default {
         fontWeight: '700',
       }],
     },
+    listStyleImage: {
+            none: 'none',
+            line: `url("./src/components/assets/line.svg")`,
+          },
     extend: {
       spacing: {
         '128': '32rem',
