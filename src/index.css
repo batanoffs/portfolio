@@ -5,10 +5,11 @@
 
 @layer base {
     html {
-        @apply bg-[#020921];
         font-family: "Inter", sans-serif;
     }
 }
+
+/* remove scroll bar */
 
 html::-webkit-scrollbar {
     display: none;
@@ -21,4 +22,3 @@ html {
 html::-moz-scrollbar {
     display: none;
 }
-

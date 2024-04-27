@@ -16,28 +16,6 @@ export default {
       sans: ['Inter', 'sans-serif'],
       serif: ['Merriweather', 'serif'],
     },
-    fontSize: {
-      'small': ['1rem', { //20
-        lineHeight: '2rem',
-        letterSpacing: '-0.01em',
-        fontWeight: '600',
-      }],
-      'base': ['1.25rem', { //20
-        lineHeight: '2rem',
-        letterSpacing: '-0.01em',
-        fontWeight: '400',
-      }],
-      'lg': ['1.5rem', { //24
-        lineHeight: '2rem',
-        letterSpacing: '-0.01em',
-        fontWeight: '700',
-      }],
-      'xl': ['2.75rem', { //48
-        lineHeight: '1',
-        letterSpacing: '-0.01em',
-        fontWeight: '700',
-      }],
-    },
     listStyleImage: {
             none: 'none',
             line: `url("./src/components/assets/line.svg")`,
@@ -52,10 +30,14 @@ export default {
       },
       colors: {
         'blue': '#020921',
+        'hover-blue': '#0d142b',
         'white': '#e5e5e5',
-        'gray-blue': '#808AA9',
+        'text-blue': '#808AA9',
         "pink": '#a251db',
       },
+      // animation: {
+      //   'cursor': 'spin 3s linear infinite',
+      // }
     }
   },
   plugins: [],
