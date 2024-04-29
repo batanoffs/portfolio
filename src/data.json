@@ -3,8 +3,11 @@
         {
             "id": "1",
             "date": "2021 - 2023",
-            "position": "Architect",
-            "company": "IPA architecture and more",
+            "position": [
+                "BIM Architect",
+                "Junior Architect"
+            ],
+            "company": "IPA",
             "website": "https://www.ip-arch.com/en",
             "description": [
                 "Delivered over 10 architectural projects",
@@ -83,7 +86,9 @@
         {
             "id": "3",
             "date": "2014 - 2015",
-            "position": "Quality Assurance",
+            "position": [
+                "Manual QA"
+            ],
             "website": "https://www.gameloft.com/",
             "company": "Gameloft",
             "description": [
