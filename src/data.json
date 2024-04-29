@@ -2,45 +2,201 @@
     "work": [
         {
             "id": "1",
-            "date": "2022 - 2024",
-            "position": "Architect - BIM architect",
+            "date": "2021 - 2023",
+            "position": "Architect",
             "company": "IPA architecture and more",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora doloremque enim ducimus quidem culpa molestiae ipsa pariatur maiores, autem, doloribus quod quos."
+            "website": "https://www.ip-arch.com/en",
+            "description": [
+                "Delivered over 10 architectural projects",
+                "Managed three junior architects while working with other teams",
+                "Being the go-to architect for assignments with short deadlines",
+                "Actively coordinating project requirements and issues with engineers in different departments (HVAC, Electrical, Water Supply, Design etc.)",
+                "Promoted to be the BIM architect on the team",
+                "Won monthly award for best BIM architect"
+            ],
+            "skills": [
+                {
+                    "id": "0",
+                    "name": "Revit"
+                },
+                {
+                    "id": "1",
+                    "name": "3D Visualization"
+                },
+                {
+                    "id": "2",
+                    "name": "Photoshop"
+                },
+                {
+                    "id": "3",
+                    "name": "Indesign"
+                },
+                {
+                    "id": "4",
+                    "name": "Project Management"
+                },
+                {
+                    "id": "5",
+                    "name": "Enscape"
+                },
+                {
+                    "id": "6",
+                    "name": "BIM"
+                }
+            ]
         },
         {
             "id": "2",
-            "date": "2022 - 2024",
-            "position": "Architect - IPA",
+            "date": "2017 - 2018",
+            "position": [
+                "Junior Architect",
+                "Intern"
+            ],
             "company": "Integra Consult Project",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora doloremque enim ducimus quidem culpa molestiae ipsa pariatur maiores, autem, doloribus quod quos."
+            "website": "https://integracp.wixsite.com/website",
+            "description": [
+                "Delivered high quality architectural drawings for assignments with short deadlines",
+                "Attended investors meetings to discuss project requirements",
+                "Proven expertise in 3D visualization and 3D modelling",
+                "Introduced BIM metodology to the team and designed templates for projects",
+                "Developed the company website with WIX"
+            ],
+            "skills": [
+                {
+                    "id": "0",
+                    "name": "Archicad"
+                },
+                {
+                    "id": "1",
+                    "name": "Photoshop"
+                },
+                {
+                    "id": "2",
+                    "name": "3D Visualization"
+                },
+                {
+                    "id": "3",
+                    "name": "Autocad"
+                }
+            ]
         },
         {
             "id": "3",
-            "date": "2022 - 2024",
+            "date": "2014 - 2015",
             "position": "Quality Assurance",
+            "website": "https://www.gameloft.com/",
             "company": "Gameloft",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora doloremque enim ducimus quidem culpa molestiae ipsa pariatur maiores, autem, doloribus quod quos."
+            "description": [
+                "Developed 100+ unique test cases and processes to remove issues for product launches",
+                "Assisted other teams during overtime to resolve major issues",
+                "Consistently giving feedback to the development team"
+            ],
+            "skills": [
+                {
+                    "id": "1",
+                    "name": "Quality Assurance"
+                },
+                {
+                    "id": "2",
+                    "name": "Bug tracking"
+                },
+                {
+                    "id": "3",
+                    "name": "Manual testing"
+                }
+            ]
         }
     ],
     "projects": [
         {
             "id": "1",
             "title": "Mini Finance Innovations",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora doloremque enim ducimus quidem culpa molestiae ipsa pariatur maiores, autem, doloribus quod quos.",
-            "image": "https://camo.githubusercontent.com/c0128d5c9f0515dc90c3960b0e5e2951c79bbd5d17809b0a8efb25a66c848ac5/68747470733a2f2f6e6f7461626c6570656e2e6261636b656e646c6573732e6170702f6170692f66696c65732f6170702f417070446174612f686f6d652f686f6d65706167652e706e67"
+            "description": "This responsive platform simulates online banking, offering features such as top-up, add friends, transactions, history and more",
+            "image": "https://camo.githubusercontent.com/c0128d5c9f0515dc90c3960b0e5e2951c79bbd5d17809b0a8efb25a66c848ac5/68747470733a2f2f6e6f7461626c6570656e2e6261636b656e646c6573732e6170702f6170692f66696c65732f6170702f417070446174612f686f6d652f686f6d65706167652e706e67",
+            "link": "https://batanoffs.github.io/mini-finance/",
+            "tags": [
+                {
+                    "id": "1",
+                    "name": "React"
+                },
+                {
+                    "id": "2",
+                    "name": "CSS/HTML"
+                },
+                {
+                    "id": "3",
+                    "name": "Backendless"
+                },
+                {
+                    "id": "4",
+                    "name": "ExchangeRate API"
+                },
+                {
+                    "id": "5",
+                    "name": "Ant Design"
+                },
+                {
+                    "id": "6",
+                    "name": "react-credit-card-2"
+                }
+            ]
         },
         {
             "id": "2",
-            "title": "Ra-auth-ui",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora doloremque enim ducimus quidem culpa molestiae ipsa pariatur maiores, autem, doloribus quod quos.",
-            "image": "https://via.placeholder.com/300x200"
+            "title": "Ra-auth-ui ~ open source project",
+            "description": "Authentication layouts, hooks and pipelines to integrate into react-admin out of the box. No extra dependencies are required except the ones react-admin is already using.",
+            "image": "https://via.placeholder.com/300x200",
+            "link": "https://github.com/batanoffs/ra-auth-ui",
+            "tags": [
+                {
+                    "id": "1",
+                    "name": "React"
+                },
+                {
+                    "id": "2",
+                    "name": "TypeScript"
+                },
+                {
+                    "id": "3",
+                    "name": "Material UI"
+                },
+                {
+                    "id": "3",
+                    "name": "Jest"
+                },
+                {
+                    "id": "3",
+                    "name": "Material UI"
+                },
+                {
+                    "id": "3",
+                    "name": "vite"
+                }
+            ]
         },
         {
             "id": "3",
-            "title": "Personal portfolio",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora doloremque enim ducimus quidem culpa molestiae ipsa pariatur maiores, autem, doloribus quod quos.",
-            "image": "https://via.placeholder.com/300x200"
+            "title": "Personal portfolio v1",
+            "description": "This portfolio was created using React and TailwindCSS to showcase my work and skills",
+            "image": "https://via.placeholder.com/300x200",
+            "tags": [
+                {
+                    "id": "1",
+                    "name": "React"
+                },
+                {
+                    "id": "2",
+                    "name": "TypeScript"
+                },
+                {
+                    "id": "3",
+                    "name": "TailwindCSS"
+                },
+                {
+                    "id": "4",
+                    "name": "Vite"
+                }
+            ]
         }
     ]
 }
-

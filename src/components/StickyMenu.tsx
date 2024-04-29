@@ -11,7 +11,7 @@ interface SocialIcons {
 
 export const StickyMenu: FC<Props> = ({ styles }) => {
     return (
-        <div className={styles}>
+        <main className={styles}>
             <div className="">
                 <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
                     <a href="#/">Daniel Batanov </a>
@@ -23,7 +23,7 @@ export const StickyMenu: FC<Props> = ({ styles }) => {
                     I build responsive animated products and digital experiences for the web.
                 </p>
             </div>
-            <nav className="flex flex-col gap-8" aria-label="In-page jump links">
+            <nav className="nav hidden lg:block" aria-label="In-page jump links">
                 <ul className="mt-16 w-max">
                     <li>
                         <a className="group flex items-center py-3 active" href="#about">
@@ -79,6 +79,6 @@ export const StickyMenu: FC<Props> = ({ styles }) => {
                 </ul>
             </nav>
             <SocialIcons styles={'ml-1 mt-8 flex items-center'} />
-        </div>
+        </main>
     )
 }
