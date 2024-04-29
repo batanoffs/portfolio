@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import { SocialIcons } from '../SocialIcons'
+import { SocialIcons } from './SocialIcons'
 
 interface Props {
     styles?: string

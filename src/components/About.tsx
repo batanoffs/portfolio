@@ -46,7 +46,7 @@ export const About: FC = () => {
                         Software University
                     </a>{' '}
                     where I study for a full-stack developer. During my first year I honed my
-                    proficiency in front end technologies. This led me to developed a finance web
+                    proficiency in front end technologies which led me to developed a finance web
                     application for{' '}
                     <a
                         className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
@@ -57,15 +57,9 @@ export const About: FC = () => {
                     >
                         "Softuniada 2024" Olympiad
                     </a>{' '}
-                    and ended up in Top 10 best projects in web apps category out of overall 150+
-                    participants.
+                    and ended up in Top 10 best projects out of overall 150+ participants.
                 </p>
-                <p className="mb-4">
-                    Beyond the professional realm, I enjoy hiking and gardening. The joy of reaching
-                    the summit after a strenuous climb, or seeing the first sprouts to harvesting
-                    the first fruits, mirrors the satisfaction I get when I finally solve a
-                    challenging coding problem.
-                </p>
+                <p className="mb-4">Beyond the professional realm, I enjoy boardgames, hiking and gardening.</p>
             </div>
         </section>
     )
