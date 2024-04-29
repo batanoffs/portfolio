@@ -113,7 +113,7 @@
             "title": "Mini Finance Innovations",
             "description": "This responsive platform simulates online banking, offering features such as top-up, add friends, transactions, history and more",
             "image": "https://camo.githubusercontent.com/c0128d5c9f0515dc90c3960b0e5e2951c79bbd5d17809b0a8efb25a66c848ac5/68747470733a2f2f6e6f7461626c6570656e2e6261636b656e646c6573732e6170702f6170692f66696c65732f6170702f417070446174612f686f6d652f686f6d65706167652e706e67",
-            "link": "https://batanoffs.github.io/mini-finance/",
+            "url": "https://batanoffs.github.io/mini-finance/",
             "tags": [
                 {
                     "id": "1",
@@ -146,7 +146,7 @@
             "title": "Ra-auth-ui ~ open source project",
             "description": "Authentication layouts, hooks and pipelines to integrate into react-admin out of the box. No extra dependencies are required except the ones react-admin is already using.",
             "image": "https://via.placeholder.com/300x200",
-            "link": "https://github.com/batanoffs/ra-auth-ui",
+            "url": "https://github.com/batanoffs/ra-auth-ui",
             "tags": [
                 {
                     "id": "1",
@@ -179,6 +179,7 @@
             "title": "Personal portfolio v1",
             "description": "This portfolio was created using React and TailwindCSS to showcase my work and skills",
             "image": "https://via.placeholder.com/300x200",
+            "url": "https://github.com/batanoffs/portfolio",
             "tags": [
                 {
                     "id": "1",
