@@ -14,10 +14,10 @@ type Project = {
 }
 
 type Props = {
-    data?: Project[]
+    projects?: Project[]
 }
 
-export const Projects: FC<Props> = ({ data = [] }) => {
+export const Projects: FC<Props> = ({ projects = [] }) => {
     return (
         <section
             id="projects"
@@ -35,7 +35,7 @@ export const Projects: FC<Props> = ({ data = [] }) => {
             </div>
             <div>
                 <ul className="group/list">
-                    {data.projects.map((project : Project) => (
+                    {projects.map((project : Project) => (
                         <li className="mb-12">
                             <div
                                 className="group relative grid gap-4 pb-1 transition-all

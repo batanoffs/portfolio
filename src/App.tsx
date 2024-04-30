@@ -1,4 +1,4 @@
-import type { FC, MouseEventHandler } from 'react'
+import type { FC } from 'react'
 import { StickyMenu } from './components/StickyMenu'
 import { MainContent } from './components/MainContent'
 import './index.css'
@@ -14,16 +14,17 @@ interface MainContent {
 }
 
 export const App: FC<Props> = () => {
-    const captureMouseCoordinates: MouseEventHandler<HTMLDivElement> = (e) => {
-        const x = e.clientX
-        const y = e.clientY
-        const coord = `x: ${x}, y: ${y}`
-        console.log(coord)
-    }
+    // TODO
+    // const captureMouseCoordinates: MouseEventHandler<HTMLDivElement> = (e) => {
+    //     const x = e.clientX
+    //     const y = e.clientY
+    //     const coord = `x: ${x}, y: ${y}`
+    //     console.log(coord)
+    // }
     return (
         <div className="group/spotlight relative">
             <div
-                onMouseMove={captureMouseCoordinates}
+                // onMouseMove={captureMouseCoordinates}
                 className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute h-dvh"
             ></div>
 

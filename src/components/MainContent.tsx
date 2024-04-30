@@ -10,8 +10,8 @@ export const MainContent: FC<{ styles?: string }> = ({ styles }) => {
     return (
         <main id="content" className={styles}>
             <About />
-            <Experience data={data} />
-            <Projects data={data} />
+            <Experience experience={data.work} />
+            <Projects projects={data.projects} />
             <Resume />
             <Footer />
         </main>

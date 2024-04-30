@@ -1,24 +1,23 @@
 import { FC } from 'react'
 
 type Work = {
-    id: string
-    date: string
-    company: string
-    position: Array<string>
-    description: string | Array<string>
-    technologies: string
-    website: string
+    id: string;
+    date: string;
+    company: string;
+    position: string[];
+    description: string | string[];
+    website: string;
     skills: Array<{
-        id: string
-        name: string
-    }>
+        id: string;
+        name: string;
+    }>;
 }
 
 type Props = {
-    data?: Exp[]
+    experience?: Work[]
 }
 
-export const Experience: FC<Props> = ({ data = [] }) => {
+export const Experience: FC<Props> = ({ experience = [] }) => {
     return (
         <section
             id="experience"
@@ -36,8 +35,8 @@ export const Experience: FC<Props> = ({ data = [] }) => {
             </div>
             <div>
                 <ol className="group/list">
-                    {data.work.map((work: Work) => (
-                        <li key={work.id} className="mb-12">
+                    {experience.map((job: Work) => (
+                        <li key={job.id} className="mb-12">
                             <div
                                 className="group relative grid pb-1 transition-all sm:grid-cols-8
                                     sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
@@ -51,7 +50,7 @@ export const Experience: FC<Props> = ({ data = [] }) => {
                                     className="z-10 mb-2 mt-1 text-xs font-semibold uppercase
                                             tracking-wide text-slate-500 sm:col-span-2"
                                 >
-                                    {work.date}
+                                    {job.date}
                                 </header>
                                 <div className="z-10 sm:col-span-6">
                                     <h3 className="font-medium leading-snug text-slate-200">
@@ -60,17 +59,17 @@ export const Experience: FC<Props> = ({ data = [] }) => {
                                                 className="inline-flex items-baseline font-medium 
                                                         leading-tight text-slate-200 hover:text-teal-300 
                                                         focus-visible:text-teal-300 group/link text-base"
-                                                href={work.website}
+                                                href={job.website}
                                                 target="_blank"
                                                 rel="noreferrer noopener"
                                                 aria-label="Senior Frontend Engineer, Accessibility at Klaviyo (opens in a new tab)"
                                             >
                                                 <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                                                 <span>
-                                                    {work.position[0]}
+                                                    {job.position[0]}
                                                     {' at '}
                                                     <span className="inline-block">
-                                                        {work.company}
+                                                        {job.company}
                                                         <svg
                                                             xmlns="http://www.w3.org/2000/svg"
                                                             viewBox="0 0 20 20"
@@ -91,8 +90,8 @@ export const Experience: FC<Props> = ({ data = [] }) => {
                                                 </span>
                                             </a>
                                         </div>
-                                        {work.position.length > 1
-                                            ? work.position
+                                        {job.position.length > 1
+                                            ? job.position
                                                   .slice(1)
                                                   .map((title: string, index: number) => (
                                                       <div key={index + 1} aria-hidden="true">
@@ -104,9 +103,9 @@ export const Experience: FC<Props> = ({ data = [] }) => {
                                             : null}
                                     </h3>
                                     <p className="mt-2 text-sm leading-normal">
-                                        {Array.isArray(work.description) ? (
+                                        {Array.isArray(job.description) ? (
                                             <ul>
-                                                {work.description.map(
+                                                {job.description.map(
                                                     (bullet: string, index: number) => (
                                                         <li className="ml-4 list-disc" key={index}>
                                                             <p>{bullet}</p>
@@ -120,7 +119,7 @@ export const Experience: FC<Props> = ({ data = [] }) => {
                                         className="mt-2 flex flex-wrap"
                                         aria-label="Technologies used"
                                     >
-                                        {work.skills.map((skill: { id: string; name: string }) => (
+                                        {job.skills.map((skill: { id: string; name: string }) => (
                                             <li key={skill.id} className="mr-1.5 mt-2">
                                                 <div
                                                     className="flex items-center rounded-full
