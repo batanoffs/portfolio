@@ -1,7 +1,20 @@
 import { FC } from 'react'
+import preview from '../assets/preview.png'
+
+type Project = {
+    id: string
+    title: string
+    description: string
+    url: string
+    image: string
+    tags?: {
+        id: string
+        name: string
+    }[]
+}
 
 type Props = {
-    data?: (typeof data)[]
+    data?: Project[]
 }
 
 export const Projects: FC<Props> = ({ data = [] }) => {
@@ -22,7 +35,7 @@ export const Projects: FC<Props> = ({ data = [] }) => {
             </div>
             <div>
                 <ul className="group/list">
-                    {data.projects.map((project) => (
+                    {data.projects.map((project : Project) => (
                         <li className="mb-12">
                             <div
                                 className="group relative grid gap-4 pb-1 transition-all
@@ -78,7 +91,7 @@ export const Projects: FC<Props> = ({ data = [] }) => {
                                             className="mt-2 flex flex-wrap"
                                             aria-label="Technologies used:"
                                         >
-                                            {project.tags.map((tag) => (
+                                            {project.tags.map((tag : {id: string, name: string}) => (
                                                 <li key={tag.id} className="mr-1.5 mt-2">
                                                     <div
                                                         className="flex items-center rounded-full bg-teal-400/10
@@ -100,7 +113,11 @@ export const Projects: FC<Props> = ({ data = [] }) => {
                                     decoding="async"
                                     style={{ color: 'transparent' }}
                                     className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
-                                    src={project.image}
+                                    src={
+                                        project.title === 'Personal portfolio v1'
+                                            ? preview
+                                            : project.image
+                                    }
                                 />
                             </div>
                         </li>

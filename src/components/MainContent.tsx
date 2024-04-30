@@ -4,18 +4,16 @@ import { Experience } from './Experience'
 import { Projects } from './Projects'
 import { About } from './About'
 import { Resume } from './Resume'
+import { Footer } from './Footer'
 
-type Props = {
-    styles?: string
-}
-
-export const MainContent: FC<Props> = ({ styles }) => {
+export const MainContent: FC<{ styles?: string }> = ({ styles }) => {
     return (
         <main id="content" className={styles}>
             <About />
             <Experience data={data} />
             <Projects data={data} />
             <Resume />
+            <Footer />
         </main>
     )
 }

@@ -1,24 +1,24 @@
 import { FC } from 'react'
 
-type ExperienceProps = {
-    data?: {
-        work: Array<{
-            id: string
-            date: string
-            company: string
-            position: Array<string>
-            description: string | Array<string>
-            technologies: string
-            website: string
-            skills: Array<{
-                id: string
-                name: string
-            }>
-        }>
-    }
+type Work = {
+    id: string
+    date: string
+    company: string
+    position: Array<string>
+    description: string | Array<string>
+    technologies: string
+    website: string
+    skills: Array<{
+        id: string
+        name: string
+    }>
 }
 
-export const Experience: FC<ExperienceProps> = ({ data = [] }) => {
+type Props = {
+    data?: Exp[]
+}
+
+export const Experience: FC<Props> = ({ data = [] }) => {
     return (
         <section
             id="experience"
@@ -36,7 +36,7 @@ export const Experience: FC<ExperienceProps> = ({ data = [] }) => {
             </div>
             <div>
                 <ol className="group/list">
-                    {data.work.map((work) => (
+                    {data.work.map((work: Work) => (
                         <li key={work.id} className="mb-12">
                             <div
                                 className="group relative grid pb-1 transition-all sm:grid-cols-8
@@ -120,7 +120,7 @@ export const Experience: FC<ExperienceProps> = ({ data = [] }) => {
                                         className="mt-2 flex flex-wrap"
                                         aria-label="Technologies used"
                                     >
-                                        {work.skills.map((skill) => (
+                                        {work.skills.map((skill: { id: string; name: string }) => (
                                             <li key={skill.id} className="mr-1.5 mt-2">
                                                 <div
                                                     className="flex items-center rounded-full

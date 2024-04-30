@@ -2,7 +2,7 @@ import { FC } from 'react'
 
 export const Resume: FC = () => {
     return (
-        <div className="mt-12">
+        <div className="mt-6">
             <a
                 className="inline-flex items-baseline font-medium leading-tight
                 text-slate-200 hover:text-teal-300 focus-visible:text-teal-300
@@ -13,7 +13,7 @@ export const Resume: FC = () => {
                 aria-label="View Full Résumé (opens in a new tab)"
             >
                 <span>
-                    View Full
+                    View Full{' '}
                     <span className="inline-block">
                         Résumé
                         <svg
