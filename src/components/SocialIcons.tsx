@@ -1,12 +1,8 @@
 import type { FC } from 'react'
 
-interface Props {
-    styles?: string
-}
-
-export const SocialIcons: FC<Props> = ({ styles }) => {
+export const SocialIcons: FC = () => {
     return (
-        <ul className={styles} aria-label="Social media">
+        <ul className='ml-1 mt-8 flex items-center' aria-label="Social media">
             {[
                 'https://github.com/batanoffs',
                 'https://www.linkedin.com/in/danielbatanov',
