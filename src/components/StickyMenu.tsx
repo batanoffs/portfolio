@@ -1,9 +1,7 @@
-import type { FC } from 'react'
 import { Link } from 'react-router-dom'
-
 import { SocialIcons } from './SocialIcons'
 
-export const StickyMenu: FC = () => {
+export const StickyMenu = () => {
     return (
         <main className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
             <div>

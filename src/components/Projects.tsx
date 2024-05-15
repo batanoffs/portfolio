@@ -1,4 +1,3 @@
-import { FC } from 'react'
 import preview from '../assets/preview.png'
 
 type Project = {
@@ -17,7 +16,7 @@ type Props = {
     projects?: Project[]
 }
 
-export const Projects: FC<Props> = ({ projects = [] }) => {
+export const Projects = ({ projects = [] }: Props = {}) => {
     return (
         <section
             id="projects"
@@ -35,7 +34,7 @@ export const Projects: FC<Props> = ({ projects = [] }) => {
             </div>
             <div>
                 <ul className="group/list">
-                    {projects.map((project : Project) => (
+                    {projects.map((project: Project) => (
                         <li className="mb-12">
                             <div
                                 className="group relative grid gap-4 pb-1 transition-all
@@ -91,16 +90,18 @@ export const Projects: FC<Props> = ({ projects = [] }) => {
                                             className="mt-2 flex flex-wrap"
                                             aria-label="Technologies used:"
                                         >
-                                            {project.tags.map((tag : {id: string, name: string}) => (
-                                                <li key={tag.id} className="mr-1.5 mt-2">
-                                                    <div
-                                                        className="flex items-center rounded-full bg-teal-400/10
+                                            {project.tags.map(
+                                                (tag: { id: string; name: string }) => (
+                                                    <li key={tag.id} className="mr-1.5 mt-2">
+                                                        <div
+                                                            className="flex items-center rounded-full bg-teal-400/10
                                                      px-3 py-1 text-xs font-medium leading-5 text-teal-300 "
-                                                    >
-                                                        {tag.name}
-                                                    </div>
-                                                </li>
-                                            ))}
+                                                        >
+                                                            {tag.name}
+                                                        </div>
+                                                    </li>
+                                                )
+                                            )}
                                         </ul>
                                     ) : null}
                                 </div>

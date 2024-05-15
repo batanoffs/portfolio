@@ -1,6 +1,4 @@
-import { FC } from 'react'
-
-export const About: FC = () => {
+export const About = () => {
     return (
         <section
             id="about"
@@ -46,7 +44,7 @@ export const About: FC = () => {
                         Software University
                     </a>{' '}
                     where I study for a full-stack developer. During my first year I honed my
-                    proficiency in front end technologies which led me to developed a finance web
+                    proficiency in front end technologies which led me to develope a finance web
                     application for{' '}
                     <a
                         className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
@@ -59,7 +57,9 @@ export const About: FC = () => {
                     </a>{' '}
                     and ended up in Top 10 best projects out of overall 150+ participants.
                 </p>
-                <p className="mb-4">Beyond the professional realm, I enjoy boardgames, hiking and gardening.</p>
+                <p className="mb-4">
+                    Beyond the professional realm, I enjoy boardgames, hiking and gardening.
+                </p>
             </div>
         </section>
     )

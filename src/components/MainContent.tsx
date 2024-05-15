@@ -1,4 +1,3 @@
-import { FC } from 'react'
 // import { Routes, Route } from 'react-router-dom'
 
 import { Experience } from './Experience'
@@ -9,7 +8,7 @@ import { Footer } from './Footer'
 
 import data from '../data.json'
 
-export const MainContent: FC = () => {
+export const MainContent = () => {
     return (
         <main id="content" className="pt-24 lg:w-1/2 lg:py-24">
             <About />

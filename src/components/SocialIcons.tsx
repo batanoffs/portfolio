@@ -1,8 +1,6 @@
-import type { FC } from 'react'
-
-export const SocialIcons: FC = () => {
+export const SocialIcons = () => {
     return (
-        <ul className='ml-1 mt-8 flex items-center' aria-label="Social media">
+        <ul className="ml-1 mt-8 flex items-center" aria-label="Social media">
             {[
                 'https://github.com/batanoffs',
                 'https://www.linkedin.com/in/danielbatanov',

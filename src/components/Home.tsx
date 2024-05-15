@@ -1,11 +1,7 @@
-import type { FC } from 'react'
-
 import { StickyMenu } from './StickyMenu'
 import { MainContent } from './MainContent'
 
-interface Props {}
-
-export const Home: FC<Props> = () => {
+export const Home = () => {
     // TODO
     // const captureMouseCoordinates: MouseEventHandler<HTMLDivElement> = (e) => {
     //     const x = e.clientX
