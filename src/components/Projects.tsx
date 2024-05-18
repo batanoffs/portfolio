@@ -82,9 +82,16 @@ export const Projects = ({ projects = [] }: Props = {}) => {
                                             </span>
                                         </a>
                                     </h3>
-                                    <p className="mt-2 text-sm leading-normal">
-                                        {project.description}
-                                    </p>
+                                    {project.title.includes('book store') ? (
+                                        <p className="mt-2 text-sm leading-normal blur-sm">
+                                            {project.description}
+                                        </p>
+                                    ) : (
+                                        <p className="mt-2 text-sm leading-normal">
+                                            {project.description}
+                                        </p>
+                                    )}
+
                                     {project.tags ? (
                                         <ul
                                             className="mt-2 flex flex-wrap"
@@ -93,12 +100,22 @@ export const Projects = ({ projects = [] }: Props = {}) => {
                                             {project.tags.map(
                                                 (tag: { id: string; name: string }) => (
                                                     <li key={tag.id} className="mr-1.5 mt-2">
-                                                        <div
+                                                        {project.title.includes('book store') ? (
+                                                            <div
+                                                            className="flex items-center rounded-full bg-teal-400/10
+                                                     px-3 py-1 text-xs font-medium leading-5 text-teal-300 blur"
+                                                        >
+                                                            {tag.name}
+                                                        </div>
+                                                        ) : (
+                                                            <div
                                                             className="flex items-center rounded-full bg-teal-400/10
                                                      px-3 py-1 text-xs font-medium leading-5 text-teal-300 "
                                                         >
                                                             {tag.name}
                                                         </div>
+                                                        )}
+                                                        
                                                     </li>
                                                 )
                                             )}

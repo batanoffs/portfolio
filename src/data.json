@@ -62,7 +62,7 @@
                 "Attended investors meetings to discuss project requirements",
                 "Proven expertise in 3D visualization and 3D modelling",
                 "Introduced BIM metodology to the team and designed templates for projects",
-                "Developed the company website with WIX"
+                "Build the company website with WIX"
             ],
             "skills": [
                 {
@@ -116,8 +116,8 @@
         {
             "id": "1",
             "title": "Mini Finance Innovations",
-            "description": "This responsive platform simulates online banking, offering features such as top-up, add friends, transactions, history and more",
-            "image": "https://notablepen.backendless.app/api/files/app/AppData/docs/dashoboardWeb.png",
+            "description": "This is the project I completed for Softuniada 2024 programing Olympiad. In short it is responsive platform that simulates online banking, offering features such as top-up, add friends, transactions, history and more",
+            "image": "https://notablepen.backendless.app/api/files/app/AppData/home/newLogoPng.png",
             "url": "https://batanoffs.github.io/mini-finance/",
             "tags": [
                 {
@@ -127,6 +127,10 @@
                 {
                     "id": "2",
                     "name": "CSS/HTML"
+                },
+                {
+                    "id": "2",
+                    "name": "Javascript"
                 },
                 {
                     "id": "3",
@@ -142,15 +146,19 @@
                 },
                 {
                     "id": "6",
-                    "name": "react-credit-card-2"
+                    "name": "react-credit-card-2 API"
+                },
+                {
+                    "id": "6",
+                    "name": "create-react-app"
                 }
             ]
         },
         {
             "id": "2",
             "title": "Ra-auth-ui ~ open source project",
-            "description": "Authentication layouts, hooks and pipelines to integrate into react-admin out of the box. No extra dependencies are required except the ones react-admin is already using.",
-            "image": "https://via.placeholder.com/300x200",
+            "description": "Recently started working on this open scource project. Where I fixed some typos in the readme file and updated the information. Also started learning more about the code and how react-admin works under the hood. Ra-auth-ui is Authentication layouts, hooks and pipelines to integrate into react-admin out of the box. No extra dependencies are required except the ones react-admin is already using.",
+            "image": "../public/ra-auth-logo1.png",
             "url": "https://github.com/ValentinnDimitroff/ra-auth-ui",
             "tags": [
                 {
@@ -171,19 +179,15 @@
                 },
                 {
                     "id": "3",
-                    "name": "Material UI"
-                },
-                {
-                    "id": "3",
                     "name": "vite"
                 }
             ]
         },
         {
             "id": "3",
-            "title": "Personal portfolio v1",
-            "description": "This portfolio was created using React and TailwindCSS to showcase my work and skills",
-            "image": "https://via.placeholder.com/300x200",
+            "title": "E-commerce book store",
+            "description": "Currently working on freelance e-commerce project for small bookstore",
+            "image": "../public/comingsoon2.png",
             "url": "https://github.com/batanoffs/portfolio",
             "tags": [
                 {
@@ -201,6 +205,14 @@
                 {
                     "id": "4",
                     "name": "Vite"
+                },
+                {
+                    "id": "4",
+                    "name": "Firebase"
+                },
+                {
+                    "id": "4",
+                    "name": "Material UI"
                 }
             ]
         }
