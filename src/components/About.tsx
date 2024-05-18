@@ -1,4 +1,8 @@
 export const About = () => {
+    const updateSummary = (e) => {
+        const buttonName = e.target.value
+        console.log(buttonName)
+    }
     return (
         <section
             id="about"
@@ -60,6 +64,29 @@ export const About = () => {
                 <p className="mb-4">
                     Beyond the professional realm, I enjoy boardgames, hiking and gardening.
                 </p>
+            </div>
+            <div className="flex gap-8">
+                <button
+                    className="flex items-center rounded-full border-teal-300 border
+                        px-3 py-1 text-xs font-medium leading-5 text-teal-300 hover:bg-teal-400/10"
+                    onClick={updateSummary}
+                >
+                    SMALL
+                </button>
+                <button
+                    className="flex items-center rounded-full border-teal-300 border
+                        px-3 py-1 text-xs font-medium leading-5 text-teal-300 hover:bg-teal-400/10"
+                    onClick={updateSummary}
+                >
+                    LONG
+                </button>
+                <button
+                    className="flex items-center rounded-full border-teal-300 border px-3 py-1
+                 text-xs font-medium leading-5 text-teal-300 hover:bg-teal-400/10"
+                    onClick={updateSummary}
+                >
+                    FULL
+                </button>
             </div>
         </section>
     )

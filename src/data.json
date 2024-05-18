@@ -98,15 +98,15 @@
             ],
             "skills": [
                 {
-                    "id": "1",
+                    "id": "0",
                     "name": "Quality Assurance"
                 },
                 {
-                    "id": "2",
+                    "id": "1",
                     "name": "Bug tracking"
                 },
                 {
-                    "id": "3",
+                    "id": "2",
                     "name": "Manual testing"
                 }
             ]
@@ -121,11 +121,11 @@
             "url": "https://batanoffs.github.io/mini-finance/",
             "tags": [
                 {
-                    "id": "1",
+                    "id": "0",
                     "name": "React"
                 },
                 {
-                    "id": "2",
+                    "id": "1",
                     "name": "CSS/HTML"
                 },
                 {
@@ -149,7 +149,7 @@
                     "name": "react-credit-card-2 API"
                 },
                 {
-                    "id": "6",
+                    "id": "7",
                     "name": "create-react-app"
                 }
             ]
@@ -162,15 +162,15 @@
             "url": "https://github.com/ValentinnDimitroff/ra-auth-ui",
             "tags": [
                 {
-                    "id": "1",
+                    "id": "0",
                     "name": "React"
                 },
                 {
-                    "id": "2",
+                    "id": "1",
                     "name": "TypeScript"
                 },
                 {
-                    "id": "3",
+                    "id": "2",
                     "name": "Material UI"
                 },
                 {
@@ -178,7 +178,7 @@
                     "name": "Jest"
                 },
                 {
-                    "id": "3",
+                    "id": "4",
                     "name": "vite"
                 }
             ]
@@ -191,19 +191,19 @@
             "url": "",
             "tags": [
                 {
-                    "id": "1",
+                    "id": "0",
                     "name": "React"
                 },
                 {
-                    "id": "2",
+                    "id": "1",
                     "name": "TypeScript"
                 },
                 {
-                    "id": "3",
+                    "id": "2",
                     "name": "TailwindCSS"
                 },
                 {
-                    "id": "4",
+                    "id": "3",
                     "name": "Vite"
                 },
                 {
@@ -211,7 +211,7 @@
                     "name": "Firebase"
                 },
                 {
-                    "id": "4",
+                    "id": "5",
                     "name": "Material UI"
                 }
             ]

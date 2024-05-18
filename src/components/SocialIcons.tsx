@@ -6,7 +6,7 @@ export const SocialIcons = () => {
                 'https://www.linkedin.com/in/danielbatanov',
                 'https://wakatime.com/@batanof',
             ].map((link, index) => (
-                <li className="mr-5 text-xs shrink-0">
+                <li key={index} className="mr-5 text-xs shrink-0">
                     <a
                         key={index}
                         href={link}

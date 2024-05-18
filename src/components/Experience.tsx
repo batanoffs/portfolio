@@ -80,9 +80,9 @@ export const Experience = (props: ExperienceProps) => {
                                                                 aria-hidden="true"
                                                             >
                                                                 <path
-                                                                    fill-rule="evenodd"
+                                                                    fillRule="evenodd"
                                                                     d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                                                                    clip-rule="evenodd"
+                                                                    clipRule="evenodd"
                                                                 ></path>
                                                             </svg>
                                                         </span>
@@ -101,22 +101,17 @@ export const Experience = (props: ExperienceProps) => {
                                                       ))
                                                 : null}
                                         </h3>
-                                        <p className="mt-2 text-sm leading-normal">
-                                            {Array.isArray(job.description) ? (
-                                                <ul>
-                                                    {job.description.map(
-                                                        (bullet: string, index: number) => (
-                                                            <li
-                                                                className="ml-4 list-disc"
-                                                                key={index}
-                                                            >
-                                                                <p>{bullet}</p>
-                                                            </li>
-                                                        )
-                                                    )}
-                                                </ul>
-                                            ) : null}
-                                        </p>
+                                        {Array.isArray(job.description) ? (
+                                            <ul className="mt-2 text-sm leading-normal">
+                                                {job.description.map(
+                                                    (bullet: string, index: number) => (
+                                                        <li className="ml-4 list-disc" key={index}>
+                                                            <p>{bullet}</p>
+                                                        </li>
+                                                    )
+                                                )}
+                                            </ul>
+                                        ) : null}
                                         <ul
                                             className="mt-2 flex flex-wrap"
                                             aria-label="Technologies used"
