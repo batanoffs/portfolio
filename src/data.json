@@ -158,7 +158,7 @@
             "id": "2",
             "title": "Ra-auth-ui ~ open source project",
             "description": "Recently started working on this open scource project. Where I fixed some typos in the readme file and updated the information. Also started learning more about the code and how react-admin works under the hood. Ra-auth-ui is Authentication layouts, hooks and pipelines to integrate into react-admin out of the box. No extra dependencies are required except the ones react-admin is already using.",
-            "image": "../public/ra-auth-logo1.png",
+            "image": "/ra-auth-logo1.png",
             "url": "https://github.com/ValentinnDimitroff/ra-auth-ui",
             "tags": [
                 {
@@ -187,7 +187,7 @@
             "id": "3",
             "title": "E-commerce book store",
             "description": "Currently working on freelance e-commerce project for small bookstore",
-            "image": "../public/comingsoon2.png",
+            "image": "/comingsoon2.png",
             "url": "https://github.com/batanoffs/portfolio",
             "tags": [
                 {
