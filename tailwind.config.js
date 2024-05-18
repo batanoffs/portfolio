@@ -35,9 +35,9 @@ export default {
         'text-blue': '#808AA9',
         "pink": '#a251db',
       },
-      // animation: {
-      //   'cursor': 'spin 3s linear infinite',
-      // }
+      cursor: {
+        water: 'url(https://img.icons8.com/doodle/48/watering-can--v1.png), pointer',
+      },
     }
   },
   plugins: [],
