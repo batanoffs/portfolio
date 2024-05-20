@@ -115,11 +115,11 @@ export const Projects = ({ projects = [] }: Props = {}) => {
                                         )}
                                     </h3>
                                     {project.title.includes('book store') ? (
-                                        <p className="mt-2 text-sm leading-normal blur-sm">
+                                        <p className="mt-2 text-sm text-pretty leading-normal blur-sm">
                                             {project.description}
                                         </p>
                                     ) : (
-                                        <p className="mt-2 text-sm leading-normal">
+                                        <p className="mt-2 text-sm text-pretty leading-normal">
                                             {project.description}
                                         </p>
                                     )}

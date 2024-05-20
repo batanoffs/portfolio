@@ -116,7 +116,7 @@
         {
             "id": "1",
             "title": "Mini Finance Innovations",
-            "description": "This is the project I completed for Softuniada 2024 programing Olympiad. In short it is responsive platform that simulates online banking, offering features such as top-up, add friends, transactions, history and more",
+            "description": "This is the project I completed for Softuniada 2024 programing Olympiad. In short it is responsive platform that simulates online banking, offering features such as top-up, add friends, transactions, history and more.",
             "image": "https://notablepen.backendless.app/api/files/app/AppData/home/newLogoPng.png",
             "url": "https://batanoffs.github.io/mini-finance/",
             "tags": [
@@ -157,7 +157,7 @@
         {
             "id": "2",
             "title": "Ra-auth-ui ~ open source project",
-            "description": "Recently started working on this open scource project to improve my skills. It is available on npm and averages 20 weekly download. I've worked on the readme file and some components. Also started learning more about the code and how react-admin works under the hood. Ra-auth-ui is Authentication layouts, hooks and pipelines to integrate into react-admin out of the box. No extra dependencies are required except the ones react-admin is already using.",
+            "description": "To improve my skills recently I started working on this open scource project which is Authentication layouts, hooks and pipelines to integrate into react-admin. It is available on NPM and averages 20 weekly download. I've worked on the readme file and some components. I am learning more about the code and how react-admin works under the hood.",
             "image": "/ra-auth.png",
             "url": "https://github.com/ValentinnDimitroff/ra-auth-ui",
             "tags": [

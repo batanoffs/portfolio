@@ -21,6 +21,19 @@ export default {
             line: `url("./src/components/assets/line.svg")`,
           },
     extend: {
+      keyframes: {
+        wiggle: {
+          '0%, 100%': {
+              transform: 'rotate(-10deg)'
+          },
+          '50%': {
+              transform: 'rotate(10deg)'
+          },
+      }
+      },
+      animation: {
+        'watering': 'wiggle 1.2s linear infinite',
+      },
       spacing: {
         '128': '32rem',
         '144': '36rem',
@@ -36,7 +49,7 @@ export default {
         "pink": '#a251db',
       },
       cursor: {
-        water: 'url(https://img.icons8.com/doodle/48/watering-can--v1.png), pointer',
+        waterCan: 'url(https://img.icons8.com/doodle/48/watering-can--v1.png), pointer',
       },
     }
   },

@@ -1,8 +1,13 @@
-export const Summary = (props: object) => {
-    console.log(props)
+type SummaryProps = {
+    name: string
+    className?: string
+}
+
+export const Summary = ({name, className}: SummaryProps) => {
+    console.log(name)
 
     const small = (
-        <div className="transition ease-in delay-1000 duration-1000">
+        <div className={className}>
             <p className="mb-4">
                 Hi there, I am former Architect studing full stack web development at
                 <a
@@ -25,7 +30,7 @@ export const Summary = (props: object) => {
     )
 
     const long = (
-        <div className="transition ease-in delay-1000 duration-1000">
+        <div className={className}>
             <p className="mb-4">
                 Ever since I wrote my first program in high school, I knew I was hooked on the art
                 of coding. My passion kicked in later when I was working as an{' '}
@@ -70,8 +75,9 @@ export const Summary = (props: object) => {
             </p>
         </div>
     )
+    
     const full = (
-        <div className="transition ease-in delay-1000 duration-1000">
+        <div className={className}>
             <p className="mb-4 text-pretty">
                 Ever since I wrote my first program in high school, I knew I was hooked on the art
                 of coding. My passion kicked in later when I was working as an{' '}
@@ -116,5 +122,5 @@ export const Summary = (props: object) => {
             </p>
         </div>
     )
-    return props?.name === 'small' ? small : props?.name === 'long' ? long : full
+    return name === 'full' ? full : name === 'long' ? long : small
 }
