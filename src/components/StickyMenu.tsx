@@ -52,7 +52,7 @@ export const StickyMenu = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link className="group flex items-center py-3 active" to="/#projects">
+                        <Link className="group flex items-center py-3 active " to="/#projects">
                             <span
                                 className="nav-indicator mr-4 h-px w-8 bg-slate-600
                                 transition-all group-hover:w-16 group-hover:bg-slate-200

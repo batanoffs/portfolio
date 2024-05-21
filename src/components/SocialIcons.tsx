@@ -18,7 +18,7 @@ export const SocialIcons = () => {
                             <>
                                 <span className="sr-only">GitHub</span>
                                 <svg
-                                    className="hover:fill-cyan-500 fill-text-blue h-8 w-8"
+                                    className="hover:fill-cyan-500 fill-slate-500 h-8 w-8"
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 496 512"
                                 >
@@ -33,7 +33,7 @@ export const SocialIcons = () => {
                             <>
                                 <span className="sr-only">Linkedin</span>
                                 <svg
-                                    className="hover:fill-cyan-500 fill-text-blue h-8 w-8"
+                                    className="hover:fill-cyan-500 fill-slate-500 h-8 w-8"
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 448 512"
                                 >
@@ -45,7 +45,7 @@ export const SocialIcons = () => {
                             <>
                                 <span className="sr-only">Wakatime</span>
                                 <svg
-                                    className="hover:fill-cyan-500 fill-text-blue h-8 w-8"
+                                    className="hover:fill-cyan-500 fill-slate-500 h-8 w-8"
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 256 256"
                                 >

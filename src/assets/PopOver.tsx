@@ -49,7 +49,7 @@ function ReactPopover({ children, content, trigger = 'click' }: ReactPopoverProp
             <div onClick={() => setShow(!show)}>{children}</div>
             <div
                 hidden={!show}
-                className="min-w-fit w-[200px] h-fit absolute bottom-[100%] z-50 transition-all"
+                className="min-w-fit w-[200px] h-fit absolute bottom-[50%] left-[40%] z-50 transition-all"
             >
                 <div className="rounded bg-transparent p-3 shadow-[10px_30px_150px_rgba(46,38,92,0.25)] mb-[10px]">
                     {content}

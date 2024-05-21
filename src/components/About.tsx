@@ -4,23 +4,32 @@ import { useState } from 'react'
 import ReactPopover from '../assets/PopOver'
 
 export const About = () => {
-    const [name, setName] = useState('')
+    const [name, setName] = useState('small')
 
     const updateSummary = (event: React.MouseEvent<HTMLButtonElement>) => {
-        const buttonName = event.currentTarget.ariaLabel
-        const plant = event.currentTarget.children[0]
+        const buttonLabel = event.currentTarget.ariaLabel;
+        const plantImage = event.currentTarget.children[0].children[0].children[0];
 
-        setName(buttonName ?? '')
-        buttonName === 'small'
-            ? (event.currentTarget.ariaLabel = 'long') &&
-              (plant.attributes.getNamedItem('src').value = './plant-stage-2.svg')
-            : buttonName === 'long'
-            ? (event.currentTarget.ariaLabel = 'full') &&
-              (plant.attributes.getNamedItem('src').value = './plant-stage-3.svg')
-            : buttonName === 'full'
-            ? (event.currentTarget.ariaLabel = 'small') &&
-              (plant.attributes.getNamedItem('src').value = './plant-stage-1.svg')
-            : null
+        const newName = buttonLabel === 'small'
+            ? 'long'
+            : buttonLabel === 'long'
+            ? 'full'
+            : buttonLabel === 'full'
+            ? 'small'
+            : '';
+
+        const newImageSrc = newName === 'small'
+            ? './plant-stage-1.svg'
+            : newName === 'long'
+            ? './plant-stage-2.svg'
+            : newName === 'full'
+            ? './plant-stage-3.svg'
+            : '';
+
+        if (newName && newImageSrc) {
+            setName(newName);
+            plantImage.attributes.getNamedItem('src').value = newImageSrc;
+        }
     }
 
     return (
@@ -43,32 +52,27 @@ export const About = () => {
                 </h2>
             </div>
             <Summary
-                className={'mb-auto transition delay-150 duration-300 ease-in-out'}
+                className={'mb-auto z-10'}
                 name={name}
             />
-            <div className="mt-auto self-center">
-                <ReactPopover
-                    trigger="hover"
-                    content={<p>Water me!</p>}
-                >
-                    <button
-                        className="relative inline-flex items-center rounded-full
+            <div className="z-1 mt-auto self-center rounded-full">
+                <button
+                    className="relative  inline-flex items-center rounded-full animate-pulse duration-300
                     hover:bg-slate-500 hover:cursor-waterCan hover:animate-watering
                     text-xs justify-center p-2 font-medium leading-5 text-teal-300"
-                        onClick={(event) =>
-                            updateSummary(event as React.MouseEvent<HTMLButtonElement>)
-                        }
-                        aria-label="small"
-                    >
+                    onClick={(event) => updateSummary(event as React.MouseEvent<HTMLButtonElement>)}
+                    aria-label={name}
+                >
+                    <ReactPopover trigger="hover" content={<p>Water me!</p>}>
                         <img
-                            className=""
+                            className="rounded-full"
                             height="100"
                             width="100"
                             src="./plant-stage-1.svg"
                             alt="plant"
                         />
-                    </button>
-                </ReactPopover>
+                    </ReactPopover>
+                </button>
             </div>
         </section>
     )
