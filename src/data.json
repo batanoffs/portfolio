@@ -156,7 +156,7 @@
         },
         {
             "id": "2",
-            "title": "Ra-auth-ui ~ open source project",
+            "title": "Ra-auth-ui ~ open source",
             "description": "To improve my skills recently I started working on this open scource project which is Authentication layouts, hooks and pipelines to integrate into react-admin. It is available on NPM and averages 20 weekly download. I've worked on the readme file and some components. I am learning more about the code and how react-admin works under the hood.",
             "image": "/ra-auth.png",
             "url": "https://github.com/ValentinnDimitroff/ra-auth-ui",
