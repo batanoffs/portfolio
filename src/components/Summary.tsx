@@ -18,9 +18,9 @@ const technologies = [
     'Material UI',
     'Git',
     'Vite',
-    'Photoshop',
-    'Figma',
 ]
+
+const tools = ['Figma', 'Github', 'VS Code', 'Photoshop', 'Postman', 'Chrome DevTools']
 
 const skills = [
     'AJAX',
@@ -30,19 +30,18 @@ const skills = [
     'Responsive design',
     'Web Accessibility',
     'Backendless | Firebase',
-    'Github',
-    'VS Code',
 ]
 
 export const Summary = ({ name, className }: SummaryProps) => {
     const [showTech, setShowTech] = useState(false)
     const [showSkills, setShowSkills] = useState(false)
+    const [showTools, setShowTools] = useState(false)
     const small = (
         <div className={className}>
             <p className="mb-4">Hello and welcome!</p>
 
             <p className="mb-4">
-                I am former Architect studing full stack web development at
+                I am a former architect currently studying to become a full stack developer at
                 <a
                     className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
                     href="https://www.ip-arch.com/en"
@@ -51,54 +50,81 @@ export const Summary = ({ name, className }: SummaryProps) => {
                     aria-label="advertising agency (opens in a new tab)"
                 >
                     {' '}
-                    Software University{' '}
+                    Software University.{' '}
                 </a>
-                with year and a half experience in coding and three years of professional experience
-                in architecture and QA.
-            </p>
-
-            <p className="mb-4">
-                Beyond the professional realm, I enjoy boardgames, hiking and gardening.
+                I have a year and a half of experience in coding, three years of professional
+                experience in architecture, and a few months in quality assurance.
             </p>
             <div className="flex flex-col gap-2 h-[110px] overflow-hidden ">
                 <div className="flex gap-2">
                     <button
-                        className="hover:text-center hover:animate-pulse w-32 h-8
-                    border-0 rounded-xl bg-sky-700/50 p-1 cursor-pointer"
+                        className="hover:text-center hover:animate-pulse w-[33%] h-8 hover:bg-cyan-400/30
+                    border-0 border-slate-700 shadow rounded-md bg-slate-200/10 cursor-pointer"
                         onMouseEnter={() => setShowTech(true)}
                         onMouseLeave={() => setShowTech(false)}
                     >
                         Technologies
                     </button>
                     <button
-                        className="hover:animate-pulse w-32 h-8
-                    border-0 rounded-xl bg-violet-600/20 cursor-pointer"
+                        className="hover:animate-pulse w-[33%] h-8 hover:bg-teal-700/40
+                    border-0 border-slate-700 shadow rounded-md bg-slate-200/10 cursor-pointer"
                         onMouseEnter={() => setShowSkills(true)}
                         onMouseLeave={() => setShowSkills(false)}
                     >
                         Skills
                     </button>
+                    <button
+                        className="hover:animate-pulse w-[33%] h-8 hover:bg-purple-800/30
+                    border-0 border-slate-700 shadow rounded-md bg-slate-200/10 cursor-pointer"
+                        onMouseEnter={() => setShowTools(true)}
+                        onMouseLeave={() => setShowTools(false)}
+                    >
+                        Tools
+                    </button>
                 </div>
                 <div className="">
-                    <div className={`flex flex-wrap gap-2 animate-writing overflow-hidden whitespace-nowrap  ${showTech ? 'flex' : 'hidden'}`}>
+                    <div
+                        className={`flex flex-wrap gap-2 animate-writing overflow-hidden whitespace-nowrap  ${
+                            showTech ? 'flex' : 'hidden'
+                        }`}
+                    >
                         {technologies.map((tech) => (
                             <div
-                                className="inline-block items-center overflow-hidden whitespace-nowrap rounded-full bg-sky-700/50
-                            px-3 py-1 text-xs font-medium leading-5 text-slate-400"
+                                className="inline-block items-center overflow-hidden whitespace-nowrap rounded-full bg-cyan-400/30
+                            px-3 py-1 text-xs font-medium leading-5 text-slate-200"
                                 key={tech}
                             >
                                 {tech}
                             </div>
                         ))}
                     </div>
-                    <div className={`flex flex-wrap gap-2 animate-writing overflow-hidden whitespace-nowrap ${showSkills ? 'flex' : 'hidden'}`}>
+                    <div
+                        className={`flex flex-wrap gap-2 animate-writing overflow-hidden whitespace-nowrap ${
+                            showSkills ? 'flex' : 'hidden'
+                        }`}
+                    >
                         {skills.map((skill) => (
                             <div
-                                className="inline-block items-center overflow-hidden whitespace-nowrap rounded-full bg-violet-600/20
-                            px-3 py-1 text-xs font-medium leading-5 text-slate-400"
+                                className="inline-block items-center overflow-hidden whitespace-nowrap rounded-full bg-teal-700/40
+                            px-3 py-1 text-xs font-medium leading-5 text-slate-200"
                                 key={skill}
                             >
                                 {skill}
+                            </div>
+                        ))}
+                    </div>
+                    <div
+                        className={`flex flex-wrap gap-2 animate-writing overflow-hidden whitespace-nowrap ${
+                            showTools ? 'flex' : 'hidden'
+                        }`}
+                    >
+                        {tools.map((tool) => (
+                            <div
+                                className="inline-block items-center overflow-hidden whitespace-nowrap rounded-full bg-purple-800/30
+                            px-3 py-1 text-xs font-medium leading-5 text-slate-200"
+                                key={tool}
+                            >
+                                {tool}
                             </div>
                         ))}
                     </div>
@@ -109,13 +135,15 @@ export const Summary = ({ name, className }: SummaryProps) => {
 
     const long = (
         <div className={className}>
+            <p className="mb-4">Hello and welcome!</p>
+
             <p className="mb-4">
-                Ever since I wrote my first program in high school of mathmatics, I knew I was
-                hooked on the art of coding. My passion kicked in later when I was working as an
-                Architect closely collaborating with our software development team.
+                Ever since writing my first program in high school mathematics, I have developed a
+                deep passion for coding. As a former architect, my passion was further nurtured
+                through extensive collaboration with software developers in my previous role.
             </p>
             <p className="mb-4">
-                That took me to{' '}
+                I am now studying to become a full-stack developer at{' '}
                 <a
                     className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
                     href="https://softuni.bg/"
@@ -124,10 +152,9 @@ export const Summary = ({ name, className }: SummaryProps) => {
                     aria-label="advertising agency (opens in a new tab)"
                 >
                     Software University
-                </a>{' '}
-                where I study for a full-stack developer. During my first year I honed my
-                proficiency in front end technologies which led me to develope a finance web
-                application for{' '}
+                </a>
+                . In my first year, I honed my front-end skills and developed a finance web
+                application that ranked in the Top 10 at the
                 <a
                     className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
                     href="https://softuniada.softuni.bg/"
@@ -135,19 +162,22 @@ export const Summary = ({ name, className }: SummaryProps) => {
                     rel="noreferrer noopener"
                     aria-label="advertising agency (opens in a new tab)"
                 >
-                    "Softuniada 2024" Olympiad
-                </a>{' '}
-                and ended up in Top 10 best projects out of overall 150+ participants.
+                    {' '}
+                    "Softuniada 2024" Programming Olympiad
+                </a>
+                .
             </p>
         </div>
     )
 
     const full = (
         <div className={className}>
+            <p className="mb-4">Hello and welcome!</p>
+
             <p className="mb-4 text-pretty">
-                Ever since I wrote my first program in High School of Mathmatics, I knew I was
-                hooked on the art of coding. My passion kicked in later when I was working as an
-                Architect at{' '}
+                Ever since I wrote my first program in high school mathematics, I knew I was hooked
+                on the art of coding. My passion kicked in later, when I was working as an architect
+                at{' '}
                 <a
                     className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
                     href="https://www.ip-arch.com/en"
@@ -155,7 +185,7 @@ export const Summary = ({ name, className }: SummaryProps) => {
                     rel="noreferrer noopener"
                     aria-label="advertising agency (opens in a new tab)"
                 >
-                    one of the biggest architectural company
+                    one of the biggest architectural companies
                 </a>{' '}
                 in Bulgaria, where I collaborated a lot with our development team.
             </p>
@@ -168,10 +198,10 @@ export const Summary = ({ name, className }: SummaryProps) => {
                     rel="noreferrer noopener"
                     aria-label="advertising agency (opens in a new tab)"
                 >
-                    Software University
+                    Software University,
                 </a>{' '}
-                where I study for a full-stack developer. During my first year I honed my
-                proficiency in front end technologies which led me to develop a finance web
+                where I am studying to be a full-stack developer. During my first year, I honed my
+                proficiency in front-end technologies, which led me to develop a finance web
                 application for{' '}
                 <a
                     className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
@@ -180,12 +210,12 @@ export const Summary = ({ name, className }: SummaryProps) => {
                     rel="noreferrer noopener"
                     aria-label="advertising agency (opens in a new tab)"
                 >
-                    "Softuniada 2024" Olympiad
+                    "Softuniada 2024" Programming Olympiad
                 </a>{' '}
-                and ended up in Top 10 best projects out of overall 150+ participants.
+                and ended up in Top 10 best projects out of an overall 150+ participants.
             </p>
             <p className="mb-4">
-                Beyond the professional realm, I enjoy boardgames, hiking and gardening.
+                Beyond the professional realm, I enjoy board games, hiking, and gardening.
             </p>
         </div>
     )
