@@ -35,8 +35,8 @@ export const About = () => {
     return (
         <section
             id="about"
-            className="flex flex-col justify-between mb-16 scroll-mt-16 h-[auto] md:mb-24
-                    lg:mb-36 lg:h-[500px] lg:scroll-mt-24"
+            className="flex flex-col justify-between mb-16 scroll-mt-16 h-[auto] md:mb-24 md:h-[500px]
+                    lg:mb-26 lg:h-[500px] lg:scroll-mt-24"
             aria-label="About me"
         >
             <div
