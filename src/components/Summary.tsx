@@ -55,7 +55,7 @@ export const Summary = ({ name, className }: SummaryProps) => {
                 I have a year and a half of experience in coding, three years of professional
                 experience in architecture, and a few months in quality assurance.
             </p>
-            <div className="flex flex-col gap-2 h-[110px] overflow-hidden ">
+            <div className="flex flex-col gap-2 h-[140px] lg:h-[110px] overflow-hidden md:h-[150px]">
                 <div className="flex gap-2">
                     <button
                         className="hover:text-center hover:animate-pulse w-[33%] h-8 hover:bg-cyan-400/30

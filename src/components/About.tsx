@@ -7,28 +7,33 @@ export const About = () => {
     const [name, setName] = useState('small')
 
     const updateSummary = (event: React.MouseEvent<HTMLButtonElement>) => {
-        const buttonLabel = event.currentTarget.ariaLabel;
-        const plantImage = event.currentTarget.children[0].children[0].children[0];
+        const buttonLabel = event.currentTarget.ariaLabel
+        const plantImage = event.currentTarget.children[0].children[0].children[0]
 
-        const newName = buttonLabel === 'small'
-            ? 'long'
-            : buttonLabel === 'long'
-            ? 'full'
-            : buttonLabel === 'full'
-            ? 'small'
-            : '';
+        const newName =
+            buttonLabel === 'small'
+                ? 'long'
+                : buttonLabel === 'long'
+                ? 'full'
+                : buttonLabel === 'full'
+                ? 'small'
+                : ''
 
-        const newImageSrc = newName === 'small'
-            ? './plant-stage-1.svg'
-            : newName === 'long'
-            ? './plant-stage-2.svg'
-            : newName === 'full'
-            ? './plant-stage-3.svg'
-            : '';
+        const newImageSrc =
+            newName === 'small'
+                ? './plant-stage-1.svg'
+                : newName === 'long'
+                ? './plant-stage-2.svg'
+                : newName === 'full'
+                ? './plant-stage-3.svg'
+                : ''
 
         if (newName && newImageSrc) {
-            setName(newName);
-            plantImage.attributes.getNamedItem('src').value = newImageSrc;
+            setName(newName)
+            const srcAttribute = plantImage.attributes.getNamedItem('src')
+            if (srcAttribute) {
+                srcAttribute.value = newImageSrc
+            }
         }
     }
 
@@ -51,10 +56,7 @@ export const About = () => {
                     About
                 </h2>
             </div>
-            <Summary
-                className={'mb-auto z-10'}
-                name={name}
-            />
+            <Summary className={'mb-auto z-10'} name={name} />
             <div className="z-1 mt-auto self-center rounded-full">
                 <button
                     className="relative  inline-flex items-center rounded-full animate-pulse duration-300

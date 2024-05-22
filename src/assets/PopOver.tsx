@@ -1,11 +1,9 @@
-import { MouseEvent, useEffect, useRef, useState } from 'react'
-
-type TriggerType = 'click' | 'hover'
+import { useEffect, useRef, useState } from 'react'
 
 interface ReactPopoverProps {
     children: React.ReactNode
     content: React.ReactNode
-    trigger?: TriggerType
+    trigger?: 'click' | 'hover'
 }
 
 function ReactPopover({ children, content, trigger = 'click' }: ReactPopoverProps) {
@@ -25,7 +23,11 @@ function ReactPopover({ children, content, trigger = 'click' }: ReactPopoverProp
     }
 
     useEffect(() => {
-        function handleClickOutside(event: MouseEvent) {
+        /**
+         * Handles a click event outside of the popover.
+         * @param event The click event.
+         */
+        function handleClickOutside(event: MouseEvent): void {
             if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {
                 setShow(false)
             }
