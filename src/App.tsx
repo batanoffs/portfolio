@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 
-import ScrollToAnchor from './components/ScrollToAnchor'
+import ScrollToAnchor from './utils/ScrollToAnchor'
 
 import { Home } from './components/Home'
 

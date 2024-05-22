@@ -14,7 +14,6 @@ export const MainContent = () => {
             <About />
             <Experience experience={data.work} />
             <Projects projects={data.projects} />
-
             <Resume />
             <Footer />
         </main>

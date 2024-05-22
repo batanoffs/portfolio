@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+// import watercan from "./watercan.svg"
 
 export default {
     content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
@@ -37,7 +38,7 @@ export default {
             animation: {
                 watering: 'wiggle 1.2s linear infinite',
                 pulse: 'pulse 1.5s infinite',
-                writing: 'writing 0.5s steps(29, end) 0s 1 normal both',
+                writing: 'writing 0.5s 0s 1 normal both',
             },
             spacing: {
                 128: '32rem',
@@ -59,4 +60,7 @@ export default {
         },
     },
     plugins: [],
+    corePlugins: {
+        scrollBehavior: true,
+    },
 }

@@ -47,7 +47,7 @@ export const Summary = ({ name, className }: SummaryProps) => {
                     href="https://www.ip-arch.com/en"
                     target="_blank"
                     rel="noreferrer noopener"
-                    aria-label="advertising agency (opens in a new tab)"
+                    aria-label="architecture studio (opens in a new tab)"
                 >
                     {' '}
                     Software University.{' '}
@@ -149,7 +149,7 @@ export const Summary = ({ name, className }: SummaryProps) => {
                     href="https://softuni.bg/"
                     target="_blank"
                     rel="noreferrer noopener"
-                    aria-label="advertising agency (opens in a new tab)"
+                    aria-label="software university (opens in a new tab)"
                 >
                     Software University
                 </a>
@@ -160,7 +160,7 @@ export const Summary = ({ name, className }: SummaryProps) => {
                     href="https://softuniada.softuni.bg/"
                     target="_blank"
                     rel="noreferrer noopener"
-                    aria-label="advertising agency (opens in a new tab)"
+                    aria-label="programming olympiad (opens in a new tab)"
                 >
                     {' '}
                     "Softuniada 2024" Programming Olympiad
@@ -183,7 +183,7 @@ export const Summary = ({ name, className }: SummaryProps) => {
                     href="https://www.ip-arch.com/en"
                     target="_blank"
                     rel="noreferrer noopener"
-                    aria-label="advertising agency (opens in a new tab)"
+                    aria-label="architecture studio (opens in a new tab)"
                 >
                     one of the biggest architectural companies
                 </a>{' '}
@@ -196,7 +196,7 @@ export const Summary = ({ name, className }: SummaryProps) => {
                     href="https://softuni.bg/"
                     target="_blank"
                     rel="noreferrer noopener"
-                    aria-label="advertising agency (opens in a new tab)"
+                    aria-label="software university (opens in a new tab)"
                 >
                     Software University,
                 </a>{' '}
@@ -208,11 +208,11 @@ export const Summary = ({ name, className }: SummaryProps) => {
                     href="https://softuniada.softuni.bg/"
                     target="_blank"
                     rel="noreferrer noopener"
-                    aria-label="advertising agency (opens in a new tab)"
+                    aria-label="programming olympiad (opens in a new tab)"
                 >
                     "Softuniada 2024" Programming Olympiad
                 </a>{' '}
-                and ended up in Top 10 best projects out of an overall 150+ participants.
+                and ranked in Top 10 best projects out of an overall 150+ participants.
             </p>
             <p className="mb-4">
                 Beyond the professional realm, I enjoy board games, hiking, and gardening.

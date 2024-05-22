@@ -1,5 +1,3 @@
-import preview from '../assets/preview.png'
-
 type Project = {
     id: string
     title: string
@@ -162,11 +160,7 @@ export const Projects = ({ projects = [] }: Props = {}) => {
                                     decoding="async"
                                     style={{ color: 'transparent' }}
                                     className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
-                                    src={
-                                        project.title === 'Personal portfolio v1'
-                                            ? preview
-                                            : project.image
-                                    }
+                                    src={project.image}
                                 />
                             </div>
                         </li>

@@ -64,11 +64,11 @@ export const Footer = () => {
                 </a>
                 , deployed with{' '}
                 <a
-                    href="https://render.com/"
+                    href="https://www.netlify.com/"
                     className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
                     target="_blank"
                     rel="noreferrer noopener"
-                    aria-label="Render (opens in a new tab)"
+                    aria-label="Netlify (opens in a new tab)"
                 >
                     Netlify
                 </a>
