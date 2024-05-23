@@ -1,7 +1,7 @@
 import { Summary } from './Summary'
 import { useState } from 'react'
 
-import ReactPopover from '../assets/PopOver'
+import { Popover } from '../assets/PopOver'
 
 export const About = () => {
     const [name, setName] = useState('small')
@@ -65,7 +65,7 @@ export const About = () => {
                     onClick={(event) => updateSummary(event as React.MouseEvent<HTMLButtonElement>)}
                     aria-label={name}
                 >
-                    <ReactPopover trigger="hover" content={<p>Water me!</p>}>
+                    <Popover trigger="hover" content={<p>Water me!</p>}>
                         <img
                             className="rounded-full"
                             height="100"
@@ -73,7 +73,7 @@ export const About = () => {
                             src="./plant-stage-1.svg"
                             alt="plant"
                         />
-                    </ReactPopover>
+                    </Popover>
                 </button>
             </div>
         </section>

@@ -224,5 +224,43 @@
                 }
             ]
         }
+    ],
+    "certificates": [
+        {
+            "name": "Programming Basics",
+            "date": "January 2023",
+            "img": "./Programming Basics - January 2023 - Certificate.jpeg",
+            "link": "https://softuni.bg/certificates/details/159814/4fcfee60"
+        },
+        {
+            "name": "Programming Fundamentals with JavaScript",
+            "date": "May 2023",
+            "img": "./Programming Fundamentals with JavaScript - May 2023 - Certificate.jpeg",
+            "link": "https://softuni.bg/certificates/details/180198/31625e83"
+        },
+        {
+            "name": "JS Advanced",
+            "date": "September 2023",
+            "img": "./JS Advanced - September 2023 - Certificate.jpeg",
+            "link": "https://softuni.bg/certificates/details/195467/d2fe5f99"
+        },
+        {
+            "name": "JS Applications",
+            "date": "October 2023",
+            "img": "./JS Applications - October 2023 - Certificate.jpeg",
+            "link": "https://softuni.bg/certificates/details/195298/1f9f9bde"
+        },
+        {
+            "name": "HTML & CSS",
+            "date": "January 2024",
+            "img": "./HTML & CSS - January 2024 - Certificate.jpeg",
+            "link": "https://softuni.bg/certificates/details/205221/f430eb0f"
+        },
+        {
+            "name": "IT Career Booster",
+            "date": "October 2023",
+            "img": "./IT Career Booster - October 2023 - Certificate.jpeg",
+            "link": "https://softuni.bg/certificates/details/198763/3656b8e0"
+        }
     ]
 }

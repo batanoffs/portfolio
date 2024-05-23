@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
 
-interface ReactPopoverProps {
+interface PopoverProps {
     children: React.ReactNode
     content: React.ReactNode
     trigger?: 'click' | 'hover'
 }
 
-function ReactPopover({ children, content, trigger = 'click' }: ReactPopoverProps) {
+export const Popover = ({ children, content, trigger = 'click' }: PopoverProps) => {
     const [show, setShow] = useState(false)
     const wrapperRef = useRef<HTMLDivElement>(null)
 
@@ -60,5 +60,3 @@ function ReactPopover({ children, content, trigger = 'click' }: ReactPopoverProp
         </div>
     )
 }
-
-export default ReactPopover

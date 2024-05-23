@@ -1,5 +1,8 @@
 import { StickyMenu } from './StickyMenu'
 import { MainContent } from './MainContent'
+import { Routes, Route } from 'react-router-dom'
+import { Certificates } from './Certificates'
+import { Footer } from './Footer'
 
 export const Home = () => {
     // TODO
@@ -28,7 +31,13 @@ export const Home = () => {
                 </a>
                 <div className="lg:flex lg:justify-between lg:gap-4">
                     <StickyMenu />
-                    <MainContent />
+                    <main id="content" className="pt-24 lg:w-1/2 lg:py-24">
+                        <Routes>
+                            <Route path="/" element={<MainContent />} />
+                            <Route path="/certificates" element={<Certificates />} />
+                        </Routes>
+                        <Footer />
+                    </main>
                 </div>
             </div>
         </div>

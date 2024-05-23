@@ -4,6 +4,7 @@ import ScrollToAnchor from './utils/ScrollToAnchor'
 
 import { Home } from './components/Home'
 
+
 import './index.css'
 
 export const App = () => {
