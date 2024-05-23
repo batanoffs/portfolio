@@ -5,7 +5,7 @@ const NavItems = [
     { name: 'About', href: '/#about' },
     { name: 'Experience', href: '/#experience' },
     { name: 'Projects', href: '/#projects' },
-    { name: 'Certificates', href: '/certificates' },
+    { name: 'Certificates', href: '/#certificates' },
 ]
 
 export const StickyMenu = () => {

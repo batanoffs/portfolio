@@ -3,7 +3,7 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-type SingleCarouselProps = {
+type Certificates = {
     certificates: CertificateProps[]
 }
 
@@ -14,7 +14,7 @@ type CertificateProps = {
     link: string
 }
 
-export const SingleCarousel = ({ certificates }: SingleCarouselProps) => {
+export const SingleCarousel = ({ certificates }: Certificates) => {
     const settings = {
         dots: false,
         infinite: true,

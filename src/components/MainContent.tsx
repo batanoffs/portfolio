@@ -3,7 +3,7 @@
 import { Experience } from './Experience'
 import { Projects } from './Projects'
 import { About } from './About'
-import { Resume } from './Resume'
+import { Certificates } from './Certificates'
 
 import data from '../data.json'
 
@@ -13,6 +13,7 @@ export const MainContent = () => {
             <About />
             <Experience experience={data.work} />
             <Projects projects={data.projects} />
+            <Certificates certificates={data.certificates} />
         </>
     )
 }
