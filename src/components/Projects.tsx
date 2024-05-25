@@ -1,9 +1,13 @@
+import { Link } from 'react-router-dom'
+
 type Project = {
     id: string
     title: string
     description: string
     url: string
     image: string
+    href: string
+    label: string
     tags?: {
         id: string
         name: string
@@ -50,12 +54,12 @@ export const Projects = ({ projects = [] }: Props = {}) => {
                                 <div className="z-10 sm:order-2 sm:col-span-6">
                                     <h3>
                                         {project.title.includes('book store') ? (
-                                            <a
+                                            <Link
                                                 className="inline-flex items-baseline font-medium
                                             leading-tight text-slate-200 hover:text-teal-300
                                             focus-visible:text-teal-300 group/link text-base "
-                                                href={project.url}
-                                                rel="noreferrer noopener"
+                                                to={project.href}
+                                                target='_self'
                                                 aria-label="coming soon"
                                             >
                                                 <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
@@ -78,16 +82,16 @@ export const Projects = ({ projects = [] }: Props = {}) => {
                                                         </svg>
                                                     </span>
                                                 </span>
-                                            </a>
+                                            </Link>
                                         ) : (
-                                            <a
+                                            <Link
                                                 className="inline-flex items-baseline font-medium
                                                 leading-tight text-slate-200 hover:text-teal-300
                                                 focus-visible:text-teal-300 group/link text-base"
-                                                href={project.url}
-                                                target="_blank"
+                                                to={project.href}
+                                                target='_self'
                                                 rel="noreferrer noopener"
-                                                aria-label="Build a Spotify Connected App (opens in a new tab)"
+                                                aria-label={project.label || 'View project'}
                                             >
                                                 <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
 
@@ -109,7 +113,7 @@ export const Projects = ({ projects = [] }: Props = {}) => {
                                                         </svg>
                                                     </span>
                                                 </span>
-                                            </a>
+                                            </Link>
                                         )}
                                     </h3>
                                     {project.title.includes('book store') ? (

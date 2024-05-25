@@ -16,7 +16,16 @@ export const StickyMenu = () => {
                     <Link to="/">Daniel Batanov </Link>
                 </h1>
                 <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
-                    Junior Frontend Developer
+                    Junior
+                    <div>
+                        <ul className="">
+                            <li>React</li>
+                            <li>JavaScript</li>
+                            <li>TypeScript</li>
+                            <li>Frontend</li>
+                        </ul>
+                    </div>
+                    Frontend Developer
                 </h2>
                 <p className="mt-4 max-w-xs leading-normal">
                     I build responsive animated products and digital experiences for the web.

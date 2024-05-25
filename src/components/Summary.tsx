@@ -138,7 +138,7 @@ export const Summary = ({ name, className }: SummaryProps) => {
             <p className="mb-4">Hello and welcome!</p>
 
             <p className="mb-4">
-                Ever since writing my first program in high school mathematics, I have developed a
+                Ever since writing my first program in high school of mathematics, I have developed a
                 deep passion for coding. As a former architect, my passion was further nurtured
                 through extensive collaboration with software developers in my previous role.
             </p>
@@ -175,7 +175,7 @@ export const Summary = ({ name, className }: SummaryProps) => {
             <p className="mb-4">Hello and welcome!</p>
 
             <p className="mb-4 text-pretty">
-                Ever since I wrote my first program in high school mathematics, I knew I was hooked
+                Ever since I wrote my first program in high school of mathematics, I knew I was hooked
                 on the art of coding. My passion kicked in later, when I was working as an architect
                 at{' '}
                 <a
