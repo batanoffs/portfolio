@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-// import watercan from "./watercan.svg"
 
 export default {
     content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
@@ -85,10 +84,10 @@ export default {
                 watering: 'wiggle 1.2s linear infinite',
                 pulse: 'pulse 1.5s infinite',
                 writing: 'writing 0.5s 0s 1 normal both',
-                '.flip2': { animation: 'flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite' },
-                '.flip3': { animation: 'flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite' },
-                '.flip4': { animation: 'flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite' },
-                '.flip5': { animation: 'flip5 12s cubic-bezier(0.23, 1, 0.32, 1.2) infinite' },
+                flip2: 'flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite',
+                flip3: 'flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite',
+                flip4: 'flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite',
+                flip5: 'flip5 12s cubic-bezier(0.23, 1, 0.32, 1.2) infinite',
             },
             spacing: {
                 128: '32rem',

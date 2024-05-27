@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -27,62 +28,3 @@ html {
 html::-moz-scrollbar {
     display: none;
 }
-
-/* text swipe animation */
-
-.wordCarousel {
-    font-size: 36px;
-    font-weight: 100;
-    color: #eee;
-}
-
-.wordCarousel div {
-    overflow: hidden;
-    position: relative;
-    float: right;
-    height: 65px;
-    padding-top: 10px;
-    margin-top: -10px;
-}
-
-.wordCarousel div li {
-    font-family: Serif;
-    color: #eee;
-    font-weight: 700;
-    padding: 0 10px;
-    height: 45px;
-    margin-bottom: 45px;
-    display: block;
-}
-
-
-/* // Layout //////////////////////////////////////////
-
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Oswald);
-body,
-html {
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-body {
-    font-family: "Roboto Condensed", cursive;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: darkorange; 
-    &::after {
-        content:"";
-        display: block;
-        width: 110%;
-        height: 125vh;
-        background: radial-gradient(#222, #000);
-        position: absolute;
-        z-index: -1;
-        transform: rotate(20deg);
-        border-radius: 50%;
-    }
-} */
