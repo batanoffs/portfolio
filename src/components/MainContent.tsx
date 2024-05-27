@@ -1,5 +1,3 @@
-// import { Routes, Route } from 'react-router-dom'
-
 import { Experience } from './Experience'
 import { Projects } from './Projects'
 import { About } from './About'

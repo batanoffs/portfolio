@@ -119,8 +119,15 @@
             "title": "Mini Finance Innovations",
             "description": "This is the project I completed for Softuniada 2024 programing Olympiad. In short it is responsive platform that simulates online banking, offering features such as top-up, add friends, transactions, history and more.",
             "image": "https://notablepen.backendless.app/api/files/app/AppData/home/newLogoPng.png",
-            "url": "https://batanoffs.github.io/mini-finance/",
-            "href": "./mini-finance",
+            "links": {
+                "live": "https://batanoffs.github.io/mini-finance/",
+                "github": "https://github.com/batanoffs/mini-finance"
+            },
+            "href": "/mini-finance",
+            "achievments": [
+                "Top 10",
+                "Finance App"
+            ],
             "tags": [
                 {
                     "id": "0",
@@ -162,8 +169,25 @@
             "title": "Ra-auth-ui ~ open source",
             "description": "To improve my skills recently I started working on this open scource project which is Authentication layouts, hooks and pipelines to integrate into react-admin. It is available on NPM and averages 20 weekly download. I've worked on the readme file and some components. I am learning more about the code and how react-admin works under the hood.",
             "image": "/ra-auth.png",
-            "url": "https://github.com/ValentinnDimitroff/ra-auth-ui",
-            "href": "./ra-auth-ui",
+            "links": {
+                "github": "https://github.com/ValentinnDimitroff/ra-auth-ui",
+                "npm": "https://www.npmjs.com/package/ra-auth-ui"
+            },
+            "href": "/ra-auth-ui",
+            "achievments": [
+                {
+                    "stars": "4"
+                },
+                {
+                    "forks": "3"
+                },
+                {
+                    "downloads": "300+"
+                },
+                { 
+                    "version": "v1.0.9"
+                }
+            ],
             "tags": [
                 {
                     "id": "0",
@@ -193,8 +217,12 @@
             "title": "E-commerce book store",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus distinctio nam illum est? Vitae, eum ab nihil facere soluta eaque in! Quia veniam est laudantium aliquid assumenda vitae dolore? Blanditiis.",
             "image": "/comingsoon2.png",
-            "url": "",
-            "href": "./book-store",
+            "links": {
+                "live": "",
+                "github": ""
+            },
+            "href": "/book-store",
+            "milestones": [],
             "tags": [
                 {
                     "id": "0",

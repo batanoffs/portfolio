@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 
 import { MainContent } from './components/MainContent'
 import { Footer } from './components/Footer'
-import { MasterLayout } from './layout/master'
+import { MasterLayout } from './layout/MasterLayout'
 import { MainLayout } from './layout/MainLayout'
 import { SocialIcons } from './components/SocialIcons'
 import { JobTitleAnimatedText } from './components/JobTitle'
@@ -10,7 +10,9 @@ import { Navigation } from './components/Navigation'
 import ScrollToAnchor from './utils/ScrollToAnchor'
 
 import { SideLayout } from './layout/SideLayout'
+import { ProjectDetails } from './pages/ProjectsDetails'
 
+import data from './data.json'
 import './index.css'
 
 export const App = () => {
@@ -25,6 +27,12 @@ export const App = () => {
             <MainLayout>
                 <Routes>
                     <Route path="/" element={<MainContent />} />
+                    {data.projects.map((project) => (
+                        <Route
+                            path={project.href}
+                            element={<ProjectDetails project={project} />}
+                        />
+                    ))}
                 </Routes>
                 <Footer />
             </MainLayout>

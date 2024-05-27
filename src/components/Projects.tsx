@@ -2,16 +2,29 @@ import { Link } from 'react-router-dom'
 
 type Project = {
     id: string
+    label: string
     title: string
     description: string
-    url: string
     image: string
+    links: {
+        live?: string
+        github?: string
+        npm?: string
+    }
+    achievments?: Array<
+        | string
+        | {
+              stars?: string
+              forks?: string
+              downloads?: string
+              version?: string
+          }
+    >
     href: string
-    label: string
-    tags?: {
+    tags: Array<{
         id: string
         name: string
-    }[]
+    }>
 }
 
 type Props = {
@@ -59,7 +72,7 @@ export const Projects = ({ projects = [] }: Props = {}) => {
                                             leading-tight text-slate-200 hover:text-teal-300
                                             focus-visible:text-teal-300 group/link text-base "
                                                 to={project.href}
-                                                target='_self'
+                                                target="_self"
                                                 aria-label="coming soon"
                                             >
                                                 <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
@@ -89,7 +102,7 @@ export const Projects = ({ projects = [] }: Props = {}) => {
                                                 leading-tight text-slate-200 hover:text-teal-300
                                                 focus-visible:text-teal-300 group/link text-base"
                                                 to={project.href}
-                                                target='_self'
+                                                target="_self"
                                                 rel="noreferrer noopener"
                                                 aria-label={project.label || 'View project'}
                                             >
