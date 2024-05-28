@@ -1,0 +1,477 @@
+{
+    "projects": [
+        {
+            "id": "0",
+            "label": "Mini Finance Innovations",
+            "title": "Mini Finance Innovations",
+            "description": "This is the project I completed for Softuniada 2024 programing Olympiad. In short it is responsive platform that simulates online banking, offering features such as top-up, add friends, transactions, history and more.",
+            "image": "https://notablepen.backendless.app/api/files/app/AppData/home/newLogoPng.png",
+            "links": {
+                "live": "https://batanoffs.github.io/mini-finance/",
+                "github": "https://github.com/batanoffs/mini-finance"
+            },
+            "href": "/mini-finance",
+            "menu": [
+                "Intro",
+                "Test account",
+                "Features",
+                "Future updates",
+                "Libraries and Services",
+                "Usage",
+                "Installation",
+                {
+                    "name": "Project Content",
+                    "items": [
+                        "Login/Register",
+                        "About",
+                        "Dashboard",
+                        "Notifications",
+                        "Profile menu",
+                        "Transactions",
+                        "Profile settings",
+                        "Quick actions",
+                        "Last transactions",
+                        "Autocomplete",
+                        "Wallet",
+                        "User balance",
+                        "Profile overview",
+                        "Help center"
+                    ]
+                },
+                "Design and Architecture",
+                "Contributing",
+                "License"
+            ],
+            "content": [
+                {
+                    "section": "Introduction",
+                    "items": [
+                        {
+                            "text": "This is the project I completed for Softuniada 2024 programing Olympiad. In short it is responsive platform that simulates online banking, offering features such as top-up, add friends, transactions, history and more."
+                        }
+                    ]
+                },
+                {
+                    "section": "Test account",
+                    "items": [
+                        "username: ivo@abv.bg, password: Minifinance123",
+                        "username: test@abv.bg, password: Minifinance123"
+                    ]
+                },
+                {
+                    "section": "Features",
+                    "items": [
+                        "Account top-up",
+                        "Add friends, Add favourites",
+                        "Notifications",
+                        "User-to-user transactions",
+                        "Transaction history tracking",
+                        "Autocomplete user input",
+                        "User profile management"
+                    ]
+                },
+                {
+                    "section": "Future updates",
+                    "items": [
+                        {
+                            "text": "oAuth",
+                            "checked": false
+                        },
+                        {
+                            "text": "Change notification settings",
+                            "checked": false
+                        },
+                        {
+                            "text": "Change profile info",
+                            "checked": true
+                        },
+                        {
+                            "text": "Age check on register",
+                            "checked": false
+                        },
+                        {
+                            "text": "Top up account",
+                            "checked": true
+                        },
+                        {
+                            "text": "Language change",
+                            "checked": false
+                        },
+                        {
+                            "text": "Dark theme",
+                            "checked": false
+                        },
+                        {
+                            "text": "Chat bot",
+                            "checked": false
+                        },
+                        {
+                            "text": "Help center search topic",
+                            "checked": false
+                        },
+                        {
+                            "text": "Update subscription plan",
+                            "checked": false
+                        },
+                        {
+                            "text": "Wallet transactions",
+                            "checked": true
+                        }
+                    ]
+                },
+                {
+                    "section": "Libraries and Services",
+                    "items": [
+                        "Backendless as the backend service",
+                        "Exchange Rate API for real-time exchange rates",
+                        "Create-react-app library",
+                        "React-router library",
+                        "React credit card 2 library",
+                        "Ant Design library for a few components",
+                        "Font Awesome Icons library",
+                        "Dotenv library for secret keys",
+                        "FaceIO library for face recognition (removed due to trial version)"
+                    ]
+                },
+                {
+                    "section": "Usage",
+                    "items": [
+                        "Register",
+                        "Topping up the account using a credit card",
+                        "Add friends",
+                        "Remove friends",
+                        "Making a transaction to another user in the ecosystem of 'Mini Finance Innovations'",
+                        "Viewing transactions history",
+                        "Changing profile info and profile picture",
+                        "Interact with notifications"
+                    ]
+                },
+                {
+                    "section": "Installation",
+                    "items": [
+                        "Clone the repository: git clone https://github.com/batanoffs/mini-finance.git",
+                        "Navigate to the project directory: cd your-project-directory",
+                        "Install dependencies: npm install",
+                        "Start the development server: npm start",
+                        "Open your browser and go to http://localhost:3000/mini-finance/ to view the app.",
+                        "Login with test credentials or register new account"
+                    ]
+                },
+                {
+                    "section": "Project content",
+                    "items": [
+                        {
+                            "subsection": "Login/Register",
+                            "details": "The user can log in to the app with an existing account or register a new one. The registration is a multi-step process as shown below and clearly displays the user's current stage. There is validation implemented for the user's input."
+                        },
+                        {
+                            "subsection": "About",
+                            "details": "About page"
+                        },
+                        {
+                            "subsection": "Dashboard",
+                            "details": "Provides a central interface for managing the account, navigation, including virtual card, balance, last transactions, quick actions and buttons."
+                        },
+                        {
+                            "subsection": "Notifications",
+                            "details": "Provides real-time notifications for friend requests and money transactions to inform users in real-time. The notifications also display the time when the notification was created and possible actions, when the user hovers over the notification with the mouse."
+                        },
+                        {
+                            "subsection": "Profile menu",
+                            "details": "Web and Mobile views"
+                        },
+                        {
+                            "subsection": "Transactions",
+                            "details": "Needs update"
+                        },
+                        {
+                            "subsection": "Profile settings",
+                            "details": "Users can change information about their account, including email, profile picture and information about credit card, as well as manage their notifications."
+                        },
+                        {
+                            "subsection": "Quick actions",
+                            "details": "Provides a quick way to execute tasks such as sending money, adding friends, requesting money, and adding friends to a category of favorite"
+                        },
+                        {
+                            "subsection": "Last transactions",
+                            "details": "Users can view their transaction history, which shows the last 5 transactions"
+                        },
+                        {
+                            "subsection": "Autocomplete",
+                            "details": "Autocomplete"
+                        },
+                        {
+                            "subsection": "Wallet",
+                            "details": "Shows all movements in the account, as well as quick buttons for sending money, loading money and searching for an amount"
+                        },
+                        {
+                            "subsection": "User balance",
+                            "details": "The dashboard contains the information about the current balance of the user for quick financial overview as well virtual card details"
+                        },
+                        {
+                            "subsection": "Profile overview",
+                            "details": "Here the user can view their data and perform actions towards their friends, as well as see who they are"
+                        },
+                        {
+                            "subsection": "Help center",
+                            "details": "Menu for help and frequently asked questions with search functionality (still not implemented)"
+                        }
+                    ]
+                },
+                {
+                    "section": "Design and Architecture",
+                    "items": [
+                        "Serverless architecture, based on Backendless as a provider.",
+                        "Used Exchange Rate API for live update rates",
+                        "Context Providers: AuthContext – provides data of authenticated user to welcomePage component through useContext from React. Additionally exports useAuthContext()",
+                        "Custom Hooks: useMessage(), useForm(initialState, onLogin, onRegister), useSessionStorage(key, initialValue), useValidate(initialStatе)",
+                        "Routers: Main router (located in App component), Secondary router (located in WelcomePage component)",
+                        "Constants: baseURL (stores base URL for backendless and exchangerate API)",
+                        "Utils: setNewGeneratedId(), formatDate(date), showLastCardDigits(number)",
+                        "Services: Authentication (authService), Virtual card generation (cardGeneratorService), Exchange Rate (exchangeRateService), Notifications (notificationService), Transactions (transactionService), User Data (userDataService)"
+                    ]
+                },
+                {
+                    "section": "Contributing",
+                    "items": [
+                        "This project is maintained by batanoffs and tested by Ivan-0101. Currently is not open to additional contributions.",
+                        "It is inspired by the layout of Tooplate 2135 Mini Finance Template. Some icons are used from Julia G at www.icons8.com"
+                    ]
+                },
+                {
+                    "section": "License",
+                    "items": [
+                        "This project is licensed under MIT Licence - see the LICENSE.txt file for details."
+                    ]
+                }
+            ],
+            "badges": [
+                {
+                    "type": "Top 10",
+                    "link": "https://img.shields.io/badge/Softuniada2024-TOP10-blue"
+                },
+                {
+                    "type": "Licence",
+                    "link": "https://img.shields.io/badge/Licence-MIT-teal"
+                },
+                {
+                    "type": "styled with prettier",
+                    "link": "https://img.shields.io/badge/styled_with-prettier-teal"
+                },
+                {
+                    "type": "styled with prettier",
+                    "link": "https://img.shields.io/badge/Finance-web_app-teal"
+                }
+            ],
+            "tags": [
+                {
+                    "id": "0",
+                    "name": "Finance"
+                },
+                {
+                    "id": "1",
+                    "name": "Web Application"
+                },
+                {
+                    "id": "2",
+                    "name": "React"
+                },
+                {
+                    "id": "3",
+                    "name": "REST API"
+                }
+            ]
+        },
+        {
+            "id": "1",
+            "label": "React Admin Auth UI",
+            "title": "Ra-Auth-UI ~ open source",
+            "description": "To improve my skills recently I started working on this open scource project which is Authentication layouts, hooks and pipelines to integrate into react-admin. It is available on NPM and averages 20 weekly download. I've worked on the readme file and some components. I am learning more about the code and how react-admin works under the hood.",
+            "image": "/ra-auth.png",
+            "links": {
+                "github": "https://github.com/ValentinnDimitroff/ra-auth-ui",
+                "npm": "https://www.npmjs.com/package/ra-auth-ui"
+            },
+            "href": "/ra-auth-ui",
+            "menu": [
+                "What's included?",
+                "Installation",
+                "Available Props",
+                "How to use",
+                "Troubleshooting"
+            ],
+            "content": [
+                {
+                    "section": "What's included?",
+                    "items": [
+                        "Login and Sign Up",
+                        "Forgot Password and Reset Password",
+                        "Easy to use wrappers"
+                    ]
+                },
+                {
+                    "section": "Installation",
+                    "items": [
+                        "Available as a npm package. You can install it using:",
+                        {
+                            "subSection": "Commands",
+                            "commands": [
+                                "npm install ra-auth-ui",
+                                "yarn add ra-auth-ui"
+                            ]
+                        },
+                        "Run the Demo",
+                        {
+                            "subSection": "Commands",
+                            "commands": [
+                                "npm run start-demo",
+                                "yarn start-demo"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "section": "Available Props",
+                    "items": [
+                        {
+                            "propName": "authRoutes",
+                            "type": "array",
+                            "default": "array",
+                            "description": "If unset provides default authentication routes and screens."
+                        },
+                        {
+                            "propName": "authLayout",
+                            "type": "object",
+                            "default": "undefined",
+                            "description": "If set to '{userMenu: true}' provides default UserMenu. If set to object pass on the props to Layout."
+                        },
+                        {
+                            "propName": "profilePage",
+                            "type": "bool | element",
+                            "default": "undefined",
+                            "description": "If set to 'true' provides default Profile Page layout. You can pass your own component."
+                        }
+                    ]
+                },
+                {
+                    "section": "How to use",
+                    "items": [
+                        "Prepare the authProvider",
+                        "First you should build your `authProvider` as explained in the react-admin documentation.",
+                        {
+                            "subSection": "Example",
+                            "code": "const authProvider = {\n    // ... default authProvider verbs\n    signUp: (params) => Promise.resolve(),\n    forgotPassword: (params) => Promise.resolve(),\n    resetPassword: (params) => Promise.resolve(),\n}"
+                        },
+                        "Use AuthAdmin wrapper",
+                        "The most basic way to add the complete set of authentication screens to your app is to substitute the `<Admin/>` component with `<AuthAdmin/>`.",
+                        {
+                            "subSection": "Example",
+                            "code": "import { AuthAdmin } from 'ra-auth-ui'\n\nconst App = () => <AuthAdmin authProvider={authProvider}>// your Routes here</AuthAdmin>"
+                        }
+                    ]
+                },
+                {
+                    "section": "Troubleshooting",
+                    "items": [
+                        "`useRoutes() may be used only in the context of a <Router> component. react-admin`",
+                        "This error relates to a missing or misplaced `<BrowserRouter>` wrapper. It should be wrapping the whole `<App/>`.",
+                        "`No QueryClient set, use QueryClientProvider to set one`"
+                    ]
+                }
+            ],
+            "badges": [
+                {
+                    "type": "npm version",
+                    "link": "https://img.shields.io/npm/v/ra-auth-ui.svg"
+                },
+                {
+                    "type": "npm downloads",
+                    "link": "https://img.shields.io/npm/dm/ra-auth-ui.svg"
+                },
+                {
+                    "type": "GitHub license",
+                    "link": "https://img.shields.io/badge/licence-MIT-teal"
+                },
+                {
+                    "type": "PRs Welcome",
+                    "link": "https://img.shields.io/badge/PRs-welcome-teal"
+                },
+                {
+                    "type": "minzipped size",
+                    "link": "https://badgen.net/bundlephobia/minzip/ra-auth-ui&label=bundlephobia-teal"
+                },
+                {
+                    "type": "styled with prettier",
+                    "link": "https://img.shields.io/badge/styled_with-prettier-teal"
+                }
+            ],
+            "tags": [
+                {
+                    "id": "0",
+                    "name": "React"
+                },
+                {
+                    "id": "1",
+                    "name": "Admin"
+                },
+                {
+                    "id": "2",
+                    "name": "Authentication"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "label": "Book Store",
+            "title": "E-commerce book store",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus distinctio nam illum est? Vitae, eum ab nihil facere soluta eaque in! Quia veniam est laudantium aliquid assumenda vitae dolore? Blanditiis.",
+            "image": "/comingsoon2.png",
+            "links": {
+                "live": "",
+                "github": ""
+            },
+            "href": "/book-store",
+            "menu": [
+                "Introduction",
+                "Features",
+                "Technologies",
+                "Milestones",
+                "Achievements"
+            ],
+            "tags": [
+                {
+                    "id": "0",
+                    "name": "React"
+                },
+                {
+                    "id": "1",
+                    "name": "TypeScript"
+                },
+                {
+                    "id": "2",
+                    "name": "TailwindCSS"
+                },
+                {
+                    "id": "3",
+                    "name": "Vite"
+                },
+                {
+                    "id": "4",
+                    "name": "Material UI"
+                },
+                {
+                    "id": "5",
+                    "name": "NodeJS"
+                },
+                {
+                    "id": "6",
+                    "name": "PostgreSQL"
+                },
+                {
+                    "id": "7",
+                    "name": "Express"
+                }
+            ]
+        }
+    ]
+}

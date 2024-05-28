@@ -7,16 +7,17 @@ import { MainLayout } from './layout/MainLayout'
 import { SocialIcons } from './components/SocialIcons'
 import { JobTitleAnimatedText } from './components/JobTitle'
 import { Navigation } from './components/Navigation'
+import { SideLayout } from './layout/SideLayout'
+import { ProjectPage } from './pages/ProjectPage'
+
 import ScrollToAnchor from './utils/ScrollToAnchor'
 
-import { SideLayout } from './layout/SideLayout'
-import { ProjectDetails } from './pages/ProjectsDetails'
-
-import data from './data.json'
+import data from './projects.json'
 import './index.css'
 
 export const App = () => {
     ScrollToAnchor()
+
     return (
         <MasterLayout>
             <SideLayout>
@@ -30,7 +31,7 @@ export const App = () => {
                     {data.projects.map((project) => (
                         <Route
                             path={project.href}
-                            element={<ProjectDetails project={project} />}
+                            element={<ProjectPage key={project.id} project={project} />}
                         />
                     ))}
                 </Routes>
@@ -39,3 +40,4 @@ export const App = () => {
         </MasterLayout>
     )
 }
+

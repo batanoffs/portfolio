@@ -11,16 +11,19 @@ type Project = {
         github?: string
         npm?: string
     }
-    achievments?: Array<
-        | string
-        | {
-              stars?: string
-              forks?: string
-              downloads?: string
-              version?: string
-          }
-    >
     href: string
+    menu: Array<string | string[]>
+    content: Array<{
+        section: string
+        items: Array<string | { subSection?: string; commands?: string[]; code?: string }>
+    }>
+    achievements: Array<{
+        section: string
+        items: Array<{
+            type: string
+            link: string
+        }>
+    }>
     tags: Array<{
         id: string
         name: string
