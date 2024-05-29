@@ -45,6 +45,7 @@
             ],
             "content": [
                 {
+                    "id": 1,
                     "section": "Introduction",
                     "items": [
                         {
@@ -53,6 +54,7 @@
                     ]
                 },
                 {
+                    "id": 2,
                     "section": "Test account",
                     "items": [
                         "username: ivo@abv.bg, password: Minifinance123",
@@ -60,6 +62,7 @@
                     ]
                 },
                 {
+                    "id": 3,
                     "section": "Features",
                     "items": [
                         "Account top-up",
@@ -72,6 +75,7 @@
                     ]
                 },
                 {
+                    "id": 4,
                     "section": "Future updates",
                     "items": [
                         {
@@ -121,6 +125,7 @@
                     ]
                 },
                 {
+                    "id": 5,
                     "section": "Libraries and Services",
                     "items": [
                         "Backendless as the backend service",
@@ -135,6 +140,7 @@
                     ]
                 },
                 {
+                    "id": 6,
                     "section": "Usage",
                     "items": [
                         "Register",
@@ -148,6 +154,7 @@
                     ]
                 },
                 {
+                    "id": 7,
                     "section": "Installation",
                     "items": [
                         "Clone the repository: git clone https://github.com/batanoffs/mini-finance.git",
@@ -159,6 +166,7 @@
                     ]
                 },
                 {
+                    "id": 8,
                     "section": "Project content",
                     "items": [
                         {
@@ -220,6 +228,7 @@
                     ]
                 },
                 {
+                    "id": 9,
                     "section": "Design and Architecture",
                     "items": [
                         "Serverless architecture, based on Backendless as a provider.",
@@ -233,6 +242,7 @@
                     ]
                 },
                 {
+                    "id": 10,
                     "section": "Contributing",
                     "items": [
                         "This project is maintained by batanoffs and tested by Ivan-0101. Currently is not open to additional contributions.",
@@ -240,6 +250,7 @@
                     ]
                 },
                 {
+                    "id": 11,
                     "section": "License",
                     "items": [
                         "This project is licensed under MIT Licence - see the LICENSE.txt file for details."
@@ -304,6 +315,7 @@
             ],
             "content": [
                 {
+                    "id": "1",
                     "section": "What's included?",
                     "items": [
                         "Login and Sign Up",
@@ -312,20 +324,19 @@
                     ]
                 },
                 {
+                    "id": "2",
                     "section": "Installation",
                     "items": [
                         "Available as a npm package. You can install it using:",
                         {
-                            "subSection": "Commands",
-                            "commands": [
-                                "npm install ra-auth-ui",
-                                "yarn add ra-auth-ui"
+                            "code": [
+                                "npm install ra-auth-ui && yarn add ra-auth-ui"
+                                
                             ]
                         },
                         "Run the Demo",
                         {
-                            "subSection": "Commands",
-                            "commands": [
+                            "code": [
                                 "npm run start-demo",
                                 "yarn start-demo"
                             ]
@@ -333,6 +344,7 @@
                     ]
                 },
                 {
+                    "id": "3",
                     "section": "Available Props",
                     "items": [
                         {
@@ -356,6 +368,7 @@
                     ]
                 },
                 {
+                    "id": "4",
                     "section": "How to use",
                     "items": [
                         "Prepare the authProvider",
@@ -368,11 +381,12 @@
                         "The most basic way to add the complete set of authentication screens to your app is to substitute the `<Admin/>` component with `<AuthAdmin/>`.",
                         {
                             "subSection": "Example",
-                            "code": "import { AuthAdmin } from 'ra-auth-ui'\n\nconst App = () => <AuthAdmin authProvider={authProvider}>// your Routes here</AuthAdmin>"
+                            "code": "import { AuthAdmin } from 'ra-auth-ui'\n\nconst App = () => \n <AuthAdmin authProvider={authProvider}> \n // your Routes here \n </AuthAdmin>"
                         }
                     ]
                 },
                 {
+                    "id": "5",
                     "section": "Troubleshooting",
                     "items": [
                         "`useRoutes() may be used only in the context of a <Router> component. react-admin`",
@@ -434,6 +448,8 @@
                 "github": ""
             },
             "href": "/book-store",
+            "content": [],
+            "badges": [],
             "menu": [
                 "Introduction",
                 "Features",

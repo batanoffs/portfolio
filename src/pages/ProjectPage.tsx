@@ -17,9 +17,8 @@ type Project = {
     href: string
     menu: Array<string | string[] | { name: string; items: string[] }>
     content: Array<{
-        id: string
-        section: string
-        items: Array<
+        section?: string
+        items?: Array<
             | string
             | {
                   subSection?: string
@@ -32,12 +31,12 @@ type Project = {
         >
     }>
     badges: Array<{
-        type: string
-        link: string
+        type?: string
+        link?: string
     }>
     tags: Array<{
-        id: string
-        name: string
+        id?: string
+        name?: string
     }>
 }
 
@@ -49,16 +48,22 @@ export const ProjectPage = ({ project }: Props) => {
     return (
         <>
             <section className="flex justify-between mb-4 scroll-mt-16 md:mb-2 lg:mb-2 lg:scroll-mt-24">
-                <h1 className="text-xl lg:text-4xl font-bold text-slate-200 self-start">{project.title}</h1>
+                <h1
+                    id={project.title}
+                    className="text-xl lg:text-4xl font-bold text-slate-200 self-start"
+                >
+                    {project.title}
+                </h1>
                 <ProjectLinks links={project.links} />
             </section>
-            <section className="flex flex-wrap lg:flex-nowrap gap-1 mb-4 scroll-mt-6 md:mb-6 lg:mb-4 lg:scroll-mt-24">
+            <section className="flex flex-wrap lg:flex-nowrap gap-2 mb-4 scroll-mt-6 md:mb-6 lg:mb-4">
                 {project.badges?.map((badge, index) => (
                     <span key={index} className="text-sm text-slate-200 font-bold">
                         <img src={badge.link} alt={badge.type} />
                     </span>
                 ))}
             </section>
+
             {project.video !== '' && (
                 <section
                     aria-label="Video"
@@ -72,6 +77,7 @@ export const ProjectPage = ({ project }: Props) => {
                         muted={true}
                         playing={true}
                         controls={true}
+                        pipe={'false'}
                     />
                 </section>
             )}
@@ -112,7 +118,12 @@ export const ProjectPage = ({ project }: Props) => {
                 ))}
             </nav>
 
-            <ProjectContent content={project.content} />
+            <ProjectContent
+                styles="mb-4 p-2 scroll-mt-16 md:mb-12 lg:mb-6 lg:scroll-mt-24 rounded-md 
+                lg:-inset-x-6 lg:bg-slate-800/50 lg:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]
+                lg:drop-shadow-lg"
+                content={project.content}
+            />
         </>
     )
 }

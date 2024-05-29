@@ -31,7 +31,7 @@ export const App = () => {
                     {data.projects.map((project) => (
                         <Route
                             key={project.id}
-                            path={project.href}
+                            path={project.href }
                             element={<ProjectPage project={project} />}
                         />
                     ))}

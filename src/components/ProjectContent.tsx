@@ -17,10 +17,12 @@ interface ProjectContentProps {
               }
         >
     }>
+    styles: string
 }
 
 interface SectionProps {
     section: string
+    styles: string
     items: Array<
         | string
         | {
@@ -55,18 +57,18 @@ interface CommandListProps {
     commands: string[]
 }
 
-export const ProjectContent = ({ content }: ProjectContentProps) => {
+export const ProjectContent = ({ content, styles }: ProjectContentProps) => {
     const renderedContent = useMemo(() => {
         return content.map(({ section, items }, index) => (
-            <Section key={index} section={section} items={items} />
+            <Section key={index} section={section} styles={styles} items={items} />
         ))
-    }, [content])
+    }, [content, styles])
 
     return <>{renderedContent}</>
 }
 
-const Section = ({ section, items }: SectionProps) => (
-    <section id={section} className="mb-6 scroll-mt-16 md:mb-12 lg:mb-24 lg:scroll-mt-24">
+const Section = ({ section, items, styles }: SectionProps) => (
+    <section id={section} className={styles}>
         <h2 className="text-xl font-bold mb-4">{section}</h2>
         <ul className={`${section === 'Future updates' ? 'list-none' : ''}`}>
             {items.map((item, index) => (
@@ -95,7 +97,9 @@ const ItemRenderer = ({ item }: ItemRendererProps): React.ReactNode => {
         return (
             <div className="mb-0">
                 {item.subSection && (
-                    <strong className="inline-block text-lg mb-0">{item.subSection}</strong>
+                    <strong className="inline-block text-xs uppercase mb-1">
+                        {item.subSection}
+                    </strong>
                 )}
                 {item.details && <p className=" text-sm leading-normal">{item.details}</p>}
                 {item.text && <p className=" text-sm leading-normal">{item.text}</p>}
@@ -115,13 +119,13 @@ const CommandList = ({ commands }: CommandListProps): React.ReactNode => (
 )
 
 const CodeSnippet = ({ code }: CodeSnippetProps): React.ReactNode => (
-    <div className="relative bg-gray-100 p-4 rounded-md mb-2">
+    <div className="relative bg-zinc-950 p-4 rounded-md mb-2">
         <pre className="whitespace-pre-line">
             <code>{code}</code>
         </pre>
         <button
             onClick={() => copyToClipboard(code)}
-            className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
+            className="absolute top-2 right-2 text-slate-400 hover:text-slate-200 p-1"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"

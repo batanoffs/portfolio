@@ -3,7 +3,9 @@ import { useState } from 'react'
 
 import { Popover } from '../assets/PopOver'
 
-export const About = () => {
+type styles = string
+
+export const About = ({ styles }: { styles: styles }) => {
     const [name, setName] = useState('small')
 
     const updateSummary = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -38,12 +40,7 @@ export const About = () => {
     }
 
     return (
-        <section
-            id="about"
-            className="flex flex-col justify-between mb-16 scroll-mt-16 h-[auto] md:mb-24 md:h-[500px]
-                    lg:mb-26 lg:h-[500px] lg:scroll-mt-24"
-            aria-label="About me"
-        >
+        <section id="about" className={styles} aria-label="About me">
             <div
                 className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75
                         px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative

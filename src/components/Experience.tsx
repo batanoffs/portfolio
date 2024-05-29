@@ -13,15 +13,12 @@ type Work = {
 
 type ExperienceProps = {
     experience?: Work[]
+    styles?: string
 }
 
 export const Experience = (props: ExperienceProps) => {
     return (
-        <section
-            id="experience"
-            className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
-            aria-label="Work experience"
-        >
+        <section id="experience" className={props.styles} aria-label="Work experience">
             <div
                 className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75
                     px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative
