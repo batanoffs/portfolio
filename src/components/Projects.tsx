@@ -74,7 +74,7 @@ export const Projects = ({ projects = [] }: Props = {}) => {
                                                 className="inline-flex items-baseline font-medium
                                             leading-tight text-slate-200 hover:text-teal-300
                                             focus-visible:text-teal-300 group/link text-base "
-                                                to={project.href}
+                                                to="/#"
                                                 target="_self"
                                                 aria-label="coming soon"
                                             >

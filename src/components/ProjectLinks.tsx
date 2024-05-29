@@ -7,7 +7,7 @@ interface ProjectLinksProps {
 }
 
 export const ProjectLinks = ({ links }: ProjectLinksProps) => (
-    <div className="flex gap-2">
+    <div className="flex gap-4 lg:gap-2">
         {Object.entries(links).map(([linkType, href]) => {
             if (!href) return null
             const getIcon = (linkType: string) => {
@@ -15,7 +15,7 @@ export const ProjectLinks = ({ links }: ProjectLinksProps) => (
                     case 'github':
                         return (
                             <svg
-                                className="hover:fill-cyan-500 fill-white h-8 w-8 my-2 "
+                                className="hover:fill-cyan-500 fill-white h-5 w-5 my-2 lg:h-8 lg:w-8 "
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 480 512"
                             >
@@ -25,7 +25,7 @@ export const ProjectLinks = ({ links }: ProjectLinksProps) => (
                     case 'live':
                         return (
                             <svg
-                                className="hover:fill-cyan-500 fill-white h-8 w-6 my-2"
+                                className="hover:fill-cyan-500 fill-white h-4 w-4 lg:h-8 lg:w-6 my-2"
                                 xmlns="http://www.w3.org/2000/svg"
                                 id="Layer_1"
                                 data-name="Layer 1"
@@ -37,7 +37,7 @@ export const ProjectLinks = ({ links }: ProjectLinksProps) => (
                     case 'npm':
                         return (
                             <svg
-                                className="hover:fill-cyan-500 fill-white h-10 w-10 my-1"
+                                className="hover:fill-cyan-500 fill-white h-9 w-9 lg:h-10 lg:w-10 lg:my-1"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 576 512"
                             >

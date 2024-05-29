@@ -30,8 +30,9 @@ export const App = () => {
                     <Route path="/" element={<MainContent />} />
                     {data.projects.map((project) => (
                         <Route
+                            key={project.id}
                             path={project.href}
-                            element={<ProjectPage key={project.id} project={project} />}
+                            element={<ProjectPage project={project} />}
                         />
                     ))}
                 </Routes>
@@ -40,4 +41,3 @@ export const App = () => {
         </MasterLayout>
     )
 }
-

@@ -1,6 +1,22 @@
 [
-    { "name": "About", "href": "/#about" },
-    { "name": "Experience", "href": "/#experience" },
-    { "name": "Projects", "href": "/#projects" },
-    { "name": "Certificates", "href": "/#certificates" }
+    {
+        "id": "about",
+        "name": "About",
+        "href": "/#about"
+    },
+    {
+        "id": "experience",
+        "name": "Experience",
+        "href": "/#experience"
+    },
+    {
+        "id": "projects",
+        "name": "Projects",
+        "href": "/#projects"
+    },
+    {
+        "id": "certificates",
+        "name": "Certificates",
+        "href": "/#certificates"
+    }
 ]

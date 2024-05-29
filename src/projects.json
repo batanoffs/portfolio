@@ -10,9 +10,10 @@
                 "live": "https://batanoffs.github.io/mini-finance/",
                 "github": "https://github.com/batanoffs/mini-finance"
             },
+            "video": "/mini-finance-demo.mp4",
             "href": "/mini-finance",
             "menu": [
-                "Intro",
+                "Introduction",
                 "Test account",
                 "Features",
                 "Future updates",
@@ -285,9 +286,10 @@
         {
             "id": "1",
             "label": "React Admin Auth UI",
-            "title": "Ra-Auth-UI ~ open source",
+            "title": "Ra-Auth-UI",
             "description": "To improve my skills recently I started working on this open scource project which is Authentication layouts, hooks and pipelines to integrate into react-admin. It is available on NPM and averages 20 weekly download. I've worked on the readme file and some components. I am learning more about the code and how react-admin works under the hood.",
             "image": "/ra-auth.png",
+            "video": "",
             "links": {
                 "github": "https://github.com/ValentinnDimitroff/ra-auth-ui",
                 "npm": "https://www.npmjs.com/package/ra-auth-ui"
@@ -426,6 +428,7 @@
             "title": "E-commerce book store",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus distinctio nam illum est? Vitae, eum ab nihil facere soluta eaque in! Quia veniam est laudantium aliquid assumenda vitae dolore? Blanditiis.",
             "image": "/comingsoon2.png",
+            "video": "",
             "links": {
                 "live": "",
                 "github": ""

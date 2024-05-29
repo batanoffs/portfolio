@@ -8,7 +8,7 @@ export const Navigation = () => {
         <nav className="nav hidden lg:block" aria-label="In-page jump links">
             <ul className="mt-16 w-max">
                 {NavItems.map((item) => (
-                    <li>
+                    <li key={item.id}>
                         <Link className="group flex items-center py-3 active" to={item.href}>
                             <span
                                 className="nav-indicator mr-4 h-px w-8 bg-slate-600
