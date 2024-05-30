@@ -2,60 +2,55 @@ import ReactPlayer from 'react-player/file'
 import { ProjectLinks } from '../components/ProjectLinks'
 import { ProjectContent } from '../components/ProjectContent'
 
-type Project = {
-    id: string
-    label: string
-    title: string
-    description: string
-    image: string
-    video: string
-    links: {
-        live?: string
-        github?: string
-        npm?: string
+type ContentItem =
+    | string
+    | { code: string[] }
+    | { subsection: string; code: string[] }
+    | { text: string; checked?: boolean }
+    | { subsection: string; details: string }
+    | { propName: string; type: string; default: string; description: string }
+
+type ContentSection = {
+    id: number | string
+    section: string
+    items: ContentItem[]
+}
+
+type ProjectProps = {
+    styles: string
+    project: {
+        id: string
+        label: string
+        title: string
+        description: string
+        image: string
+        video: string
+        links: {
+            live?: string
+            github: string
+            npm?: string
+        }
+        href: string
+        menu: (string | { name: string; items: string[] })[]
+        content: ContentSection[]
+        badges: { type: string; link: string }[]
+        tags: { id: string; name: string }[]
     }
-    href: string
-    menu: Array<string | string[] | { name: string; items: string[] }>
-    content: Array<{
-        section?: string
-        items?: Array<
-            | string
-            | {
-                  subSection?: string
-                  commands?: string[]
-                  code?: string
-                  details?: string
-                  text?: string
-                  checked?: boolean
-              }
-        >
-    }>
-    badges: Array<{
-        type?: string
-        link?: string
-    }>
-    tags: Array<{
-        id?: string
-        name?: string
-    }>
 }
 
-type Props = {
-    project: Project
-}
-
-export const ProjectPage = ({ project }: Props) => {
+export const ProjectPage = ({ project, styles }: ProjectProps) => {
     return (
-        <>
-            <section className="flex justify-between mb-4 scroll-mt-16 md:mb-2 lg:mb-2 lg:scroll-mt-24">
+        <section className={styles} aria-label="Selected project">
+            <div className="flex justify-between mb-4 bg-slate-900/75">
                 <h1
-                    id={project.title}
-                    className="text-xl lg:text-4xl font-bold text-slate-200 self-start"
+                    id={project.label}
+                    className="text-xl mg:text-4xl lg:text-4xl font-bold text-slate-200"
                 >
                     {project.title}
                 </h1>
                 <ProjectLinks links={project.links} />
-            </section>
+            </div>
+
             <section className="flex flex-wrap lg:flex-nowrap gap-2 mb-4 scroll-mt-6 md:mb-6 lg:mb-4">
                 {project.badges?.map((badge, index) => (
                     <span key={index} className="text-sm text-slate-200 font-bold">
@@ -124,6 +119,6 @@ export const ProjectPage = ({ project }: Props) => {
                 lg:drop-shadow-lg"
                 content={project.content}
             />
-        </>
+        </section>
     )
 }

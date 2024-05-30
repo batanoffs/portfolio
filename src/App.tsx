@@ -14,6 +14,7 @@ import ScrollToAnchor from './utils/ScrollToAnchor'
 
 import data from './projects.json'
 import './index.css'
+import { ScrollToTop } from './utils/ScrollToTop'
 
 export const App = () => {
     ScrollToAnchor()
@@ -31,12 +32,18 @@ export const App = () => {
                     {data.projects.map((project) => (
                         <Route
                             key={project.id}
-                            path={project.href }
-                            element={<ProjectPage project={project} />}
+                            path={project.href}
+                            element={
+                                <ProjectPage
+                                    styles="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+                                    project={project}
+                                />
+                            }
                         />
                     ))}
                 </Routes>
                 <Footer />
+                <ScrollToTop />
             </MainLayout>
         </MasterLayout>
     )
