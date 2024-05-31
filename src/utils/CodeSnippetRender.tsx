@@ -1,17 +1,14 @@
-import {copyToClipboard} from './CopyToClipboard'
+import { copyToClipboard } from './CopyToClipboard'
 
 interface CodeSnippetProps {
     code: string
 }
 
-
-export const CodeSnippet = ({ code }: CodeSnippetProps): React.ReactNode => (
+export const CodeSnippet = ({ children }: CodeSnippetProps): React.ReactNode => (
     <div className="relative bg-zinc-950 p-4 rounded-md mb-2">
-        <pre className="whitespace-pre-line">
-            <code>{code}</code>
-        </pre>
+        <pre className="whitespace-pre-line">{children}</pre>
         <button
-            onClick={() => copyToClipboard(code)}
+            onClick={() => copyToClipboard(children)}
             className="absolute top-2 right-2 text-slate-400 hover:text-slate-200 p-1"
         >
             <svg

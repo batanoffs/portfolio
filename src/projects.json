@@ -7,6 +7,7 @@
             "description": "This is the project I completed for Softuniada 2024 programing Olympiad. In short it is responsive platform that simulates online banking, offering features such as top-up, add friends, transactions, history and more.",
             "image": "https://notablepen.backendless.app/api/files/app/AppData/home/newLogoPng.png",
             "href": "/mini-finance",
+            "readme": "https://raw.githubusercontent.com/batanoffs/mini-finance/main/README.md",
             "links": {
                 "live": "https://batanoffs.github.io/mini-finance/",
                 "github": "https://github.com/batanoffs/mini-finance"
@@ -301,6 +302,7 @@
             "description": "To improve my skills recently I started working on this open scource project which is Authentication layouts, hooks and pipelines to integrate into react-admin. It is available on NPM and averages 20 weekly download. I've worked on the readme file and some components. I am learning more about the code and how react-admin works under the hood.",
             "image": "/ra-auth.png",
             "href": "/ra-auth-ui",
+            "readme": "https://raw.githubusercontent.com/ValentinnDimitroff/ra-auth-ui/main/README.md",
             "video": "",
             "links": {
                 "github": "https://github.com/ValentinnDimitroff/ra-auth-ui",
@@ -448,6 +450,7 @@
                 "github": ""
             },
             "href": "/book-store",
+            "readme": "",
             "content": [],
             "badges": [],
             "menu": [
