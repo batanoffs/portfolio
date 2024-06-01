@@ -12,7 +12,8 @@ import { ProjectPage } from './pages/ProjectPage'
 
 import ScrollToAnchor from './utils/ScrollToAnchor'
 
-import data from './projects.json'
+import data from './data.json'
+
 import './index.css'
 import { ScrollToTop } from './utils/ScrollToTop'
 
@@ -28,7 +29,7 @@ export const App = () => {
             </SideLayout>
             <MainLayout>
                 <Routes>
-                    <Route path="/" element={<MainContent />} />
+                    <Route path="/" element={<MainContent data={data} />} />
                     {data.projects.map((project) => (
                         <Route
                             key={project.id}

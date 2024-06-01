@@ -2,8 +2,10 @@ import { useFetchReadme } from '../hooks/useFetchReadme'
 
 import Markdown from 'react-markdown'
 import ReactPlayer from 'react-player/file'
+import remarkGfm from 'remark-gfm'
 
 import { CodeSnippet } from '../utils/CodeSnippetRender'
+import { ProjectLinks } from '../components/ProjectLinks'
 
 type ProjectProps = {
     styles: string
@@ -21,21 +23,15 @@ type ProjectProps = {
         }
         href: string
         readme: string
-        menu: (string | { name: string; items: string[] })[]
-        content: ContentSection[]
         badges: { type: string; link: string }[]
         tags: { id: string; name: string }[]
     }
 }
 
-type ContentSection = {
-    id: number | string
-    section: string
-    items: string[]
-}
-
 export const ProjectPage = ({ project, styles }: ProjectProps) => {
     const { data, loading, error } = useFetchReadme(project.readme)
+
+    const raAuthTitle = 'ra-auth-ui'
 
     const ifMiniFinance = data.includes(
         'https://github.com/batanoffs/mini-finance/assets/111650687/d3e5ef51-4f2d-4225-a05e-6da467265a31'
@@ -54,34 +50,39 @@ export const ProjectPage = ({ project, styles }: ProjectProps) => {
 
     return (
         <div className={styles}>
+            <div className="flex justify-between">
+                <h1 className="text-3xl font-bold mb-4">{project.title}</h1>
+                <ProjectLinks links={project.links} />
+            </div>
             {ifMiniFinance && (
-                <>
-                    <h1 className="text-3xl font-bold mb-4">{project.title}</h1>
-                    <section
-                        aria-label="Video"
-                        className="relative aspect-video mb-4 scroll-mt-16 md:mb-0 lg:mb-8 lg:scroll-mt-12"
-                    >
-                        <ReactPlayer
-                            className="absolute top-0 left-0"
-                            width="100%"
-                            height="100%"
-                            url={project.video}
-                            muted={true}
-                            playing={true}
-                            controls={true}
-                            pipe={'false'}
-                        />
-                    </section>
-                </>
+                <section
+                    aria-label="Video"
+                    className="relative aspect-video mb-4 scroll-mt-16 md:mb-0 lg:mb-8 lg:scroll-mt-12"
+                >
+                    <ReactPlayer
+                        className="absolute top-0 left-0"
+                        width="100%"
+                        height="100%"
+                        url={project.video}
+                        muted={true}
+                        playing={true}
+                        controls={true}
+                        pipe={'false'}
+                    />
+                </section>
             )}
 
             <Markdown
                 children={ifMiniFinance ? newData : data}
+                skipHtml={false}
+                remarkPlugins={[remarkGfm]}
                 components={{
                     h1: ({ children }) => (
                         <h1
                             id={children?.toString().toLowerCase().replace(/\s+/g, '-')}
-                            className={`text-3xl ${ifMiniFinance ? 'hidden' : ''} font-bold my-4`}
+                            className={`text-3xl ${ifMiniFinance ? 'hidden' : ''} ${
+                                children?.toString().includes(raAuthTitle) ? 'hidden' : ''
+                            } font-bold my-4`}
                         >
                             {children}
                         </h1>
@@ -109,14 +110,17 @@ export const ProjectPage = ({ project, styles }: ProjectProps) => {
                         </a>
                     ),
                     li: ({ children }) => <li className="ml-4 list-disc">{children}</li>,
-                    code: ({ inline, children }) =>
-                        inline ? (
+                    code: (props) => {
+                        const { children, className, ...rest } = props
+                        const match = /language-(\w+)/.exec(className || '')
+                        return match ? (
                             <CodeSnippet>{children}</CodeSnippet>
                         ) : (
-                            <pre className="bg-gray-950 text-slate-500 rounded p-4 my-2">
-                                <code>{children}</code>
-                            </pre>
-                        ),
+                            <code {...rest} className={className}>
+                                {children}
+                            </code>
+                        )
+                    },
                 }}
             />
         </div>

@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { Section } from '../utils/SectionRender'
+import { Section } from '../archive/SectionRender'
 import 'react-toastify/dist/ReactToastify.css'
 
 interface ProjectContentProps {

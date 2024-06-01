@@ -1,41 +1,35 @@
 import { ProjectList } from './ProjectsList'
 
-type Project = {
+interface Project {
     id: string
     label: string
     title: string
     description: string
     image: string
+    href: string
+    readme: string
+    video: string
     links: {
         live?: string
         github?: string
         npm?: string
     }
-    href: string
-    menu: Array<string | string[]>
-    content: Array<{
-        section: string
-        items: Array<string | { subSection?: string; commands?: string[]; code?: string }>
-    }>
-    achievements: Array<{
-        section: string
-        items: Array<{
-            type: string
-            link: string
-        }>
-    }>
-    tags: Array<{
+    badges: {
+        type: string
+        link: string
+    }[]
+    tags: {
         id: string
         name: string
-    }>
+    }[]
 }
 
-type Props = {
+interface Props {
     projects?: Project[]
     styles?: string
 }
 
-export const Projects = ({ projects = [], styles }: Props = {}) => {
+export const Projects: React.FC<Props> = ({ projects = [], styles }: Props = {}) => {
     return (
         <section id="projects" className={styles} aria-label="Selected projects">
             <div

@@ -1,10 +1,10 @@
 type Work = {
     id: string
     date: string
-    company: string
     position: string[]
-    description: string | string[]
+    company: string
     website: string
+    description: string[]
     skills: Array<{
         id: string
         name: string
@@ -16,9 +16,9 @@ type ExperienceProps = {
     styles?: string
 }
 
-export const Experience = (props: ExperienceProps) => {
+export const Experience = ({ experience, styles }: ExperienceProps) => {
     return (
-        <section id="experience" className={props.styles} aria-label="Work experience">
+        <section id="experience" className={styles} aria-label="Work experience">
             <div
                 className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75
                     px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative
@@ -30,8 +30,8 @@ export const Experience = (props: ExperienceProps) => {
             </div>
             <div>
                 <ol className="group/list">
-                    {props.experience &&
-                        props.experience.map((job: Work) => (
+                    {experience &&
+                        experience.map((job) => (
                             <li key={job.id} className="mb-12">
                                 <div
                                     className="group relative grid pb-1 transition-all sm:grid-cols-8

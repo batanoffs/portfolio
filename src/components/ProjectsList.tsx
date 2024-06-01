@@ -12,18 +12,6 @@ type ProjectListProps = {
         npm?: string
     }
     href: string
-    menu: Array<string | string[]>
-    content: Array<{
-        section: string
-        items: Array<string | { subSection?: string; commands?: string[]; code?: string }>
-    }>
-    achievements: Array<{
-        section: string
-        items: Array<{
-            type: string
-            link: string
-        }>
-    }>
     tags: Array<{
         id: string
         name: string
@@ -87,7 +75,7 @@ export const ProjectList = ({ project }: Props) => {
                                 className="inline-flex items-baseline font-medium
                                                 leading-tight text-slate-200 hover:text-teal-300
                                                 focus-visible:text-teal-300 group/link text-base"
-                                to={project.href + "/#" + project.label}
+                                to={project.href + '/#' + project.label}
                                 target="_self"
                                 rel="noreferrer noopener"
                                 aria-label={project.label || 'View project'}
