@@ -57,5 +57,5 @@ export const SocialIcons = () => {
                 </li>
             ))}
         </ul>
-    )
-}
+    );
+};

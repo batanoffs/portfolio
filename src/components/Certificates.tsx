@@ -1,16 +1,16 @@
-import { SingleCarousel } from '../assets/SingleCarousel'
+import { SingleCarousel } from '../assets/SingleCarousel';
 
 type Certificates = {
-    certificates: CertificateProps[]
-    styles?: string
-}
+    certificates: CertificateProps[];
+    styles?: string;
+};
 
 type CertificateProps = {
-    name: string
-    date: string
-    img: string
-    link: string
-}
+    name: string;
+    date: string;
+    img: string;
+    link: string;
+};
 
 export const Certificates = ({ certificates, styles }: Certificates) => {
     return (
@@ -28,5 +28,5 @@ export const Certificates = ({ certificates, styles }: Certificates) => {
                 <SingleCarousel certificates={certificates} />
             </div>
         </section>
-    )
-}
+    );
+};

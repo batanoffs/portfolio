@@ -1,7 +1,7 @@
 // import { Link } from 'react-router-dom'
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 
-import NavItems from '../nav.json'
+import NavItems from '../nav.json';
 
 export const Navigation = () => {
     return (
@@ -54,5 +54,5 @@ export const Navigation = () => {
                 ))}
             </ul>
         </nav>
-    )
-}
+    );
+};

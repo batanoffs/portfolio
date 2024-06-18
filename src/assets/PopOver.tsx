@@ -1,26 +1,26 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react';
 
 interface PopoverProps {
-    children: React.ReactNode
-    content: React.ReactNode
-    trigger?: 'click' | 'hover'
+    children: React.ReactNode;
+    content: React.ReactNode;
+    trigger?: 'click' | 'hover';
 }
 
 export const Popover = ({ children, content, trigger = 'click' }: PopoverProps) => {
-    const [show, setShow] = useState(false)
-    const wrapperRef = useRef<HTMLDivElement>(null)
+    const [show, setShow] = useState(false);
+    const wrapperRef = useRef<HTMLDivElement>(null);
 
     const handleMouseOver = () => {
         if (trigger === 'hover') {
-            setShow(true)
+            setShow(true);
         }
-    }
+    };
 
     const handleMouseLeft = () => {
         if (trigger === 'hover') {
-            setShow(false)
+            setShow(false);
         }
-    }
+    };
 
     useEffect(() => {
         /**
@@ -29,17 +29,17 @@ export const Popover = ({ children, content, trigger = 'click' }: PopoverProps) 
          */
         function handleClickOutside(event: MouseEvent): void {
             if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {
-                setShow(false)
+                setShow(false);
             }
         }
 
         if (show) {
-            document.addEventListener('mousedown', handleClickOutside)
+            document.addEventListener('mousedown', handleClickOutside);
             return () => {
-                document.removeEventListener('mousedown', handleClickOutside)
-            }
+                document.removeEventListener('mousedown', handleClickOutside);
+            };
         }
-    }, [show, wrapperRef])
+    }, [show, wrapperRef]);
 
     return (
         <div
@@ -58,5 +58,5 @@ export const Popover = ({ children, content, trigger = 'click' }: PopoverProps) 
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};

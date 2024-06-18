@@ -1,26 +1,26 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 type ProjectListProps = {
-    id: string
-    label: string
-    title: string
-    description: string
-    image: string
+    id: string;
+    label: string;
+    title: string;
+    description: string;
+    image: string;
     links: {
-        live?: string
-        github?: string
-        npm?: string
-    }
-    href: string
+        live?: string;
+        github?: string;
+        npm?: string;
+    };
+    href: string;
     tags: Array<{
-        id: string
-        name: string
-    }>
-}
+        id: string;
+        name: string;
+    }>;
+};
 
 type Props = {
-    project: ProjectListProps
-}
+    project: ProjectListProps;
+};
 
 export const ProjectList = ({ project }: Props) => {
     return (
@@ -150,5 +150,5 @@ export const ProjectList = ({ project }: Props) => {
                 />
             </div>
         </li>
-    )
-}
+    );
+};

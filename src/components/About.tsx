@@ -1,16 +1,16 @@
-import { Summary } from './Summary'
-import { useState } from 'react'
+import { Summary } from './Summary';
+import { useState } from 'react';
 
-import { Popover } from '../assets/PopOver'
+import { Popover } from '../assets/PopOver';
 
-type styles = string
+type styles = string;
 
 export const About = ({ styles }: { styles: styles }) => {
-    const [name, setName] = useState('small')
+    const [name, setName] = useState('small');
 
     const updateSummary = (event: React.MouseEvent<HTMLButtonElement>) => {
-        const buttonLabel = event.currentTarget.ariaLabel
-        const plantImage = event.currentTarget.children[0].children[0].children[0]
+        const buttonLabel = event.currentTarget.ariaLabel;
+        const plantImage = event.currentTarget.children[0].children[0].children[0];
 
         const newName =
             buttonLabel === 'small'
@@ -19,7 +19,7 @@ export const About = ({ styles }: { styles: styles }) => {
                 ? 'full'
                 : buttonLabel === 'full'
                 ? 'small'
-                : ''
+                : '';
 
         const newImageSrc =
             newName === 'small'
@@ -28,16 +28,16 @@ export const About = ({ styles }: { styles: styles }) => {
                 ? './plant-stage-2.svg'
                 : newName === 'full'
                 ? './plant-stage-3.svg'
-                : ''
+                : '';
 
         if (newName && newImageSrc) {
-            setName(newName)
-            const srcAttribute = plantImage.attributes.getNamedItem('src')
+            setName(newName);
+            const srcAttribute = plantImage.attributes.getNamedItem('src');
             if (srcAttribute) {
-                srcAttribute.value = newImageSrc
+                srcAttribute.value = newImageSrc;
             }
         }
-    }
+    };
 
     return (
         <section id="about" className={styles} aria-label="About me">
@@ -74,5 +74,5 @@ export const About = ({ styles }: { styles: styles }) => {
                 </button>
             </div>
         </section>
-    )
-}
+    );
+};

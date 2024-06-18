@@ -1,32 +1,32 @@
-import { ProjectList } from './ProjectsList'
+import { ProjectList } from './ProjectsList';
 
 interface Project {
-    id: string
-    label: string
-    title: string
-    description: string
-    image: string
-    href: string
-    readme: string
-    video: string
+    id: string;
+    label: string;
+    title: string;
+    description: string;
+    image: string;
+    href: string;
+    readme: string;
+    video: string;
     links: {
-        live?: string
-        github?: string
-        npm?: string
-    }
+        live?: string;
+        github?: string;
+        npm?: string;
+    };
     badges: {
-        type: string
-        link: string
-    }[]
+        type: string;
+        link: string;
+    }[];
     tags: {
-        id: string
-        name: string
-    }[]
+        id: string;
+        name: string;
+    }[];
 }
 
 interface Props {
-    projects?: Project[]
-    styles?: string
+    projects?: Project[];
+    styles?: string;
 }
 
 export const Projects: React.FC<Props> = ({ projects = [], styles }: Props = {}) => {
@@ -49,5 +49,5 @@ export const Projects: React.FC<Props> = ({ projects = [], styles }: Props = {})
                 </ul>
             </div>
         </section>
-    )
-}
+    );
+};

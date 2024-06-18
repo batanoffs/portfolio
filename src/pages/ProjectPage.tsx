@@ -1,52 +1,56 @@
-import { useFetchReadme } from '../hooks/useFetchReadme'
+import { useFetchReadme } from '../hooks/useFetchReadme';
 
-import Markdown from 'react-markdown'
-import ReactPlayer from 'react-player/file'
-import remarkGfm from 'remark-gfm'
+import Markdown from 'react-markdown';
+import ReactPlayer from 'react-player/file';
+import remarkGfm from 'remark-gfm';
 
-import { CodeSnippet } from '../utils/CodeSnippetRender'
-import { ProjectLinks } from '../components/ProjectLinks'
+import { CodeSnippet } from '../utils/CodeSnippetRender';
+import { ProjectLinks } from '../components/ProjectLinks';
 
 type ProjectProps = {
-    styles: string
+    styles: string;
     project: {
-        id: string
-        label: string
-        title: string
-        description: string
-        image: string
-        video: string
+        id: string;
+        label: string;
+        title: string;
+        description: string;
+        image: string;
+        video: string;
         links: {
-            live?: string
-            github: string
-            npm?: string
-        }
-        href: string
-        readme: string
-        badges: { type: string; link: string }[]
-        tags: { id: string; name: string }[]
-    }
-}
+            live?: string;
+            github: string;
+            npm?: string;
+        };
+        href: string;
+        readme: string;
+        badges: { type: string; link: string }[];
+        tags: { id: string; name: string }[];
+    };
+};
 
 export const ProjectPage = ({ project, styles }: ProjectProps) => {
-    const { data, loading, error } = useFetchReadme(project.readme)
+    const { data, loading, error } = useFetchReadme(project.readme);
 
-    const raAuthTitle = 'ra-auth-ui'
+    const raAuthTitle = 'ra-auth-ui';
 
     const ifMiniFinance = data.includes(
         'https://github.com/batanoffs/mini-finance/assets/111650687/d3e5ef51-4f2d-4225-a05e-6da467265a31'
-    )
+    );
 
-    let newData
+    let newData;
     if (ifMiniFinance) {
         newData = data.replace(
             /https:\/\/github.com\/batanoffs\/mini-finance\/assets\/111650687\/d3e5ef51-4f2d-4225-a05e-6da467265a31/g,
             ''
-        )
+        );
     }
 
-    if (loading) return <div className="text-center my-4">Loading...</div>
-    if (error) return <div className="text-red-500">Error: {error.message}</div>
+    if (loading) {
+        return <div className="text-center my-4">Loading...</div>;
+    }
+    if (error) {
+        return <div className="text-red-500">Error: {error.message}</div>;
+    }
 
     return (
         <div className={styles}>
@@ -111,18 +115,18 @@ export const ProjectPage = ({ project, styles }: ProjectProps) => {
                     ),
                     li: ({ children }) => <li className="ml-4 list-disc">{children}</li>,
                     code: (props) => {
-                        const { children, className, ...rest } = props
-                        const match = /language-(\w+)/.exec(className || '')
+                        const { children, className, ...rest } = props;
+                        const match = /language-(\w+)/.exec(className || '');
                         return match ? (
                             <CodeSnippet>{children}</CodeSnippet>
                         ) : (
                             <code {...rest} className={className}>
                                 {children}
                             </code>
-                        )
+                        );
                     },
                 }}
             />
         </div>
-    )
-}
+    );
+};

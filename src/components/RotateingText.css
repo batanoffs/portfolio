@@ -1,34 +1,34 @@
 .rotating-text {
-  font-weight: 600;
-  font-size: 24px;
-  transform: translateX(-80px);
+    font-weight: 600;
+    font-size: 24px;
+    transform: translateX(-80px);
 }
 
 .rotating-text p {
-  display: inline-flex;
-  margin: 0;
-  vertical-align: top;
+    display: inline-flex;
+    margin: 0;
+    vertical-align: top;
 }
 
 .rotating-text p .word {
-  position: absolute;
-  display: flex;
-  opacity: 0;
+    position: absolute;
+    display: flex;
+    opacity: 0;
 }
 
 .rotating-text p .word .letter {
-  transform-origin: center center 25px;
+    transform-origin: center center 25px;
 }
 
 .rotating-text p .word .letter.out {
-  transform: rotateX(90deg);
-  transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+    transform: rotateX(90deg);
+    transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
 }
 
 .rotating-text p .word .letter.in {
-  transition: 0.38s ease;
+    transition: 0.38s ease;
 }
 
 .rotating-text p .word .letter.behind {
-  transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
 }

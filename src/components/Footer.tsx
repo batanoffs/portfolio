@@ -1,4 +1,4 @@
-import { Resume } from './Resume'
+import { Resume } from './Resume';
 
 export const Footer = () => {
     return (
@@ -90,5 +90,5 @@ export const Footer = () => {
                 typeface.
             </p>
         </footer>
-    )
-}
+    );
+};

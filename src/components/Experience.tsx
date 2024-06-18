@@ -1,20 +1,20 @@
 type Work = {
-    id: string
-    date: string
-    position: string[]
-    company: string
-    website: string
-    description: string[]
+    id: string;
+    date: string;
+    position: string[];
+    company: string;
+    website: string;
+    description: string[];
     skills: Array<{
-        id: string
-        name: string
-    }>
-}
+        id: string;
+        name: string;
+    }>;
+};
 
 type ExperienceProps = {
-    experience?: Work[]
-    styles?: string
-}
+    experience?: Work[];
+    styles?: string;
+};
 
 export const Experience = ({ experience, styles }: ExperienceProps) => {
     return (
@@ -134,5 +134,5 @@ export const Experience = ({ experience, styles }: ExperienceProps) => {
                 </ol>
             </div>
         </section>
-    )
-}
+    );
+};

@@ -112,4 +112,4 @@ export default {
     corePlugins: {
         scrollBehavior: true,
     },
-}
+};

@@ -1,52 +1,52 @@
-import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-import './RotateingText.css'
+import './RotateingText.css';
 
 export const JobTitleAnimatedText = () => {
     useEffect(() => {
-        const words = document.querySelectorAll('.word') as NodeListOf<HTMLElement>
+        const words = document.querySelectorAll('.word') as NodeListOf<HTMLElement>;
         words.forEach((word) => {
-            const letters = word.textContent!.split('')
-            word.textContent = ''
+            const letters = word.textContent!.split('');
+            word.textContent = '';
             letters.forEach((letter) => {
-                const span = document.createElement('span')
-                span.textContent = letter
-                span.className = 'letter'
-                word.append(span)
-            })
-        })
+                const span = document.createElement('span');
+                span.textContent = letter;
+                span.className = 'letter';
+                word.append(span);
+            });
+        });
 
-        let currentWordIndex = 0
-        const maxWordIndex = words.length - 1
-        words[currentWordIndex].style.opacity = '1'
+        let currentWordIndex = 0;
+        const maxWordIndex = words.length - 1;
+        words[currentWordIndex].style.opacity = '1';
 
         const rotateText = () => {
-            const currentWord = words[currentWordIndex]
+            const currentWord = words[currentWordIndex];
             const nextWord =
-                currentWordIndex === maxWordIndex ? words[0] : words[currentWordIndex + 1]
+                currentWordIndex === maxWordIndex ? words[0] : words[currentWordIndex + 1];
 
             Array.from(currentWord.children).forEach((letter, i) => {
                 setTimeout(() => {
-                    letter.className = 'letter out'
-                }, i * 80)
-            })
+                    letter.className = 'letter out';
+                }, i * 80);
+            });
 
-            nextWord.style.opacity = '1'
+            nextWord.style.opacity = '1';
             Array.from(nextWord.children).forEach((letter, i) => {
-                letter.className = 'letter behind'
+                letter.className = 'letter behind';
                 setTimeout(() => {
-                    letter.className = 'letter in'
-                }, 340 + i * 80)
-            })
+                    letter.className = 'letter in';
+                }, 340 + i * 80);
+            });
 
-            currentWordIndex = currentWordIndex === maxWordIndex ? 0 : currentWordIndex + 1
-        }
+            currentWordIndex = currentWordIndex === maxWordIndex ? 0 : currentWordIndex + 1;
+        };
 
-        rotateText()
-        const interval = setInterval(rotateText, 4000)
-        return () => clearInterval(interval)
-    }, [])
+        rotateText();
+        const interval = setInterval(rotateText, 4000);
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <div>
@@ -66,5 +66,5 @@ export const JobTitleAnimatedText = () => {
                 I build responsive animated products and digital experiences for the web.
             </p>
         </div>
-    )
-}
+    );
+};

@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
 type SummaryProps = {
-    name: string
-    className?: string
-}
+    name: string;
+    className?: string;
+};
 
 const technologies = [
     'React',
@@ -18,9 +18,9 @@ const technologies = [
     'Material UI',
     'Git',
     'Vite',
-]
+];
 
-const tools = ['Figma', 'Github', 'VS Code', 'Photoshop', 'Postman', 'Chrome DevTools']
+const tools = ['Figma', 'Github', 'VS Code', 'Photoshop', 'Postman', 'Chrome DevTools'];
 
 const skills = [
     'AJAX',
@@ -30,12 +30,12 @@ const skills = [
     'Responsive design',
     'Web Accessibility',
     'Backendless | Firebase',
-]
+];
 
 export const Summary = ({ name, className }: SummaryProps) => {
-    const [showTech, setShowTech] = useState(false)
-    const [showSkills, setShowSkills] = useState(false)
-    const [showTools, setShowTools] = useState(false)
+    const [showTech, setShowTech] = useState(false);
+    const [showSkills, setShowSkills] = useState(false);
+    const [showTools, setShowTools] = useState(false);
     const small = (
         <div className={className}>
             <p className="mb-4">Hello and welcome!</p>
@@ -131,15 +131,15 @@ export const Summary = ({ name, className }: SummaryProps) => {
                 </div>
             </div>
         </div>
-    )
+    );
 
     const long = (
         <div className={className}>
             <p className="mb-4">Hello and welcome!</p>
 
             <p className="mb-4">
-                Ever since writing my first program in high school of mathematics, I have developed a
-                deep passion for coding. As a former architect, my passion was further nurtured
+                Ever since writing my first program in high school of mathematics, I have developed
+                a deep passion for coding. As a former architect, my passion was further nurtured
                 through extensive collaboration with software developers in my previous role.
             </p>
             <p className="mb-4">
@@ -168,16 +168,16 @@ export const Summary = ({ name, className }: SummaryProps) => {
                 .
             </p>
         </div>
-    )
+    );
 
     const full = (
         <div className={className}>
             <p className="mb-4">Hello and welcome!</p>
 
             <p className="mb-4 text-pretty">
-                Ever since I wrote my first program in high school of mathematics, I knew I was hooked
-                on the art of coding. My passion kicked in later, when I was working as an architect
-                at{' '}
+                Ever since I wrote my first program in high school of mathematics, I knew I was
+                hooked on the art of coding. My passion kicked in later, when I was working as an
+                architect at{' '}
                 <a
                     className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
                     href="https://www.ip-arch.com/en"
@@ -218,6 +218,6 @@ export const Summary = ({ name, className }: SummaryProps) => {
                 Beyond the professional realm, I enjoy board games, hiking, and gardening.
             </p>
         </div>
-    )
-    return name === 'full' ? full : name === 'long' ? long : name === 'small' ? small : small
-}
+    );
+    return name === 'full' ? full : name === 'long' ? long : name === 'small' ? small : small;
+};

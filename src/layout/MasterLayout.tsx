@@ -1,5 +1,3 @@
-
-
 export const MasterLayout = ({ children }: any) => {
     return (
         <div className="group/spotlight relative">
@@ -18,5 +16,5 @@ export const MasterLayout = ({ children }: any) => {
                 <div className="lg:flex lg:justify-between lg:gap-4">{children}</div>
             </div>
         </div>
-    )
-}
+    );
+};

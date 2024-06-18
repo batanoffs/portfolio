@@ -1,7 +1,7 @@
-import { copyToClipboard } from './CopyToClipboard'
+import { copyToClipboard } from './CopyToClipboard';
 
 interface CodeSnippetProps {
-    children: React.ReactNode
+    children: React.ReactNode;
 }
 
 export const CodeSnippet = ({ children }: CodeSnippetProps) => {
@@ -28,5 +28,5 @@ export const CodeSnippet = ({ children }: CodeSnippetProps) => {
                 </svg>
             </button>
         </div>
-    )
-}
+    );
+};

@@ -1,18 +1,18 @@
-import Slider from 'react-slick'
+import Slider from 'react-slick';
 
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 type Certificates = {
-    certificates: CertificateProps[]
-}
+    certificates: CertificateProps[];
+};
 
 type CertificateProps = {
-    name: string
-    date: string
-    img: string
-    link: string
-}
+    name: string;
+    date: string;
+    img: string;
+    link: string;
+};
 
 export const SingleCarousel = ({ certificates }: Certificates) => {
     const settings = {
@@ -45,7 +45,7 @@ export const SingleCarousel = ({ certificates }: Certificates) => {
                 },
             },
         ],
-    }
+    };
     return (
         <div className="">
             <Slider {...settings}>
@@ -61,5 +61,5 @@ export const SingleCarousel = ({ certificates }: Certificates) => {
                 ))}
             </Slider>
         </div>
-    )
-}
+    );
+};

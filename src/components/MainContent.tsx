@@ -1,52 +1,52 @@
-import { Experience } from './Experience'
-import { Projects } from './Projects'
-import { About } from './About'
-import { Certificates } from './Certificates'
+import { Experience } from './Experience';
+import { Projects } from './Projects';
+import { About } from './About';
+import { Certificates } from './Certificates';
 
 interface MainContentProps {
     data: {
         work: Array<{
-            id: string
-            date: string
-            position: string[]
-            company: string
-            website: string
-            description: string[]
+            id: string;
+            date: string;
+            position: string[];
+            company: string;
+            website: string;
+            description: string[];
             skills: Array<{
-                id: string
-                name: string
-            }>
-        }>
+                id: string;
+                name: string;
+            }>;
+        }>;
         projects: Array<{
-            id: string
-            label: string
-            title: string
-            description: string
-            image: string
-            href: string
-            readme: string
-            video: string
+            id: string;
+            label: string;
+            title: string;
+            description: string;
+            image: string;
+            href: string;
+            readme: string;
+            video: string;
             links: {
-                live?: string
-                github?: string
-                npm?: string
-            }
+                live?: string;
+                github?: string;
+                npm?: string;
+            };
             badges: {
-                type: string
-                link: string
-            }[]
+                type: string;
+                link: string;
+            }[];
             tags: {
-                id: string
-                name: string
-            }[]
-        }>
+                id: string;
+                name: string;
+            }[];
+        }>;
         certificates: Array<{
-            name: string
-            date: string
-            img: string
-            link: string
-        }>
-    }
+            name: string;
+            date: string;
+            img: string;
+            link: string;
+        }>;
+    };
 }
 
 export const MainContent = ({ data }: MainContentProps) => {
@@ -69,5 +69,5 @@ export const MainContent = ({ data }: MainContentProps) => {
                 certificates={data.certificates}
             />
         </>
-    )
-}
+    );
+};

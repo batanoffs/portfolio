@@ -1,24 +1,24 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom';
 
-import { MainContent } from './components/MainContent'
-import { Footer } from './components/Footer'
-import { MasterLayout } from './layout/MasterLayout'
-import { MainLayout } from './layout/MainLayout'
-import { SocialIcons } from './components/SocialIcons'
-import { JobTitleAnimatedText } from './components/JobTitle'
-import { Navigation } from './components/Navigation'
-import { SideLayout } from './layout/SideLayout'
-import { ProjectPage } from './pages/ProjectPage'
+import { MainContent } from './components/MainContent';
+import { Footer } from './components/Footer';
+import { MasterLayout } from './layout/MasterLayout';
+import { MainLayout } from './layout/MainLayout';
+import { SocialIcons } from './components/SocialIcons';
+import { JobTitleAnimatedText } from './components/JobTitle';
+import { Navigation } from './components/Navigation';
+import { SideLayout } from './layout/SideLayout';
+import { ProjectPage } from './pages/ProjectPage';
+import { ScrollToTop } from './utils/ScrollToTop';
 
-import ScrollToAnchor from './utils/ScrollToAnchor'
+import ScrollToAnchor from './utils/ScrollToAnchor';
 
-import data from './data.json'
+import data from './data.json';
 
-import './index.css'
-import { ScrollToTop } from './utils/ScrollToTop'
+import './index.css';
 
 export const App = () => {
-    ScrollToAnchor()
+    ScrollToAnchor();
 
     return (
         <MasterLayout>
@@ -47,5 +47,5 @@ export const App = () => {
                 <ScrollToTop />
             </MainLayout>
         </MasterLayout>
-    )
-}
+    );
+};

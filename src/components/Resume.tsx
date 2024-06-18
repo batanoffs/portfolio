@@ -1,4 +1,4 @@
-import resumePDF from '/resume.pdf'
+import resumePDF from '/resume.pdf';
 
 export const Resume = () => {
     return (
@@ -36,5 +36,5 @@ export const Resume = () => {
                 </span>
             </a>
         </div>
-    )
-}
+    );
+};
