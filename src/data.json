@@ -138,16 +138,22 @@
             "link": "https://softuni.bg/certificates/details/195298/1f9f9bde"
         },
         {
+            "name": "IT Career Booster",
+            "date": "October 2023",
+            "img": "./IT Career Booster - October 2023 - Certificate.jpeg",
+            "link": "https://softuni.bg/certificates/details/198763/3656b8e0"
+        },
+        {
             "name": "HTML & CSS",
             "date": "January 2024",
             "img": "./HTML & CSS - January 2024 - Certificate.jpeg",
             "link": "https://softuni.bg/certificates/details/205221/f430eb0f"
         },
         {
-            "name": "IT Career Booster",
-            "date": "October 2023",
-            "img": "./IT Career Booster - October 2023 - Certificate.jpeg",
-            "link": "https://softuni.bg/certificates/details/198763/3656b8e0"
+            "name": "JS Back-End",
+            "date": "May 2024",
+            "img": "./JS Back-End - May 2024 - Certificate.jpeg",
+            "link": "https://softuni.bg/Certificates/Details/218275/6b86be8a"
         }
     ],
     "projects": [
