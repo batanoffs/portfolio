@@ -60,6 +60,7 @@ export const JobTitleAnimatedText = () => {
                     <span className="word text-purple-500">React JS</span>
                     <span className="word text-green-400">Node JS</span>
                     <span className="word text-teal-400">Full-stack</span>
+                    <span className="word text-orange-400">Front-end</span>
                 </p>
                 <p>Developer</p>
             </div>
