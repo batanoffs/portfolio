@@ -1,4 +1,5 @@
 import { copyToClipboard } from './CopyToClipboard';
+import React from 'react';
 
 interface CodeSnippetProps {
     children: React.ReactNode;
