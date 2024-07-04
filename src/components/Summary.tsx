@@ -29,13 +29,15 @@ export const Summary = ({ name, className }: SummaryProps) => {
                 I have a year and a half of experience in coding, three years of professional
                 experience in architecture, and a few months in quality assurance.
             </p>
-            <div className="flex flex-col gap-2 h-[150px] lg:h-[110px] overflow-hidden md:h-[150px]">
+            <div className="flex flex-col gap-2 h-[180px] lg:h-[110px] overflow-hidden md:h-[150px]">
                 <div className="flex gap-2">
                     <button
                         className="hover:text-center hover:animate-pulse w-[33%] h-8 hover:bg-cyan-400/30
                     border-0 border-slate-700 shadow rounded-md bg-slate-200/10 cursor-pointer"
                         onMouseEnter={() => setShowTech(true)}
                         onMouseLeave={() => setShowTech(false)}
+                        onTouchStart={() => setShowTech(true)}
+                        onTouchEnd={() => setShowTech(false)}
                     >
                         Technologies
                     </button>
@@ -44,6 +46,8 @@ export const Summary = ({ name, className }: SummaryProps) => {
                     border-0 border-slate-700 shadow rounded-md bg-slate-200/10 cursor-pointer"
                         onMouseEnter={() => setShowSkills(true)}
                         onMouseLeave={() => setShowSkills(false)}
+                        onTouchStart={() => setShowTech(true)}
+                        onTouchEnd={() => setShowTech(false)}
                     >
                         Skills
                     </button>
@@ -52,6 +56,8 @@ export const Summary = ({ name, className }: SummaryProps) => {
                     border-0 border-slate-700 shadow rounded-md bg-slate-200/10 cursor-pointer"
                         onMouseEnter={() => setShowTools(true)}
                         onMouseLeave={() => setShowTools(false)}
+                        onTouchStart={() => setShowTech(true)}
+                        onTouchEnd={() => setShowTech(false)}
                     >
                         Tools
                     </button>
