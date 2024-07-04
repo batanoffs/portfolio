@@ -40,7 +40,8 @@ export const ProjectList = ({ project }: Props) => {
 
                 <div className="z-10 sm:order-2 sm:col-span-6">
                     <h3>
-                        {project.title.includes('book store') ? (
+                        {project.title.includes('Book Store') ||
+                        project.title.includes('Portfolio') ? (
                             <Link
                                 className="inline-flex items-baseline font-medium
                                             leading-tight text-slate-200 hover:text-teal-300
@@ -103,7 +104,7 @@ export const ProjectList = ({ project }: Props) => {
                             </Link>
                         )}
                     </h3>
-                    {project.title.includes('book store') ? (
+                    {project.title.includes('Book Store') || project.title.includes('Portfolio') ? (
                         <p className="mt-2 text-sm text-pretty leading-normal blur-sm">
                             {project.description}
                         </p>
@@ -117,7 +118,8 @@ export const ProjectList = ({ project }: Props) => {
                         <ul className="mt-2 flex flex-wrap" aria-label="Technologies used:">
                             {project.tags.map((tag: { id: string; name: string }) => (
                                 <li key={tag.id} className="mr-1.5 mt-2">
-                                    {project.title.includes('book store') ? (
+                                    {project.title.includes('Book Store') ||
+                                    project.title.includes('Portfolio') ? (
                                         <div
                                             className="flex items-center rounded-full bg-teal-400/10
                                                      px-3 py-1 text-xs font-medium leading-5 text-teal-300 blur"
