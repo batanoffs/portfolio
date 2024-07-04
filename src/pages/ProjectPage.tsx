@@ -46,8 +46,9 @@ export const ProjectPage = ({ project, styles }: ProjectProps) => {
     }
 
     if (loading) {
-        return <div className="text-center my-4">Loading...</div>;
+        return <div className="text-center text-2xl my-4 text-slate-400">Loading...</div>;
     }
+
     if (error) {
         return <div className="text-red-500">Error: {error.message}</div>;
     }
@@ -107,9 +108,11 @@ export const ProjectPage = ({ project, styles }: ProjectProps) => {
                             {children}
                         </h3>
                     ),
-                    p: ({ children }) => <p className="my-2">{children}</p>,
+                    p: ({ children }) => {
+                        return <p className="my-2">{children}</p>;
+                    },
                     a: ({ href, children }) => (
-                        <a href={href} className=" text-blue-500 underline">
+                        <a href={href} className="text-blue-500 underline">
                             {children}
                         </a>
                     ),
