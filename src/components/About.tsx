@@ -1,3 +1,4 @@
+import React from 'react';
 import { Summary } from './Summary';
 import { useState } from 'react';
 
