@@ -264,7 +264,7 @@
         {
             "id": "2",
             "label": "Book Store",
-            "title": "E-commerce book store",
+            "title": "E-commerce Book Store",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus distinctio nam illum est? Vitae, eum ab nihil facere soluta eaque in! Quia veniam est laudantium aliquid assumenda vitae dolore? Blanditiis.",
             "image": "/comingsoon2.png",
             "video": "",
@@ -303,6 +303,55 @@
                 {
                     "id": "6",
                     "name": "PostgreSQL"
+                },
+                {
+                    "id": "7",
+                    "name": "Express"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "label": "Mila's Photography",
+            "title": "Mila's Photography Portfolio Website",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus distinctio nam illum est? Vitae, eum ab nihil facere soluta eaque in! Quia veniam est laudantium aliquid assumenda vitae dolore? Blanditiis.",
+            "image": "/comingsoon2.png",
+            "video": "",
+            "links": {
+                "live": "",
+                "github": ""
+            },
+            "href": "/",
+            "readme": "",
+            "badges": [],
+            "tags": [
+                {
+                    "id": "0",
+                    "name": "React"
+                },
+                {
+                    "id": "1",
+                    "name": "TypeScript"
+                },
+                {
+                    "id": "2",
+                    "name": "NodeJS"
+                },
+                {
+                    "id": "3",
+                    "name": "Vite"
+                },
+                {
+                    "id": "4",
+                    "name": "Material UI"
+                },
+                {
+                    "id": "5",
+                    "name": "SASS"
+                },
+                {
+                    "id": "6",
+                    "name": "MongoDB"
                 },
                 {
                     "id": "7",
