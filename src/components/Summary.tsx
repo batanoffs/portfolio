@@ -1,36 +1,10 @@
 import { useState } from 'react';
+import { techStack } from '../constants/skills';
 
 type SummaryProps = {
     name: string;
     className?: string;
 };
-
-const technologies = [
-    'React',
-    'JavaScript',
-    'TypeScript',
-    'CSS3',
-    'HTML5',
-    'TailwindCSS',
-    'SASS',
-    'Bootstrap',
-    'AntDesign',
-    'Material UI',
-    'Git',
-    'Vite',
-];
-
-const tools = ['Figma', 'Github', 'VS Code', 'Photoshop', 'Postman', 'Chrome DevTools'];
-
-const skills = [
-    'AJAX',
-    'oAuth',
-    'RESTful APIs',
-    'Authentication',
-    'Responsive design',
-    'Web Accessibility',
-    'Backendless | Firebase',
-];
 
 export const Summary = ({ name, className }: SummaryProps) => {
     const [showTech, setShowTech] = useState(false);
@@ -88,7 +62,7 @@ export const Summary = ({ name, className }: SummaryProps) => {
                             showTech ? 'flex' : 'hidden'
                         }`}
                     >
-                        {technologies.map((tech) => (
+                        {techStack.technologies.map((tech) => (
                             <div
                                 className="inline-block items-center overflow-hidden whitespace-nowrap rounded-full bg-cyan-400/30
                             px-3 py-1 text-xs font-medium leading-5 text-slate-200"
@@ -103,7 +77,7 @@ export const Summary = ({ name, className }: SummaryProps) => {
                             showSkills ? 'flex' : 'hidden'
                         }`}
                     >
-                        {skills.map((skill) => (
+                        {techStack.skills.map((skill) => (
                             <div
                                 className="inline-block items-center overflow-hidden whitespace-nowrap rounded-full bg-teal-700/40
                             px-3 py-1 text-xs font-medium leading-5 text-slate-200"
@@ -118,7 +92,7 @@ export const Summary = ({ name, className }: SummaryProps) => {
                             showTools ? 'flex' : 'hidden'
                         }`}
                     >
-                        {tools.map((tool) => (
+                        {techStack.tools.map((tool) => (
                             <div
                                 className="inline-block items-center overflow-hidden whitespace-nowrap rounded-full bg-purple-800/30
                             px-3 py-1 text-xs font-medium leading-5 text-slate-200"
