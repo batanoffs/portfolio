@@ -9,7 +9,9 @@ interface ProjectLinksProps {
 export const ProjectLinks = ({ links }: ProjectLinksProps) => (
     <div className="flex gap-4 lg:gap-2">
         {Object.entries(links).map(([linkType, href]) => {
-            if (!href) return null;
+            if (!href) {
+                return null;
+            }
             const getIcon = (linkType: string) => {
                 switch (linkType) {
                     case 'github':
