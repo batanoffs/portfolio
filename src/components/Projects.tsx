@@ -29,7 +29,7 @@ interface Props {
     styles?: string;
 }
 
-export const Projects: React.FC<Props> = ({ projects = [], styles }: Props = {}) => {
+export const Projects = ({ projects = [], styles }: Props = {}) => {
     return (
         <section id="projects" className={styles} aria-label="Selected projects">
             <div

@@ -154,6 +154,12 @@
             "date": "May 2024",
             "img": "./JS Back-End - May 2024 - Certificate.jpeg",
             "link": "https://softuni.bg/Certificates/Details/218275/6b86be8a"
+        },
+        {
+            "name": "React JS",
+            "date": "August 2024",
+            "img": "./React JS - August 2024 - Certificate.jpeg",
+            "link": "https://softuni.bg/certificates/details/223751/509209a4"
         }
     ],
     "projects": [
@@ -265,16 +271,25 @@
             "id": "2",
             "label": "Book Store",
             "title": "E-commerce Book Store",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus distinctio nam illum est? Vitae, eum ab nihil facere soluta eaque in! Quia veniam est laudantium aliquid assumenda vitae dolore? Blanditiis.",
-            "image": "/comingsoon2.png",
+            "description": "This web application is e-commerce books store, where you can buy books. It is a project I have build in 2 months. I've worked on frontend and backend. I have learned more about express, mongoDB and how react-admin works under the hood because there is admin panel implemented where admin can view, update and edit database.",
+            "image": "/e-books-cover.png",
             "video": "",
             "links": {
                 "live": "",
-                "github": ""
+                "github": "https://github.com/batanoffs/e-books"
             },
-            "href": "/book-store",
-            "readme": "",
-            "badges": [],
+            "href": "/e-books",
+            "readme": "https://raw.githubusercontent.com/batanoffs/e-books/main/README.md",
+            "badges": [
+                {
+                    "type": "Licence",
+                    "link": "https://img.shields.io/badge/Licence-MIT-teal"
+                },
+                {
+                    "type": "styled with prettier",
+                    "link": "https://img.shields.io/badge/styled_with-prettier-teal"
+                }
+            ],
             "tags": [
                 {
                     "id": "0",
@@ -286,7 +301,7 @@
                 },
                 {
                     "id": "2",
-                    "name": "TailwindCSS"
+                    "name": "SCSS"
                 },
                 {
                     "id": "3",
@@ -302,11 +317,51 @@
                 },
                 {
                     "id": "6",
-                    "name": "PostgreSQL"
+                    "name": "MongoDB"
                 },
                 {
                     "id": "7",
                     "name": "Express"
+                },
+                {
+                    "id": "8",
+                    "name": "React Admin framework"
+                },
+                {
+                    "id": "9",
+                    "name": "Slick-Carousel"
+                },
+                {
+                    "id": "10",
+                    "name": "Zustand"
+                },
+                {
+                    "id": "11",
+                    "name": "React Hook Form"
+                },
+                {
+                    "id": "12",
+                    "name": "JsonWebToken"
+                },
+                {
+                    "id": "13",
+                    "name": "Axios"
+                },
+                {
+                    "id": "14",
+                    "name": "Mongoose"
+                },
+                {
+                    "id": "15",
+                    "name": "FilePond"
+                },
+                {
+                    "id": "16",
+                    "name": "Bcrypt"
+                },
+                {
+                    "id": "17",
+                    "name": "Cors"
                 }
             ]
         },
