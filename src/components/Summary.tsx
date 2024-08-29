@@ -15,21 +15,14 @@ export const Summary = ({ name, className }: SummaryProps) => {
             <p className="mb-4">Hello and welcome!</p>
 
             <p className="mb-4">
-                I am a former architect currently studying to become a full stack developer at
-                <a
-                    className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
-                    href="https://www.ip-arch.com/en"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    aria-label="architecture studio (opens in a new tab)"
-                >
-                    {' '}
-                    Software University.{' '}
-                </a>
-                I have a year and a half of experience in coding, three years of professional
-                experience in architecture, and a few months in quality assurance.
+                I am experienced professional passionate about building engaging, user-friendly
+                applications. About two years ago, I found a new passion for coding. During that
+                time I worked my skills up through various courses, projects, and internships. My
+                previous experience in architecture and QA testing has instilled a strong work ethic
+                and a proactive mindset. I am now looking forward to applying my skill set in a new
+                environment alongside like-minded individuals.
             </p>
-            <div className="flex flex-col gap-2 h-[180px] lg:h-[110px] overflow-hidden md:h-[150px]">
+            <div className="flex flex-col gap-2 h-[180px] lg:h-[160px] overflow-hidden md:h-[150px]">
                 <div className="flex gap-2">
                     <button
                         className="hover:text-center hover:animate-pulse w-[33%] h-8 hover:bg-cyan-400/30
@@ -64,7 +57,7 @@ export const Summary = ({ name, className }: SummaryProps) => {
                 </div>
                 <div className="">
                     <div
-                        className={`flex flex-wrap gap-2 animate-writing overflow-hidden whitespace-nowrap  ${
+                        className={`flex flex-wrap gap-1 animate-writing overflow-hidden whitespace-nowrap  ${
                             showTech ? 'flex' : 'hidden'
                         }`}
                     >
@@ -79,7 +72,7 @@ export const Summary = ({ name, className }: SummaryProps) => {
                         ))}
                     </div>
                     <div
-                        className={`flex flex-wrap gap-2 animate-writing overflow-hidden whitespace-nowrap ${
+                        className={`flex flex-wrap gap-1 animate-writing overflow-hidden whitespace-nowrap ${
                             showSkills ? 'flex' : 'hidden'
                         }`}
                     >
@@ -94,7 +87,7 @@ export const Summary = ({ name, className }: SummaryProps) => {
                         ))}
                     </div>
                     <div
-                        className={`flex flex-wrap gap-2 animate-writing overflow-hidden whitespace-nowrap ${
+                        className={`flex flex-wrap gap-1 animate-writing overflow-hidden whitespace-nowrap ${
                             showTools ? 'flex' : 'hidden'
                         }`}
                     >
@@ -120,10 +113,11 @@ export const Summary = ({ name, className }: SummaryProps) => {
             <p className="mb-4">
                 Ever since writing my first program in high school of mathematics, I have developed
                 a deep passion for coding. As a former architect, my passion was further nurtured
-                through extensive collaboration with software developers in my previous role.
+                through extensive collaboration with software developers in my previous and current
+                role.
             </p>
             <p className="mb-4">
-                I am now studying to become a full-stack developer at{' '}
+                I studied to become a full-stack developer at{' '}
                 <a
                     className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
                     href="https://softuni.bg/"
@@ -154,46 +148,6 @@ export const Summary = ({ name, className }: SummaryProps) => {
         <div className={className}>
             <p className="mb-4">Hello and welcome!</p>
 
-            <p className="mb-4 text-pretty">
-                Ever since I wrote my first program in high school of mathematics, I knew I was
-                hooked on the art of coding. My passion kicked in later, when I was working as an
-                architect at{' '}
-                <a
-                    className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
-                    href="https://www.ip-arch.com/en"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    aria-label="architecture studio (opens in a new tab)"
-                >
-                    one of the biggest architectural companies
-                </a>{' '}
-                in Bulgaria, where I collaborated a lot with our development team.
-            </p>
-            <p className="mb-4 text-pretty">
-                That took me to{' '}
-                <a
-                    className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
-                    href="https://softuni.bg/"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    aria-label="software university (opens in a new tab)"
-                >
-                    Software University,
-                </a>{' '}
-                where I am studying to be a full-stack developer. During my first year, I honed my
-                proficiency in front-end technologies, which led me to develop a finance web
-                application for{' '}
-                <a
-                    className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
-                    href="https://softuniada.softuni.bg/"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    aria-label="programming olympiad (opens in a new tab)"
-                >
-                    "Softuniada 2024" Programming Olympiad
-                </a>{' '}
-                and ranked in Top 10 best projects out of an overall 150+ participants.
-            </p>
             <p className="mb-4">
                 Beyond the professional realm, I enjoy board games, hiking, and gardening.
             </p>
