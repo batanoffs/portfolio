@@ -2,6 +2,37 @@
     "work": [
         {
             "id": "1",
+            "date": "march 2024 - present",
+            "position": [
+                "Software Developer Intern"
+            ],
+            "company": "Humble Software Ltd",
+            "website": "",
+            "description": [
+                "Currently working in the development of a specialized library built on the React Admin framework, collaborating closely with a technical lead.",
+                "Leveraged technologies such as React, TypeScript, and Material-UI to create a robust and user-friendly interface, ensuring seamless integration with existing systems."
+            ],
+            "skills": [
+                {
+                    "id": "0",
+                    "name": "React Admin"
+                },
+                {
+                    "id": "1",
+                    "name": "React"
+                },
+                {
+                    "id": "2",
+                    "name": "TypeScript"
+                },
+                {
+                    "id": "3",
+                    "name": "Material-UI"
+                }
+            ]
+        },
+        {
+            "id": "2",
             "date": "2021 - 2023",
             "position": [
                 "BIM Architect",
@@ -49,7 +80,7 @@
             ]
         },
         {
-            "id": "2",
+            "id": "3",
             "date": "2017 - 2018",
             "position": [
                 "Junior Architect",
@@ -84,7 +115,7 @@
             ]
         },
         {
-            "id": "3",
+            "id": "4",
             "date": "2014 - 2015",
             "position": [
                 "Manual QA"
@@ -167,7 +198,7 @@
             "id": "0",
             "label": "Mini-Finance-Innovations",
             "title": "Mini Finance Innovations",
-            "description": "This is the project I completed for Softuniada 2024 programing Olympiad. In short it is responsive platform that simulates online banking, offering features such as top-up, add friends, transactions, history and more.",
+            "description": "This is the project I completed for the Softuniada 2024 programming Olympiad. In short, it is a responsive platform that simulates online banking, offering features such as top-up, add friends, transactions, history, and more.",
             "image": "https://notablepen.backendless.app/api/files/app/AppData/home/newLogoPng.png",
             "href": "/mini-finance",
             "readme": "https://raw.githubusercontent.com/batanoffs/mini-finance/main/README.md",
@@ -201,15 +232,19 @@
                 },
                 {
                     "id": "1",
-                    "name": "Web Application"
+                    "name": "Responsive Web App"
                 },
                 {
                     "id": "2",
-                    "name": "React"
+                    "name": "Payments"
                 },
                 {
                     "id": "3",
-                    "name": "REST API"
+                    "name": "Backendless provider"
+                },
+                {
+                    "id": "4",
+                    "name": "Serverless architecture"
                 }
             ]
         },
@@ -217,7 +252,7 @@
             "id": "1",
             "label": "Ra-Auth-UI",
             "title": "Ra-Auth-UI",
-            "description": "To improve my skills recently I started working on this open scource project which is Authentication layouts, hooks and pipelines to integrate into react-admin. It is available on NPM and averages 20 weekly download. I've worked on the readme file and some components. I am learning more about the code and how react-admin works under the hood.",
+            "description": "As part of my current internship, I am contributing to the development of a specialized library built on the React Admin framework. The library provides authentication layouts, hooks, and pipelines for seamless integration. It is available on NPM and has gained traction, with an average of 30 weekly downloads.",
             "image": "/ra-auth.png",
             "href": "/ra-auth-ui",
             "readme": "https://raw.githubusercontent.com/ValentinnDimitroff/ra-auth-ui/main/README.md",
@@ -255,23 +290,43 @@
             "tags": [
                 {
                     "id": "0",
-                    "name": "React"
+                    "name": "Extends React Admin framework"
                 },
                 {
                     "id": "1",
-                    "name": "Admin"
+                    "name": "Provides pipelines"
                 },
                 {
                     "id": "2",
-                    "name": "Authentication"
+                    "name": "Available on NPM"
+                },
+                {
+                    "id": "3",
+                    "name": "Built for developers"
+                },
+                {
+                    "id": "4",
+                    "name": "React"
+                },
+                {
+                    "id": "5",
+                    "name": "React Admin"
+                },
+                {
+                    "id": "6",
+                    "name": "Material UI"
+                },
+                {
+                    "id": "7",
+                    "name": "TypeScript"
                 }
             ]
         },
         {
             "id": "2",
             "label": "Book Store",
-            "title": "E-commerce Book Store",
-            "description": "This web application is e-commerce books store, where you can buy books. It is a project I have build in 2 months. I've worked on frontend and backend. I have learned more about express, mongoDB and how react-admin works under the hood because there is admin panel implemented where admin can view, update and edit database.",
+            "title": "Book store `Книги бг`",
+            "description": "`Книги бг` is an e-commerce platform that offers features such as buying items(books,textbooks and stationeries), user carts, wishlists, delivery options, and payment integrations. Additionally, the platform includes an admin panel that gives store managers efficient control over the e-commerce system. Through this project, I gained experience working with Express, MongoDB, and the React-admin framework that powers the administrative interface.",
             "image": "/e-books-cover.png",
             "video": "",
             "links": {
@@ -369,7 +424,48 @@
             "id": "3",
             "label": "Mila's Photography",
             "title": "Mila's Photography Portfolio Website",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus distinctio nam illum est? Vitae, eum ab nihil facere soluta eaque in! Quia veniam est laudantium aliquid assumenda vitae dolore? Blanditiis.",
+            "description": "This is Mila's personal portfolio website.",
+            "image": "/comingsoon2.png",
+            "video": "",
+            "links": {
+                "live": "",
+                "github": ""
+            },
+            "href": "/",
+            "readme": "",
+            "badges": [],
+            "tags": [
+                {
+                    "id": "0",
+                    "name": "React"
+                },
+                {
+                    "id": "1",
+                    "name": "TypeScript"
+                },
+                {
+                    "id": "2",
+                    "name": "NodeJS"
+                },
+                {
+                    "id": "3",
+                    "name": "Vite"
+                },
+                {
+                    "id": "4",
+                    "name": "Material UI"
+                },
+                {
+                    "id": "5",
+                    "name": "SASS"
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "label": "Simona's Photography",
+            "title": "Simona's Personal Photography Portfolio Website",
+            "description": "This project aims to showcase Simona's professional portfolio through a personal website designed to present her creative works and accomplishments in an engaging and visually appealing manner. The website includes an admin panel that allows Simona to easily manage and update the content, as well as cloud hosting to efficiently store and deliver the images and media showcased on the site.",
             "image": "/comingsoon2.png",
             "video": "",
             "links": {
