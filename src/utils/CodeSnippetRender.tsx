@@ -1,11 +1,7 @@
 import { copyToClipboard } from './CopyToClipboard';
-import React from 'react';
+import { ReactNode } from 'react';
 
-interface CodeSnippetProps {
-    children: React.ReactNode;
-}
-
-export const CodeSnippet = ({ children }: CodeSnippetProps) => {
+export const CodeSnippet = ({ children }: { children: ReactNode }) => {
     return (
         <div className="relative bg-zinc-950 p-4 rounded-md mb-2">
             <pre className="whitespace-pre-line">{children}</pre>

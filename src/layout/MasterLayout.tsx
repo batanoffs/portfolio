@@ -1,4 +1,6 @@
-export const MasterLayout = ({ children }: any) => {
+import { PropsWithChildren } from 'react';
+
+export const MasterLayout = ({ children }: PropsWithChildren<unknown>) => {
     return (
         <div className="group/spotlight relative">
             <div className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute h-dvh"></div>
