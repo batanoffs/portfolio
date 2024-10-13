@@ -10,8 +10,7 @@ import { Navigation } from './components/Navigation';
 import { SideLayout } from './layout/SideLayout';
 import { ProjectPage } from './pages/ProjectPage';
 import { ScrollToTop } from './utils/ScrollToTop';
-
-import ScrollToAnchor from './utils/ScrollToAnchor';
+import { ScrollToAnchor } from './utils/ScrollToAnchor';
 
 import data from './data.json';
 
