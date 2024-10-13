@@ -1,10 +1,4 @@
-interface ProjectLinksProps {
-    links: {
-        github?: string;
-        live?: string;
-        npm?: string;
-    };
-}
+import { ProjectLinksProps } from '../interfaces/project.interface';
 
 export const ProjectLinks = ({ links }: ProjectLinksProps) => (
     <div className="flex gap-4 lg:gap-2">
