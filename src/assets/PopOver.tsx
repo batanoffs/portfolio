@@ -1,10 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-
-interface PopoverProps {
-    children: React.ReactNode;
-    content: React.ReactNode;
-    trigger?: 'click' | 'hover';
-}
+import { PopoverProps } from '../interfaces/popover.interface';
 
 export const Popover = ({ children, content, trigger = 'click' }: PopoverProps) => {
     const [show, setShow] = useState(false);
@@ -23,15 +18,11 @@ export const Popover = ({ children, content, trigger = 'click' }: PopoverProps) 
     };
 
     useEffect(() => {
-        /**
-         * Handles a click event outside of the popover.
-         * @param event The click event.
-         */
-        function handleClickOutside(event: MouseEvent): void {
+        const handleClickOutside = (event: MouseEvent): void => {
             if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {
                 setShow(false);
             }
-        }
+        };
 
         if (show) {
             document.addEventListener('mousedown', handleClickOutside);
