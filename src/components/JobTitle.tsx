@@ -51,7 +51,7 @@ export const JobTitleAnimatedText = () => {
     return (
         <div>
             <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
-                <Link to="/">Daniel Batanov </Link>
+                <Link to="/">Daniel Batanov</Link>
             </h1>
             <div className="rotating-text ml-20 mt-3 inline-flex gap-[136px]">
                 <p>
