@@ -1,4 +1,4 @@
-import resumePDF from '/resume.pdf';
+import resumePDF from '/resume - Daniel Batanov.pdf';
 
 export const Resume = () => {
     return (
