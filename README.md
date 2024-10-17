@@ -15,3 +15,4 @@ Tools and technologies:
 - react-toastify
 - remark-gfm
 - slick-carousel
+- vite
