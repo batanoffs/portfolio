@@ -92,7 +92,7 @@
                 "Delivered high quality architectural drawings for assignments with short deadlines",
                 "Attended investors meetings to discuss project requirements",
                 "Proven expertise in 3D visualization and 3D modelling",
-                "Introduced BIM metodology to the team and designed templates for projects",
+                "Introduced BIM methodology to the team and designed templates for projects",
                 "Build the company website with WIX"
             ],
             "skills": [
@@ -205,7 +205,7 @@
             "label": "Mini-Finance-Innovations",
             "title": "Mini Finance Innovations",
             "description": "This is the project I completed for the Softuniada 2024 programming Olympiad. In short, it is a responsive platform that simulates online banking, offering features such as top-up, add friends, transactions, history, and more.",
-            "image": "https://notablepen.backendless.app/api/files/app/AppData/home/newLogoPng.png",
+            "image": "https://res.cloudinary.com/dzh01qrmx/image/upload/v1729501409/newLogoPng_brnw5j.png",
             "href": "/mini-finance",
             "readme": "https://raw.githubusercontent.com/batanoffs/mini-finance/main/README.md",
             "links": {
