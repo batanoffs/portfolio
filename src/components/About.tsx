@@ -7,16 +7,9 @@ export const About = ({ styles }: { styles: string }) => {
 
     const updateSummary = (event: MouseEvent<HTMLButtonElement>) => {
         const buttonLabel = event.currentTarget.ariaLabel;
-        const plantImage = event.currentTarget.children[0].children[0].children[0];
+        const plantImage = event.currentTarget.children[0].children[1];
 
-        const newName =
-            buttonLabel === 'small'
-                ? 'long'
-                : buttonLabel === 'long'
-                ? 'full'
-                : buttonLabel === 'full'
-                ? 'small'
-                : '';
+        const newName = buttonLabel === 'small' ? 'long' : buttonLabel === 'long' ? 'full' : buttonLabel === 'full' ? 'small' : '';
 
         const newImageSrc =
             newName === 'small'
@@ -60,13 +53,7 @@ export const About = ({ styles }: { styles: string }) => {
                     aria-label={name}
                 >
                     <Popover trigger="hover" content={<p>Water me!</p>}>
-                        <img
-                            className="rounded-full"
-                            height="100"
-                            width="100"
-                            src="./plant-stage-1.svg"
-                            alt="plant"
-                        />
+                        <img className="rounded-full border-0" height="100" width="100" src="./plant-stage-1.svg" alt="plant" />
                     </Popover>
                 </button>
             </div>
