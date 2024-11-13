@@ -1,53 +1,15 @@
-import { useEffect, useRef, useState } from 'react';
 import { PopoverProps } from '../interfaces/popover.interface';
 
-export const Popover = ({ children, content, trigger = 'click' }: PopoverProps) => {
-    const [show, setShow] = useState(false);
-    const wrapperRef = useRef<HTMLDivElement>(null);
-
-    const handleMouseOver = () => {
-        if (trigger === 'hover') {
-            setShow(true);
-        }
-    };
-
-    const handleMouseLeft = () => {
-        if (trigger === 'hover') {
-            setShow(false);
-        }
-    };
-
-    useEffect(() => {
-        const handleClickOutside = (event: MouseEvent): void => {
-            if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {
-                setShow(false);
-            }
-        };
-
-        if (show) {
-            document.addEventListener('mousedown', handleClickOutside);
-            return () => {
-                document.removeEventListener('mousedown', handleClickOutside);
-            };
-        }
-    }, [show, wrapperRef]);
-
+export const Popover = ({ children, content }: PopoverProps) => {
     return (
-        <div
-            ref={wrapperRef}
-            onMouseEnter={handleMouseOver}
-            onMouseLeave={handleMouseLeft}
-            className="w-fit h-fit relative flex justify-center"
-        >
-            <div onClick={() => setShow(!show)}>{children}</div>
+        <div className="group relative">
             <div
-                hidden={!show}
-                className="min-w-fit w-[200px] h-fit absolute bottom-[50%] left-[40%] z-50 transition-all"
+                className="group-hover:block hidden absolute bottom-[70%] left-[100%]
+             z-10 w-20 transition-all bg-transparent shadow-[10px_30px_150px_rgba(46,38,92,0.25)] mb-[10px]"
             >
-                <div className="rounded bg-transparent p-3 shadow-[10px_30px_150px_rgba(46,38,92,0.25)] mb-[10px]">
-                    {content}
-                </div>
+                {content}
             </div>
+            {children}
         </div>
     );
 };
