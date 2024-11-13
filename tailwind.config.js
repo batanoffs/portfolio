@@ -104,7 +104,7 @@ export default {
                 pink: '#a251db',
             },
             cursor: {
-                waterCan: 'url(https://img.icons8.com/doodle/48/watering-can--v1.png), pointer',
+                waterCan: 'url(water-can.png), pointer',
             },
         },
     },
