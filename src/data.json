@@ -209,7 +209,7 @@
             "href": "/mini-finance",
             "readme": "https://raw.githubusercontent.com/batanoffs/mini-finance/main/README.md",
             "links": {
-                "live": "https://batanoffs.github.io/mini-finance/",
+                "live": "https://mini-finance.onrender.com",
                 "github": "https://github.com/batanoffs/mini-finance"
             },
             "video": "/mini-finance-demo.mp4",
