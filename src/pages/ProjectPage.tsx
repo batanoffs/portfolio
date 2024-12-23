@@ -7,7 +7,8 @@ import remarkGfm from 'remark-gfm';
 import { CodeSnippet } from '../utils/CodeSnippetRender';
 import { ProjectLinks } from '../components/ProjectLinks';
 import { ProjectProps } from '../interfaces/project.interface';
-import { RA_AUTH_TITLE, MINI_FINANCE_URL, KNIGI_BG_TITLE } from '../constants/common';
+import { MINI_FINANCE_URL } from '../constants/common';
+import { ReactNode } from 'react';
 
 export const ProjectPage = ({ project, styles }: ProjectProps) => {
     const { data, loading, error } = useFetchReadme(project.readme);
@@ -24,39 +25,36 @@ export const ProjectPage = ({ project, styles }: ProjectProps) => {
 
     return (
         <div className={styles}>
-            <div className="flex justify-between">
-                <h1 className="text-3xl font-bold mb-4">{project.title}</h1>
-                <ProjectLinks links={project.links} />
-            </div>
-            {miniFinance && (
-                <section aria-label="Video" className="relative aspect-video mb-4 scroll-mt-16 md:mb-0 lg:mb-8 lg:scroll-mt-12">
-                    <ReactPlayer
-                        className="absolute top-0 left-0"
-                        width="100%"
-                        height="100%"
-                        url={project.video}
-                        muted={true}
-                        playing={true}
-                        controls={true}
-                        pipe={'false'}
-                    />
-                </section>
-            )}
-
             <Markdown
                 children={miniFinance ? newData : data}
                 skipHtml={false}
                 remarkPlugins={[remarkGfm]}
                 components={{
                     h1: ({ children }) => (
-                        <h1
-                            id={children?.toString().toLowerCase().replace(/\s+/g, '-')}
-                            className={`text-3xl ${miniFinance ? 'hidden' : ''} ${
-                                children?.toString().includes(RA_AUTH_TITLE || KNIGI_BG_TITLE) ? 'hidden' : ''
-                            } font-bold my-4`}
-                        >
-                            {children}
-                        </h1>
+                        <>
+                            <div className="flex justify-between align-middle items-center mb-4">
+                                <h1 id={children?.toString().toLowerCase().replace(/\s+/g, '-')} className="text-3xl font-bold my-4 ">
+                                    {children}
+                                </h1>
+                                <ProjectLinks links={project.links} />
+                            </div>
+                            {/* <div>
+                                {miniFinance && (
+                                    <section aria-label="Video" className="relative aspect-video mb-4 scroll-mt-16 md:mb-0 lg:mb-8 lg:scroll-mt-12">
+                                        <ReactPlayer
+                                            className="absolute top-0 left-0"
+                                            width="100%"
+                                            height="100%"
+                                            url={project.video}
+                                            muted={true}
+                                            playing={true}
+                                            controls={true}
+                                            pipe={'false'}
+                                        />
+                                    </section>
+                                )}
+                            </div> */}
+                        </>
                     ),
                     h2: ({ children }) => (
                         <h2 id={children?.toString().toLowerCase().replace(/\s+/g, '-')} className="text-2xl font-bold my-4">
@@ -64,31 +62,38 @@ export const ProjectPage = ({ project, styles }: ProjectProps) => {
                         </h2>
                     ),
                     h3: ({ children }) => (
-                        <h3 id={children?.toString().toLowerCase().replace(/\s+/g, '-')} className="text-xl font-bold my-4">
+                        <h3 id={children?.toString().toLowerCase().replace(/\s+/g, '-')} className="text-xl font-bold my-4 text-gray-200">
                             {children}
                         </h3>
                     ),
-                    p: ({ children }) => {
-                        return <p className="my-2">{children}</p>;
+                    p: ({ children, node }: { children?: ReactNode; node?: { position?: { start: { line: number } } } }) => {
+                        const isFirstParagraph = node?.position?.start.line && node?.position?.start.line <= 3 ? true : false;
+                        return <p className={`my-2 ${isFirstParagraph ? 'flex gap-2' : ''}`}>{children}</p>;
                     },
                     a: ({ href, children }) => (
-                        <a href={href} className="text-blue-500 underline">
+                        <a href={href} className="text-blue-500 underline hover:text-blue-700">
                             {children}
                         </a>
                     ),
-                    li: ({ children }) => <li className="ml-4 list-disc">{children}</li>,
+
+                    ul: ({ children }) => <ul className="ml-4 list-disc">{children}</ul>,
                     table: ({ children }) => (
-                        <div className="overflow-x-auto">
-                            <table className="w-full border border-slate-700">{children}</table>
+                        <div className="overflow-x-auto mt-2 mb-4">
+                            <table className="w-full border border-slate-700 border-collapse">
+                                <tbody className=" text-gray-400">{children}</tbody>
+                            </table>
                         </div>
                     ),
+                    tr: ({ children }) => <tr className="border-b border-slate-700">{children}</tr>,
+                    th: ({ children }) => <th className="px-2 py-2 border border-slate-700 bg-slate-800 text-left">{children}</th>,
+                    td: ({ children }) => <td className="px-2 py-2 border border-slate-700">{children}</td>,
                     code: (props) => {
                         const { children, className, ...rest } = props;
                         const match = /language-(\w+)/.exec(className || '');
                         return match ? (
                             <CodeSnippet>{children}</CodeSnippet>
                         ) : (
-                            <code {...rest} className={className}>
+                            <code {...rest} className={`${className} bg-gray-800 text-gray-500 p-0.5 rounded`}>
                                 {children}
                             </code>
                         );
