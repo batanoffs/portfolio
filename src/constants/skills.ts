@@ -1,4 +1,4 @@
-const technologies = [
+export const technologies = [
     'JavaScript ES6+',
     'HTML5',
     'CSS3',
@@ -20,7 +20,7 @@ const technologies = [
     'Material UI',
 ];
 
-const tools = [
+export const tools = [
     'Git',
     'Vite',
     'NPM',
@@ -37,7 +37,7 @@ const tools = [
     'Illustrator',
 ];
 
-const skills = [
+export const skills = [
     'AJAX',
     'Unit Testing',
     'End-to-End Testing',
