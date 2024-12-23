@@ -15,7 +15,7 @@ export default {
         },
         listStyleImage: {
             none: 'none',
-            line: `url("./src/components/assets/line.svg")`,
+            line: 'url("./src/components/assets/line.svg")',
         },
         extend: {
             keyframes: {
