@@ -9,7 +9,14 @@ export const About = ({ styles }: { styles: string }) => {
         const buttonLabel = event.currentTarget.ariaLabel;
         const plantImage = event.currentTarget.children[0].children[1];
 
-        const newName = buttonLabel === 'small' ? 'long' : buttonLabel === 'long' ? 'full' : buttonLabel === 'full' ? 'small' : '';
+        const newName =
+            buttonLabel === 'small'
+                ? 'long'
+                : buttonLabel === 'long'
+                ? 'full'
+                : buttonLabel === 'full'
+                ? 'small'
+                : '';
 
         const newImageSrc =
             newName === 'small'
@@ -46,14 +53,20 @@ export const About = ({ styles }: { styles: string }) => {
             <Summary className={'mb-auto z-10'} name={name} />
             <div className="z-1 mt-auto self-center rounded-full">
                 <button
-                    className="relative  inline-flex items-center rounded-full animate-pulse duration-300
+                    className="relative inline-flex items-center rounded-full animate-pulse duration-300
                     hover:bg-slate-500 hover:cursor-waterCan hover:animate-watering
                     text-xs justify-center p-2 font-medium leading-5 text-teal-300"
                     onClick={(event) => updateSummary(event as MouseEvent<HTMLButtonElement>)}
                     aria-label={name}
                 >
                     <Popover trigger="hover" content={<p>Water me!</p>}>
-                        <img className="rounded-full border-0" height="100" width="100" src="./plant-stage-1.svg" alt="plant" />
+                        <img
+                            className="rounded-full border-0"
+                            height="100"
+                            width="100"
+                            src="./plant-stage-1.svg"
+                            alt="plant"
+                        />
                     </Popover>
                 </button>
             </div>

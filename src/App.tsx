@@ -11,6 +11,7 @@ import { SideLayout } from './layout/SideLayout';
 import { ProjectPage } from './pages/ProjectPage';
 import { ScrollToTop } from './utils/ScrollToTop';
 import { ScrollToAnchor } from './utils/ScrollToAnchor';
+import { SkillButtons } from './components/SkillButtons';
 
 import data from './data.json';
 
@@ -23,6 +24,7 @@ export const App = () => {
         <MasterLayout>
             <SideLayout>
                 <JobTitleAnimatedText />
+                <SkillButtons styles="flex flex-col lg:flex-row md:flex-row gap-2 overflow-hidden h-[auto] mb-6" />
                 <Navigation />
                 <SocialIcons />
             </SideLayout>
