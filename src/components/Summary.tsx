@@ -1,5 +1,3 @@
-import { SkillButtons } from './SkillButtons';
-
 type SummaryProps = {
     name: string;
     className?: string;
@@ -10,9 +8,9 @@ export const Summary = ({ name, className }: SummaryProps) => {
         <p className="mb-4">
             I am experienced professional passionate about web technologies and user-friendly
             applications. About two years ago, I rediscovered my passion for coding. During that
-            time I have improved my knowledge and skills through various courses and projects. At the
-            end I was able to land an internship role at Humble Software where I currently work as
-            frontend developer intern.
+            time I have improved my knowledge and skills through various courses and projects. At
+            the end I was able to land my first internship at Humble Software Ltd and right after
+            that I joined Cost-effective solutions as a full-stack intern.
         </p>
     );
 
@@ -54,7 +52,8 @@ export const Summary = ({ name, className }: SummaryProps) => {
 
     const full = (
         <p className="mb-4">
-            Beyond the professional realm, I enjoy board games, hiking, gardening and sometimes I play squash or basketball.
+            Beyond the professional realm, I enjoy board games, hiking, gardening and sometimes I
+            play squash or basketball.
         </p>
     );
     return (
@@ -62,7 +61,6 @@ export const Summary = ({ name, className }: SummaryProps) => {
             <p className="mb-4">Hello and welcome!</p>
 
             {name === 'full' ? full : name === 'long' ? long : name === 'small' ? small : small}
-            {name === 'small' ? <SkillButtons /> : null}
         </div>
     );
 };
