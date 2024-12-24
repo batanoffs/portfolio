@@ -1,24 +1,21 @@
-type Work = {
-    id: string;
-    date: string;
-    position: string[];
-    company: string;
-    website: string;
-    description: string[];
-    skills: Array<{
-        id: string;
-        name: string;
-    }>;
-};
+/**
+ * Experience component
+ * 
+ * Renders a section displaying work experience details.
+ * Each job entry includes position, company, date, description, and skills used.
+ *
+ * @component Experience.tsx
+ * @param {ExperienceProps} props - Component props including experience data and styles.
+ * @returns {JSX.Element} The rendered experience section.
+ */
 
-type ExperienceProps = {
-    experience?: Work[];
-    styles?: string;
-};
+import { ExperienceProps } from './experience.interface';
 
 export const Experience = ({ experience, styles }: ExperienceProps) => {
     return (
         <section id="experience" className={styles} aria-label="Work experience">
+
+            {/* Header with sticky behavior for accessibility */}
             <div
                 className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75
                     px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative
@@ -29,6 +26,8 @@ export const Experience = ({ experience, styles }: ExperienceProps) => {
                 </h2>
             </div>
             <div>
+
+                {/* List of job experiences */}
                 <ol className="group/list">
                     {experience &&
                         experience.map((job) => (
@@ -37,11 +36,15 @@ export const Experience = ({ experience, styles }: ExperienceProps) => {
                                     className="group relative grid pb-1 transition-all sm:grid-cols-8
                                     sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
                                 >
+
+                                    {/* Background effect for hover */}
                                     <div
                                         className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition
                                         motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50
                                         lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
                                     ></div>
+
+                                    {/* Job date */}
                                     <header
                                         className="z-10 mb-2 mt-1 text-xs font-semibold uppercase
                                             tracking-wide text-slate-500 sm:col-span-2"
@@ -49,6 +52,8 @@ export const Experience = ({ experience, styles }: ExperienceProps) => {
                                         {job.date}
                                     </header>
                                     <div className="z-10 sm:col-span-6">
+
+                                        {/* Job position and company */}
                                         <h3 className="font-medium leading-snug text-slate-200">
                                             <div>
                                                 <a
@@ -58,7 +63,7 @@ export const Experience = ({ experience, styles }: ExperienceProps) => {
                                                     href={job.website}
                                                     target="_blank"
                                                     rel="noreferrer noopener"
-                                                    aria-label="Senior Frontend Engineer, Accessibility at Klaviyo (opens in a new tab)"
+                                                    aria-label={`Senior Frontend Engineer, Accessibility at ${job.company} (opens in a new tab)`}
                                                 >
                                                     <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                                                     <span>
@@ -86,6 +91,8 @@ export const Experience = ({ experience, styles }: ExperienceProps) => {
                                                     </span>
                                                 </a>
                                             </div>
+
+                                            {/* Additional positions if any */}
                                             {job.position.length > 1
                                                 ? job.position
                                                       .slice(1)
@@ -98,6 +105,8 @@ export const Experience = ({ experience, styles }: ExperienceProps) => {
                                                       ))
                                                 : null}
                                         </h3>
+
+                                        {/* Job description */}
                                         {Array.isArray(job.description) ? (
                                             <ul className="mt-2 text-sm leading-normal">
                                                 {job.description.map(
@@ -109,6 +118,8 @@ export const Experience = ({ experience, styles }: ExperienceProps) => {
                                                 )}
                                             </ul>
                                         ) : null}
+
+                                        {/* Skills used in the job */}
                                         <ul
                                             className="mt-2 flex flex-wrap"
                                             aria-label="Technologies used"
@@ -136,3 +147,4 @@ export const Experience = ({ experience, styles }: ExperienceProps) => {
         </section>
     );
 };
+
