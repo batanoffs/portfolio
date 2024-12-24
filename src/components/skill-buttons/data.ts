@@ -1,0 +1,45 @@
+export const technologies = [
+    'React',
+    'TypeScript',
+    'Node',
+    'Express',
+    'MongoDB',
+    'SQL',
+    'JS ES6+',
+    'HTML5',
+    'CSS3',
+    'SASS',
+    'Tailwind',
+    'Mongoose',
+    'Handlebars',
+    'Playwright',
+    'Mocha-Chai',
+    'Bootstrap',
+    'AntDesign',
+    'MUI',
+];
+
+export const toolsList = [
+    'Git',
+    'Vite',
+    'NPM',
+    'Yarn',
+    'Nodemon',
+    'Prettier',
+    'ESLint',
+    'Postman',
+    'Chrome Dev Tools',
+    'React Dev Tools',
+    'Figma',
+];
+
+export const skillsList = [
+    'Unit Testing',
+    'REST APIs',
+    'Scrapers',
+    'Cloudinary',
+    'Stripe API',
+    'Responsive Design',
+    'JsonWebToken',
+    'Backendless',
+];
