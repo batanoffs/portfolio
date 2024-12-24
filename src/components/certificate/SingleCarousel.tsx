@@ -1,24 +1,30 @@
+/**
+ * SingleCarousel
+ *
+ * This component renders a single carousel element.
+ * It is used by the Certificates component to render a carousel of certificates.
+ *
+ * @component SingleCarousel.tsx
+ * @param {CertificateProps} props - The props for the SingleCarousel component, including:
+ *   - certificates: The array of certificates to display.
+ * @returns {JSX.Element} - The rendered SingleCarousel component.
+ */
+
 import Slider from 'react-slick';
+import { CertificateProps } from './certificate.interface';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-type Certificates = {
-    certificates: CertificateProps[];
-};
+export const SingleCarousel = ({ certificates }: CertificateProps) => {
 
-type CertificateProps = {
-    name: string;
-    date: string;
-    img: string;
-    link: string;
-};
-
-export const SingleCarousel = ({ certificates }: Certificates) => {
+    // Define settings object to setup the Slider from react-slick library
     const settings = {
         dots: false,
         infinite: true,
         speed: 500,
+
+        // At a breakpoint of 1024px, show 1 slide, scroll 1 slide at a time, show dots, and set the initial slide to 1.
         responsive: [
             {
                 breakpoint: 1024,
@@ -29,6 +35,8 @@ export const SingleCarousel = ({ certificates }: Certificates) => {
                     dots: true,
                 },
             },
+            
+            // At a breakpoint of 600px, show 1 slide, scroll 1 slide at a time, and set the initial slide to 1.
             {
                 breakpoint: 600,
                 settings: {
@@ -37,6 +45,8 @@ export const SingleCarousel = ({ certificates }: Certificates) => {
                     initialSlide: 1,
                 },
             },
+            
+            // At a breakpoint of 480px, show 1 slide, scroll 1 slide at a time.
             {
                 breakpoint: 480,
                 settings: {
@@ -46,9 +56,15 @@ export const SingleCarousel = ({ certificates }: Certificates) => {
             },
         ],
     };
+
+    // Return the JSX
     return (
         <div className="">
+
+            {/* Render the Slider component from react-slick */}
             <Slider {...settings}>
+
+                {/* Map over the certificates array and render a div for each certificate */}
                 {certificates.map((certificate) => (
                     <div
                         key={certificate.name}
@@ -63,3 +79,4 @@ export const SingleCarousel = ({ certificates }: Certificates) => {
         </div>
     );
 };
+

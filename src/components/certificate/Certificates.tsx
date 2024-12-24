@@ -1,18 +1,19 @@
-import { SingleCarousel } from '../assets/SingleCarousel';
+/**
+ * Certificates
+ *
+ * This component renders the certificates section.
+ * It displays the certificates in a carousel and
+ * is responsive to different screen sizes.
+ *
+ * @component Certificates.tsx
+ * @param {CertificateProps} props - The props to be passed to the component.
+ * @returns {JSX.Element} A JSX element representing the Certificates component.
+ */
 
-type Certificates = {
-    certificates: CertificateProps[];
-    styles?: string;
-};
+import { CertificateProps } from './certificate.interface';
+import { SingleCarousel } from './SingleCarousel';
 
-type CertificateProps = {
-    name: string;
-    date: string;
-    img: string;
-    link: string;
-};
-
-export const Certificates = ({ certificates, styles }: Certificates) => {
+export const Certificates = ({ certificates, styles }: CertificateProps) => {
     return (
         <section id="certificates" className={styles} aria-label="Selected certificates">
             <div
