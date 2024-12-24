@@ -1,46 +1,45 @@
+/**
+ * ProjectList component
+ *
+ * This component renders a single project item. It displays the project title, description, tags,
+ * and an image. If the project's title includes 'Portfolio', it renders a special link and applies
+ * specific styles to the description and tags.
+ *
+ * @component ProjectList.tsx
+ * @param {Project} project - The project data to be rendered.
+ * @returns {JSX.Element} A JSX element representing a project item.
+ */
+
 import { Link } from 'react-router-dom';
+import { ProjectProps } from './project.interface';
+import { JSX } from 'react';
 
-type ProjectListProps = {
-    id: string;
-    label: string;
-    title: string;
-    description: string;
-    image: string;
-    links: {
-        live?: string;
-        github?: string;
-        npm?: string;
-    };
-    href: string;
-    tags: Array<{
-        id: string;
-        name: string;
-    }>;
-};
+export const ProjectList = (project: ProjectProps): JSX.Element => {
 
-type Props = {
-    project: ProjectListProps;
-};
-
-export const ProjectList = ({ project }: Props) => {
     return (
         <li key={project.id} className="mb-12">
+
+            {/* Container for project item */}
             <div
                 className="group relative grid gap-4 pb-1 transition-all
-                                    sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100
-                                    lg:group-hover/list:opacity-50"
+                            sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100
+                            lg:group-hover/list:opacity-50"
             >
+
+                {/* Background effect for hover */}
                 <div
                     className="absolute -inset-x-4 -inset-y-4 z-0 hidden
-                                        rounded-md transition motion-reduce:transition-none
-                                        lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50
-                                        lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]
-                                        lg:group-hover:drop-shadow-lg"
-                ></div>
+                                rounded-md transition motion-reduce:transition-none
+                                lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50
+                                lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]
+                                lg:group-hover:drop-shadow-lg"
+                />
 
                 <div className="z-10 sm:order-2 sm:col-span-6">
                     <h3>
-                        {project.title.includes('Portfolio') ? (
+
+                        {/* Conditional rendering for Portfolio projects */}
+                        {project?.title?.includes('Portfolio') ? (
                             <Link
                                 className="inline-flex items-baseline font-medium
                                             leading-tight text-slate-200 hover:text-teal-300
@@ -103,7 +102,9 @@ export const ProjectList = ({ project }: Props) => {
                             </Link>
                         )}
                     </h3>
-                    {project.title.includes('Portfolio') ? (
+                    
+                    {/* Project description */}
+                    {project.title?.includes('Portfolio') ? (
                         <p className="mt-2 text-sm text-pretty leading-normal blur-sm">
                             {project.description}
                         </p>
@@ -113,11 +114,12 @@ export const ProjectList = ({ project }: Props) => {
                         </p>
                     )}
 
+                    {/* Project tags */}
                     {project.tags ? (
                         <ul className="mt-2 flex flex-wrap" aria-label="Technologies used:">
                             {project.tags.map((tag: { id: string; name: string }) => (
                                 <li key={tag.id} className="mr-1.5 mt-2">
-                                    {project.title.includes('Portfolio') ? (
+                                    {project.title?.includes('Portfolio') ? (
                                         <div
                                             className="flex items-center rounded-full bg-teal-400/10
                                                      px-3 py-1 text-xs font-medium leading-5 text-teal-300 blur"
@@ -138,6 +140,7 @@ export const ProjectList = ({ project }: Props) => {
                     ) : null}
                 </div>
 
+                {/* Project image */}
                 <img
                     alt={project.title}
                     loading="lazy"
@@ -152,3 +155,4 @@ export const ProjectList = ({ project }: Props) => {
         </li>
     );
 };
+
