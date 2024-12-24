@@ -1,21 +1,21 @@
 [
     {
-        "id": "about",
+        "id": "0",
         "name": "About",
         "href": "/#about"
     },
     {
-        "id": "experience",
+        "id": "1",
         "name": "Experience",
         "href": "/#experience"
     },
     {
-        "id": "projects",
+        "id": "2",
         "name": "Projects",
         "href": "/#projects"
     },
     {
-        "id": "certificates",
+        "id": "3",
         "name": "Certificates",
         "href": "/#certificates"
     }
