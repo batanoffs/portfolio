@@ -1,41 +1,70 @@
+/**
+ * About
+ *
+ * This component renders a section about the author and
+ * can be toggled between three different states.
+ *
+ * @component About.tsx
+ * @param {string} styles - The tailwind class styles for this section
+ * @returns {JSX.Element} - A JSX element representing the About component.
+ */
+
 import { MouseEvent, useState } from 'react';
-import { Summary } from './Summary';
-import { Popover } from '../assets/PopOver';
+import { Summary } from '../summary/Summary';
+import { Popover } from './PopOver';
 
 export const About = ({ styles }: { styles: string }) => {
+    
+    // This state holds the name of the plant
     const [name, setName] = useState('small');
 
+    // This handler updates the state of the component by changing the name and the image of the plant.
     const updateSummary = (event: MouseEvent<HTMLButtonElement>) => {
+
+        // Get the name and the image of the plant
         const buttonLabel = event.currentTarget.ariaLabel;
         const plantImage = event.currentTarget.children[0].children[1];
 
-        const newName =
-            buttonLabel === 'small'
-                ? 'long'
-                : buttonLabel === 'long'
-                ? 'full'
-                : buttonLabel === 'full'
-                ? 'small'
-                : '';
+        // Declare and define variables
+        let newName = '';
+        let newImageSrc = '';
 
-        const newImageSrc =
-            newName === 'small'
-                ? './plant-stage-1.svg'
-                : newName === 'long'
-                ? './plant-stage-2.svg'
-                : newName === 'full'
-                ? './plant-stage-3.svg'
-                : '';
+        // Update the name and the image of the plant based on the button label
+        switch (buttonLabel) {
+            case 'small':
+                newName = 'long';
+                newImageSrc = './plant-stage-2.svg';
+                break;
+            case 'long':
+                newName = 'full';
+                newImageSrc = './plant-stage-3.svg';
+                break;
+            case 'full':
+                newName = 'small';
+                newImageSrc = './plant-stage-1.svg';
+                break;
+            default:
+                break;
+        }
 
+        // Check if there is new name or image
         if (newName && newImageSrc) {
+
+            // Set new name
             setName(newName);
+            
+            // Get the 'src' attribute from the plant image
             const srcAttribute = plantImage.attributes.getNamedItem('src');
+
+            // Check if the attribute exists
             if (srcAttribute) {
+                // Set the new image source
                 srcAttribute.value = newImageSrc;
             }
         }
     };
 
+    // Returns the JSX
     return (
         <section id="about" className={styles} aria-label="About me">
             <div
