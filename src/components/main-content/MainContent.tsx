@@ -23,7 +23,7 @@ export const MainContent = ({ data }: MainContentProps) => {
             {/* The About component renders the About section of the page */}
             <About
                 styles="flex flex-col justify-between mb-16 scroll-mt-16
-                h-[auto] md:mb-8 md:h-[370px] lg:mb-8 lg:h-[370px] lg:scroll-mt-24"
+                h-[auto] md:mb-24 md:h-[370px] lg:mb-36 lg:h-[370px] lg:scroll-mt-24"
             />
 
             {/* The Experience component renders the Experience section of the page */}
