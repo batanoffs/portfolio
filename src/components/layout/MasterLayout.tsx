@@ -1,3 +1,14 @@
+/**
+ * MasterLayout component
+ *
+ * This component renders the main layout of the application, which includes
+ * the navigation, main content and footer.
+ *
+ * @component MasterLayout.tsx
+ * @param {PropsWithChildren<unknown>} props The props of the component.
+ * @returns {JSX.Element} - A JSX element representing the MasterLayout component.
+ */
+
 import { PropsWithChildren } from 'react';
 
 export const MasterLayout = ({ children }: PropsWithChildren<unknown>) => {
