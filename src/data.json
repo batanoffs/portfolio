@@ -2,7 +2,7 @@
     "work": [
         {
             "id": "0",
-            "date": "november 2024 - present",
+            "date": "december 2024 - present",
             "position": [
                 "Full Stack Developer Intern"
             ],
@@ -248,6 +248,12 @@
             "date": "September 2024",
             "img": "./MySQL - September 2024 - Certificate.jpeg",
             "link": "https://softuni.bg/Certificates/Details/226193/b51bd6a0"
+        },
+        {
+            "name": "Angular",
+            "date": "October 2024",
+            "img": "./Angular - October 2024 - Certificate.jpeg",
+            "link": "https://softuni.bg/Certificates/Details/234678/df131946"
         }
     ],
     "projects": [
@@ -387,7 +393,7 @@
             "id": "2",
             "label": "Book Store",
             "title": "Book store `Книги бг`",
-            "description": "`Книги бг` is an e-commerce platform that offers features such as buying items(books,textbooks and stationeries), user carts, wishlists, delivery options, and payment integrations. Additionally, the platform includes an admin panel that gives store managers efficient control over the e-commerce system. Through this project, I gained experience working with Express, MongoDB, and the React-admin framework that powers the administrative interface.",
+            "description": "`Книги бг` is an e-commerce platform that offers features such as buying items(books,textbooks and stationeries), user carts, wishlists, delivery options, and payment integrations. Additionally, the platform includes an admin panel that gives store managers efficient control over the e-commerce system. Through this project, I gained experience working with Express, MongoDB, and the React-admin framework that powers the admin interface.",
             "image": "/e-books-cover.png",
             "video": "",
             "links": {
