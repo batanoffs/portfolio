@@ -1,13 +1,23 @@
+/**
+ * Navigation component
+ * 
+ * Renders a list of links to different parts of the page.
+ * It is used in the main app component to provide a way for the
+ * user to quickly jump to different sections of the page.
+ *
+ * @component Navigation.tsx
+ * @returns {JSX.Element} The rendered component.
+ */
+
 // import { Link } from 'react-router-dom'
 import { NavLink } from 'react-router-dom';
-
-import NavItems from '../nav.json';
+import navItems from './nav.json';
 
 export const Navigation = () => {
     return (
         <nav className="nav hidden lg:block" aria-label="In-page jump links">
             <ul className="mt-16 w-max">
-                {NavItems.map((item) => (
+                {navItems.map((item) => (
                     <li key={item.id}>
                         <NavLink className="group flex items-center py-3 active" to={item.href}>
                             <span
@@ -56,3 +66,4 @@ export const Navigation = () => {
         </nav>
     );
 };
+
