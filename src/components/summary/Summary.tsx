@@ -14,7 +14,12 @@ import { content } from './content';
 
 export const Summary = ({ name, className }: SummaryProps) => {
     // Define the three states of the Summary component.
-    const small = <p className="mb-4">{content.small}</p>;
+    const small = (
+        <>
+            <p className="mb-4">{content.small.p}</p>
+            <p className="mb-4">{content.small.p1}</p>
+        </>
+    );
     const full = <p className="mb-4">{content.full}</p>;
     const long = (
         <>
