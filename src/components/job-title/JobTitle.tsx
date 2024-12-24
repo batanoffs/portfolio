@@ -1,11 +1,26 @@
+/**
+ * JobTitle component
+ *
+ * Displays the job title with animated rotating text effects.
+ * It utilizes the useEffect hook to manage the animation lifecycle.
+ *
+ * @component JobTitle.tsx
+ * @returns {JSX.Element} A JSX element representing the SkillButtons component.
+ */
+
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import './rotate-text.css';
 
-import './RotateingText.css';
+export const JobTitle = () => {
 
-export const JobTitleAnimatedText = () => {
+    // Initiate on component first render
     useEffect(() => {
-        const words = document.querySelectorAll('.word') as NodeListOf<HTMLElement>;
+        
+        // Select all elements with the class 'word'
+        const words = document.querySelectorAll('.word');
+
+        // Split each word into letters and wrap them with span elements
         words.forEach((word) => {
             const letters = word.textContent!.split('');
             word.textContent = '';
@@ -19,20 +34,26 @@ export const JobTitleAnimatedText = () => {
 
         let currentWordIndex = 0;
         const maxWordIndex = words.length - 1;
-        words[currentWordIndex].style.opacity = '1';
+        (words[currentWordIndex] as HTMLElement).style.opacity = '1';
 
+        // Rotates the text by transitioning letters out and in.
         const rotateText = () => {
             const currentWord = words[currentWordIndex];
             const nextWord =
-                currentWordIndex === maxWordIndex ? words[0] : words[currentWordIndex + 1];
+                currentWordIndex === maxWordIndex
+                    ? words[0]
+                    : (words[currentWordIndex + 1]);
 
+            // Transition current word out
             Array.from(currentWord.children).forEach((letter, i) => {
                 setTimeout(() => {
                     letter.className = 'letter out';
                 }, i * 80);
             });
 
-            nextWord.style.opacity = '1';
+            (nextWord as HTMLElement).style.opacity = '1';
+
+            // Transition next word in
             Array.from(nextWord.children).forEach((letter, i) => {
                 letter.className = 'letter behind';
                 setTimeout(() => {
@@ -40,14 +61,19 @@ export const JobTitleAnimatedText = () => {
                 }, 340 + i * 80);
             });
 
+            // Update current word index
             currentWordIndex = currentWordIndex === maxWordIndex ? 0 : currentWordIndex + 1;
         };
 
+        // Start the initial rotation and set interval for continuous rotation
         rotateText();
         const interval = setInterval(rotateText, 4000);
+
+        // Cleanup interval on component unmount
         return () => clearInterval(interval);
     }, []);
 
+    // Returns component jsx
     return (
         <div>
             <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
