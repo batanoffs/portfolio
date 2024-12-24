@@ -1,3 +1,11 @@
+/**
+ * CodeSnippet
+ * 
+ * Renders a code block with an optional copy button.
+ * @param {{ children: ReactNode }} props
+ * @returns {JSX.Element}
+ */
+
 import { copyToClipboard } from './CopyToClipboard';
 import { ReactNode } from 'react';
 
@@ -27,3 +35,4 @@ export const CodeSnippet = ({ children }: { children: ReactNode }) => {
         </div>
     );
 };
+
