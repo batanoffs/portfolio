@@ -1,3 +1,11 @@
+/**
+ * Resume component
+ * A component that renders a link to the full resume PDF.
+ *
+ * @component Resume.tsx
+ * @returns {JSX.Element} - A JSX element representing the Resume component.
+ */
+
 import resumePDF from '/resume - Daniel Batanov.pdf';
 
 export const Resume = () => {
@@ -38,3 +46,4 @@ export const Resume = () => {
         </div>
     );
 };
+

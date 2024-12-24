@@ -1,11 +1,27 @@
+/**
+ * Footer component
+ *
+ * This component renders the footer section of the webpage.
+ * It includes a resume link and provides information about
+ * the tools and technologies used in the design and development
+ * of the website.
+ *
+ * @component Footer
+ * @returns {JSX.Element} A JSX element representing the footer.
+ */
+
 import { Resume } from './Resume';
 
 export const Footer = () => {
     return (
         <footer className="max-w-md pb-16 text-sm text-slate-500 sm:pb-0">
+
+            {/* Render the Resume component */}
             <Resume />
 
             <p>
+                
+                {/* Design and coding tools */}
                 Loosely designed in{' '}
                 <a
                     href="https://www.figma.com/"
@@ -92,3 +108,4 @@ export const Footer = () => {
         </footer>
     );
 };
+
