@@ -1,12 +1,21 @@
-export const SocialIcons = () => {
+/**
+ * SocialIcons component
+ *
+ * This component renders a list of social media icons with links.
+ * Each icon is an SVG and is linked to an external social media profile.
+ * The links are fetched from a JSON file.
+ *
+ * @component SocialIcons.tsx
+ * @returns {JSX.Element} A list of social media icons with links.
+ */
+
+import { ReactNode } from 'react';
+import icons from './social-icons.json';
+
+export const SocialIcons = (): ReactNode => {
     return (
         <ul className="ml-1 mt-8 flex items-center" aria-label="Social media">
-            {[
-                'https://github.com/batanoffs',
-                'https://www.linkedin.com/in/danielbatanov',
-                'https://wakatime.com/@batanof',
-                'https://www.youtube.com/@danieltechsjourney',
-            ].map((link, index) => (
+            {icons.map((link, index) => (
                 <li key={index} className="mr-5 text-xs shrink-0">
                     <a
                         key={index}
@@ -15,6 +24,8 @@ export const SocialIcons = () => {
                         rel="noreferrer"
                         className="block hover:text-slate-200"
                     >
+
+                        {/* GitHub Icon */}
                         {index === 0 && (
                             <>
                                 <span className="sr-only">GitHub</span>
@@ -30,6 +41,8 @@ export const SocialIcons = () => {
                                 </svg>
                             </>
                         )}
+
+                        {/* LinkedIn Icon */}
                         {index === 1 && (
                             <>
                                 <span className="sr-only">Linkedin</span>
@@ -42,6 +55,8 @@ export const SocialIcons = () => {
                                 </svg>
                             </>
                         )}
+
+                        {/* Wakatime Icon */}
                         {index === 2 && (
                             <>
                                 <span className="sr-only">Wakatime</span>
@@ -54,6 +69,8 @@ export const SocialIcons = () => {
                                 </svg>
                             </>
                         )}
+
+                        {/* YouTube Icon */}
                         {index === 3 && (
                             <>
                                 <span className="sr-only">Youtube</span>
