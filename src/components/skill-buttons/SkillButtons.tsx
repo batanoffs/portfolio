@@ -1,11 +1,11 @@
 /**
  * SkillButtons component:
- * 
+ *
  * Renders a list of buttons, each corresponding to
- * a specific type of skills, technologies or tools. 
+ * a specific type of skills, technologies or tools.
  * When a button is hovered or touched, a list of the
  * corresponding items is rendered animated.
- * 
+ *
  * @component SkillButtons.ts
  * @returns {JSX.Element} A JSX element representing the SkillButtons component.
  */
@@ -16,7 +16,6 @@ import { skillsList, technologies, toolsList } from './data';
 import { RenderAnimatedSkills } from './renderAnimatedSkills';
 
 export const SkillButtons = () => {
-
     // Initiate state for visibility with 3 items and set default state false
     const [visibility, setVisibility] = useState<{ [key: string]: boolean }>({
         techs: false,
@@ -35,9 +34,8 @@ export const SkillButtons = () => {
     };
 
     return (
-        <div className="flex flex-col lg:flex-row md:flex-row gap-2 overflow-hidden mb-6">
+        <div className="flex flex-col lg:flex-row md:flex-row gap-2 lg:max-h-[98px] md:max-h-[98px] min-h-[100px] max-h-[130px] overflow-hidden">
             <div className="flex flex-row md:flex-col lg:flex-col gap-2">
-
                 {/* Map through visibility to render buttons since the events are the same*/}
                 {Object.keys(visibility).map((key) => (
                     <button
@@ -48,15 +46,13 @@ export const SkillButtons = () => {
                         onTouchStart={() => handleMouseEnter(key)}
                         onTouchEnd={() => handleMouseLeave(key)}
                     >
-
                         {/* Modify the key element as title of the button with uppercase */}
                         {key.charAt(0).toUpperCase() + key.slice(1)}
-                        
                     </button>
                 ))}
             </div>
 
-            {/* Map through each entries of visibility to check which one has been hovered and display it */}
+            {/* Map through each entry of visibility to check which one has been hovered and display it */}
             {Object.entries(visibility).map(
                 ([key, value]) =>
                     value && (

@@ -16,7 +16,7 @@ import navItems from './nav.json';
 export const Navigation = () => {
     return (
         <nav className="nav hidden lg:block" aria-label="In-page jump links">
-            <ul className="mt-16 w-max">
+            <ul className="w-max">
                 {navItems.map((item) => (
                     <li key={item.id}>
                         <NavLink className="group flex items-center py-3 active" to={item.href}>
