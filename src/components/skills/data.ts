@@ -24,12 +24,13 @@ export const toolsList = [
     'Vite',
     'NPM',
     'Yarn',
-    'Nodemon',
     'Prettier',
     'ESLint',
     'Postman',
+    'Nodemon',
     'Chrome Dev Tools',
     'React Dev Tools',
+    'Angular Dev Tools',
     'Figma',
 ];
 
@@ -37,7 +38,7 @@ export const skillsList = [
     'Unit Testing',
     'REST APIs',
     'Scrapers',
-    'Cloudinary',
+    'Cloudinary API',
     'Stripe API',
     'Responsive Design',
     'JsonWebToken',

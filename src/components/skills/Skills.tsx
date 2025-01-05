@@ -17,7 +17,7 @@ import { SkillList } from './SkillList';
 export const Skills = () => {
     // Initiate state for visibility for each skill category
     const [visibility, setVisibility] = useState<{ [key: string]: boolean }>({
-        techs: false,
+        technologies: false,
         skills: false,
         tools: false,
     });

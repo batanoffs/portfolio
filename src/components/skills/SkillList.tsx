@@ -21,7 +21,7 @@ type ConfigType = {
 
 // Define the configuration for each skill category like the items and the background color
 const config: ConfigType = {
-    techs: {
+    technologies: {
         items: technologies,
         backgroundColor: 'bg-cyan-400/30',
     },
