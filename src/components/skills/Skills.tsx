@@ -33,7 +33,7 @@ export const Skills = () => {
     };
 
     return (
-        <div className="flex flex-col gap-6 overflow-hidden lg:min-h-[140px] md:max-h-[95px] min-h-[100px] max-h-[170px]">
+        <div className="flex flex-col gap-6 overflow-hidden lg:min-h-[140px] md:max-h-[100px] min-h-[110px] max-h-[170px]">
             <div className="flex justify-start gap-4">
                 {/* Map through visibility to render buttons since the events are the same*/}
                 {Object.keys(visibility).map((key) => (
