@@ -1,5 +1,5 @@
 /**
- * SkillButtons component:
+ * Skills component:
  *
  * Renders a list of buttons, each corresponding to
  * a specific type of skills, technologies or tools.
@@ -12,11 +12,10 @@
 
 import { useState } from 'react';
 import { animationButton } from './styles';
-import { skillsList, technologies, toolsList } from './data';
-import { RenderAnimatedSkills } from './renderAnimatedSkills';
+import { SkillList } from './SkillList';
 
-export const SkillButtons = () => {
-    // Initiate state for visibility with 3 items and set default state false
+export const Skills = () => {
+    // Initiate state for visibility for each skill category
     const [visibility, setVisibility] = useState<{ [key: string]: boolean }>({
         techs: false,
         skills: false,
@@ -34,8 +33,8 @@ export const SkillButtons = () => {
     };
 
     return (
-        <div className="flex flex-col lg:flex-row md:flex-row gap-2 lg:max-h-[98px] md:max-h-[98px] min-h-[100px] max-h-[130px] overflow-hidden">
-            <div className="flex flex-row md:flex-col lg:flex-col gap-2">
+        <div className="flex flex-col gap-6 overflow-hidden lg:min-h-[140px] md:max-h-[95px] min-h-[100px] max-h-[170px]">
+            <div className="flex justify-start gap-4">
                 {/* Map through visibility to render buttons since the events are the same*/}
                 {Object.keys(visibility).map((key) => (
                     <button
@@ -54,27 +53,7 @@ export const SkillButtons = () => {
 
             {/* Map through each entry of visibility to check which one has been hovered and display it */}
             {Object.entries(visibility).map(
-                ([key, value]) =>
-                    value && (
-                        <RenderAnimatedSkills
-                            key={key}
-                            items={
-                                key === 'techs'
-                                    ? technologies
-                                    : key === 'skills'
-                                    ? skillsList
-                                    : toolsList
-                            }
-                            backgroundColor={
-                                key === 'techs'
-                                    ? 'bg-cyan-400/30'
-                                    : key === 'skills'
-                                    ? 'bg-teal-700/40'
-                                    : 'bg-purple-800/30'
-                            }
-                            isVisible={value}
-                        />
-                    )
+                ([key, value]) => value && <SkillList key={key} category={key} isVisible={value} />
             )}
         </div>
     );
