@@ -8,7 +8,7 @@
  */
 
 import { Routes, Route } from 'react-router-dom';
-import { JobTitle, MainContent, Footer, SocialIcons, SkillButtons, Navigation } from './components/index';
+import { JobTitle, MainContent, Footer, SocialIcons, Skills, Navigation } from './components/index';
 import { MasterLayout, MainLayout, SideLayout } from './components/layout/index';
 import { ScrollToAnchor, ScrollToTop } from './utils/index';
 import { ProjectPage } from './components/project-page/ProjectPage';
@@ -30,7 +30,7 @@ export const App = () => {
             {/* Render the side layout */}
             <SideLayout>
                 <JobTitle />
-                <SkillButtons />
+                <Skills />
                 <Navigation />
                 <SocialIcons />
             </SideLayout>
