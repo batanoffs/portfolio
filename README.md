@@ -5,14 +5,13 @@
 This project is just a simple web app build with vite, typescript, react and tailwind to showcase my work.
 It fetches github `readme.md` files and displays them directly on project pages with the help of `react-markdown` and `remark-gfm` libraries.
 
+Uses featured based folder structure.
+
 Tools and technologies:
-- react
-- tailwind
-- typescript
-- react-markdown
-- react-player
-- react-slick
-- react-toastify
-- remark-gfm
-- slick-carousel
-- vite
+
+| Category    | Technologies                                                                  |
+| ----------- | ----------------------------------------------------------------------------- |
+| Frontend    | `React`, `TypeScript`                                                         |
+| UI          | `Tailwind`, `Slick-Carousel`, `react-player`,`react-toastify`, `React-Slick`, |
+| API Request | `Axios`, `react-markdown`. `remark-gfm`                                       |
+| Tools       | `Git`, `Vite`, `ESLint`, `Prettier`, `Npm`,                                   |
