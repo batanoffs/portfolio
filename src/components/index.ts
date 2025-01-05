@@ -9,4 +9,4 @@ export * from './project-page/projects/Projects';
 export * from './footer/Footer';
 export * from './summary/Summary';
 export * from './social-icons/SocialIcons';
-export * from './skill-buttons/SkillButtons';
+export * from './skills/Skills';
