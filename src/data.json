@@ -196,6 +196,12 @@
     ],
     "certificates": [
         {
+            "name": "Diploma Front-End Developer",
+            "date": "January 2025",
+            "img": "./Diploma for Front-End Developer with JavaScript.jpeg",
+            "link": "https://softuni.bg/Certificates/Details/234933/99d88c8f"
+        },
+        {
             "name": "Programming Basics",
             "date": "January 2023",
             "img": "./Programming Basics - January 2023 - Certificate.jpeg",
@@ -489,8 +495,152 @@
         },
         {
             "id": "3",
+            "label": "Ai Webpage Builder",
+            "title": "Ai Webpage Builder",
+            "description": "This is a full stack application that uses OpenAI API to generate code, combine and display it into a working web page.",
+            "image": "/comingsoon2.png",
+            "video": "",
+            "links": {
+                "live": "",
+                "github": "https://github.com/batanoffs/ai-webpage-builder"
+            },
+            "href": "/ai-builder",
+            "readme": "https://raw.githubusercontent.com/batanoffs/ai-webpage-builder/main/README.md",
+            "badges": [
+                {
+                    "type": "Licence",
+                    "link": "https://img.shields.io/badge/Licence-MIT-teal"
+                },
+                {
+                    "type": "styled with prettier",
+                    "link": "https://img.shields.io/badge/styled_with-prettier-teal"
+                }
+            ],
+            "tags": [
+                {
+                    "id": "0",
+                    "name": "React"
+                },
+                {
+                    "id": "1",
+                    "name": "TypeScript"
+                },
+                {
+                    "id": "2",
+                    "name": "Tailwind"
+                },
+                {
+                    "id": "3",
+                    "name": "Vite"
+                },
+                {
+                    "id": "4",
+                    "name": "OpenAI API"
+                },
+                {
+                    "id": "5",
+                    "name": "NodeJS"
+                },
+                {
+                    "id": "6",
+                    "name": "MongoDB"
+                },
+                {
+                    "id": "7",
+                    "name": "Express"
+                },
+                {
+                    "id": "8",
+                    "name": "Axios"
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "label": "Crops Info",
+            "title": "Crops Info",
+            "description": "This is plants/crops wiki where users can find information about growing crops and different types of plants. Also be able to add or edit current data about the crops.",
+            "image": "/comingsoon2.png",
+            "video": "",
+            "links": {
+                "live": "",
+                "github": "https://github.com/batanoffs/crops-info"
+            },
+            "href": "/crops-info",
+            "readme": "https://raw.githubusercontent.com/batanoffs/crops-info/main/README.md",
+            "badges": [
+                {
+                    "type": "Licence",
+                    "link": "https://img.shields.io/badge/Licence-MIT-teal"
+                },
+                {
+                    "type": "styled with prettier",
+                    "link": "https://img.shields.io/badge/styled_with-prettier-teal"
+                }
+            ],
+            "tags": [
+                {
+                    "id": "0",
+                    "name": "Angular 18"
+                },
+                {
+                    "id": "1",
+                    "name": "TypeScript"
+                },
+                {
+                    "id": "2",
+                    "name": "SCSS"
+                },
+                {
+                    "id": "3",
+                    "name": "Vite"
+                },
+                {
+                    "id": "4",
+                    "name": "Node"
+                },
+                {
+                    "id": "5",
+                    "name": "MongoDB"
+                },
+                {
+                    "id": "6",
+                    "name": "Express"
+                },
+                {
+                    "id": "7",
+                    "name": "NG forms"
+                },
+                {
+                    "id": "8",
+                    "name": "JsonWebToken"
+                },
+                {
+                    "id": "9",
+                    "name": "Axios"
+                },
+                {
+                    "id": "10",
+                    "name": "Mongoose"
+                },
+                {
+                    "id": "11",
+                    "name": "Multer"
+                },
+                {
+                    "id": "12",
+                    "name": "Bcrypt"
+                },
+                {
+                    "id": "13",
+                    "name": "Cors"
+                }
+            ]
+        },
+        {
+            "id": "5",
             "label": "Mila's Photography",
-            "title": "Mila's Photography Portfolio Website",
+            "title": "Mila's Photography Website",
             "description": "This is Mila's personal portfolio website.",
             "image": "/comingsoon2.png",
             "video": "",
