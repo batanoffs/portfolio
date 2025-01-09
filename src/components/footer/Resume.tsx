@@ -6,7 +6,7 @@
  * @returns {JSX.Element} - A JSX element representing the Resume component.
  */
 
-import resumePDF from '/resume - Daniel Batanov.pdf';
+import resumePDF from '/Resume - Daniel Batanov.pdf';
 
 export const Resume = () => {
     return (
