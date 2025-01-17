@@ -498,7 +498,7 @@
             "label": "Ai Webpage Builder",
             "title": "Ai Webpage Builder",
             "description": "This is a full stack application that uses OpenAI API to generate code, combine and display it into a working web page.",
-            "image": "/comingsoon2.png",
+            "image": "/ai_builder.png",
             "video": "",
             "links": {
                 "live": "",
@@ -560,7 +560,7 @@
             "label": "Crops Info",
             "title": "Crops Info",
             "description": "This is plants/crops wiki where users can find information about growing crops and different types of plants. Also be able to add or edit current data about the crops.",
-            "image": "/comingsoon2.png",
+            "image": "/crops_info.png",
             "video": "",
             "links": {
                 "live": "",
