@@ -9,13 +9,12 @@
  * @returns {JSX.Element} The rendered Projects section.
  */
 
-import { ProjectProps, ProjectListProps } from './project.interface';
+import { ProjectListProps } from './project.interface';
 import { ProjectList } from './ProjectsList';
 
 export const Projects = ({ projects, styles }: ProjectListProps) => {
     return (
         <section id="projects" className={styles} aria-label="Selected projects">
-
             {/* Header section with sticky behavior for accessibility */}
             <div
                 className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75
@@ -27,13 +26,7 @@ export const Projects = ({ projects, styles }: ProjectListProps) => {
                 </h2>
             </div>
             <div>
-
-                {/* List of project items */}
-                <ul className="group/list">
-                    {projects?.map((project: ProjectProps) => (
-                        <ProjectList key={project.id} {...project} />
-                    ))}
-                </ul>
+                <ProjectList projects={projects} />
             </div>
         </section>
     );
