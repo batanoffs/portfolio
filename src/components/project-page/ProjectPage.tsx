@@ -17,7 +17,7 @@ import ReactPlayer from 'react-player';
 import { useFetchReadme } from './useFetchReadme';
 import { ProjectLinks } from './ProjectLinks';
 import { ProjectProps } from './projects/project.interface';
-import { KNIGI_BG_DEMO_URL, MINI_FINANCE_DEMO_URL } from '../../constants/common';
+import { DEMO_URLS } from '../../constants/common';
 import { CodeSnippet, Loading } from '../../utils';
 
 export const ProjectPage = (project: ProjectProps) => {
@@ -90,8 +90,9 @@ export const ProjectPage = (project: ProjectProps) => {
                         );
                     },
                     a: ({ href, children }) =>
-                        (href && href === MINI_FINANCE_DEMO_URL) ||
-                        (href && href === KNIGI_BG_DEMO_URL) ? (
+                        (href && href === DEMO_URLS.miniFinance) ||
+                        (href && href === DEMO_URLS.knigiBg) ||
+                        (href && href === DEMO_URLS.aiBuilder) ? (
                             <section
                                 aria-label="Video"
                                 className="relative aspect-video mb-4 scroll-mt-16 md:mb-0 lg:mb-8 lg:scroll-mt-12"
