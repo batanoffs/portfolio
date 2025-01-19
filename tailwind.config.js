@@ -104,7 +104,7 @@ export default {
                 pink: '#a251db',
             },
             cursor: {
-                waterCan: 'url(water-can.png), pointer',
+                waterCan: 'url(/water-can.png), pointer',
             },
         },
     },
