@@ -9,7 +9,7 @@
  * @returns {JSX.Element} The parsed readme for the current project.
  */
 
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import ReactPlayer from 'react-player';
@@ -30,11 +30,48 @@ export const ProjectPage = (project: ProjectProps) => {
     // Check if error occurred and render error
     if (error) {
         return (
-            <div className="text-red-500">
-                Unexpected error occurred while fetching data. Please reload the page.
+            <div className="text-red-500 p-4 rounded-md bg-red-50" role="alert">
+                <p>Failed to load project data.</p>
+                <button onClick={() => window.location.reload()} className="mt-2 text-sm underline">
+                    Retry
+                </button>
             </div>
         );
     }
+
+    // VideoComponent for better organization
+    const VideoComponent = ({ url }: { url: string }) => (
+        <ReactPlayer
+            aria-label="Video"
+            className="relative aspect-video mb-4 scroll-mt-16 md:mb-0 lg:mb-8 lg:scroll-mt-12"
+            width="100%"
+            height="100%"
+            url={url}
+            muted={true}
+            playing={true}
+            controls={true}
+            pipe="false"
+        />
+    );
+
+    const LinkRenderer = ({ href, children }: { href?: string; children: ReactNode }) => {
+        if (
+            href &&
+            (href === DEMO_URLS.miniFinance ||
+                href === DEMO_URLS.knigiBg ||
+                href === DEMO_URLS.aiBuilder)
+        ) {
+            return <VideoComponent url={href} />;
+        }
+
+        if (!href) return <>{children}</>;
+
+        return (
+            <a href={href} className="text-blue-500 underline hover:text-blue-700">
+                {children}
+            </a>
+        );
+    };
 
     // Return component JSX logic and elements
     return (
@@ -80,45 +117,41 @@ export const ProjectPage = (project: ProjectProps) => {
                         node?: { position?: { start: { line: number } } };
                     }) => {
                         const isFirstParagraph =
-                            node?.position?.start.line && node?.position?.start.line <= 3
-                                ? true
-                                : false;
+                            node?.position?.start.line && node?.position?.start.line <= 3;
+
+                        // Check if children contain video links
+                        if (
+                            Array.isArray(children) &&
+                            children.some(
+                                (child) =>
+                                    React.isValidElement(child) &&
+                                    (child as React.ReactElement<{ href: string }>).props?.href &&
+                                    [
+                                        DEMO_URLS.miniFinance,
+                                        DEMO_URLS.knigiBg,
+                                        DEMO_URLS.aiBuilder,
+                                    ].includes(
+                                        (child as React.ReactElement<{ href: string }>).props.href
+                                    )
+                            )
+                        ) {
+                            return <>{children}</>;
+                        }
+
                         return (
                             <p className={`my-2 ${isFirstParagraph ? 'flex gap-2' : ''}`}>
                                 {children}
                             </p>
                         );
                     },
-                    a: ({ href, children }) =>
-                        (href && href === DEMO_URLS.miniFinance) ||
-                        (href && href === DEMO_URLS.knigiBg) ||
-                        (href && href === DEMO_URLS.aiBuilder) ? (
-                            <section
-                                aria-label="Video"
-                                className="relative aspect-video mb-4 scroll-mt-16 md:mb-0 lg:mb-8 lg:scroll-mt-12"
-                            >
-                                <ReactPlayer
-                                    className="absolute top-0 left-0"
-                                    width="100%"
-                                    height="100%"
-                                    url={href}
-                                    muted={true}
-                                    playing={true}
-                                    controls={true}
-                                    pipe={false}
-                                />
-                            </section>
-                        ) : (
-                            <a href={href} className="text-blue-500 underline hover:text-blue-700">
-                                {children}
-                            </a>
-                        ),
+                    a: ({ href, children }) => <LinkRenderer href={href} children={children} />,
 
                     ul: ({ children }) => <ul className="ml-4 list-disc">{children}</ul>,
                     table: ({ children }) => (
                         <div className="overflow-x-auto mt-2 mb-4">
                             <table className="w-full border border-slate-700 border-collapse">
-                                <tbody className=" text-gray-400">{children}</tbody>
+                                {/* <tbody className=" text-gray-400"></tbody> */}
+                                {children}
                             </table>
                         </div>
                     ),
