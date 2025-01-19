@@ -12,13 +12,13 @@
 import { ReactNode } from 'react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import ReactPlayer from 'react-player';
 
 import { useFetchReadme } from './useFetchReadme';
 import { ProjectLinks } from './ProjectLinks';
 import { ProjectProps } from './projects/project.interface';
-import { MINI_FINANCE_URL } from '../../constants/common';
+import { KNIGI_BG_DEMO_URL, MINI_FINANCE_DEMO_URL } from '../../constants/common';
 import { CodeSnippet, Loading } from '../../utils';
-import ReactPlayer from 'react-player';
 
 export const ProjectPage = (project: ProjectProps) => {
     // Call hook to obtain data
@@ -90,7 +90,8 @@ export const ProjectPage = (project: ProjectProps) => {
                         );
                     },
                     a: ({ href, children }) =>
-                        href && href === MINI_FINANCE_URL ? (
+                        (href && href === MINI_FINANCE_DEMO_URL) ||
+                        (href && href === KNIGI_BG_DEMO_URL) ? (
                             <section
                                 aria-label="Video"
                                 className="relative aspect-video mb-4 scroll-mt-16 md:mb-0 lg:mb-8 lg:scroll-mt-12"
