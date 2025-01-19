@@ -1,11 +1,36 @@
-import { Link } from 'react-router-dom';
+import { MouseEvent, useCallback } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 
 import { ProjectProps } from './project.interface';
 
 export const ProjectItem = ({ project }: { project: ProjectProps }) => {
+    const navigate = useNavigate();
+
+    // Scroll to top function
+    const handleNavClick = useCallback(
+        async (e: MouseEvent<HTMLAnchorElement>, to: string) => {
+            e.preventDefault();
+
+            try {
+                // Navigate to the new route
+                await navigate(to);
+
+                // Small delay to ensure DOM update
+                setTimeout(() => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth',
+                    });
+                }, 100);
+            } catch (error) {
+                console.error('Navigation failed:', error);
+            }
+        },
+        [navigate]
+    );
+
     return (
         <li key={project.id} className="mb-12">
-
             {/* Container for project item */}
             <div
                 className="group relative grid gap-4 pb-1 transition-all
@@ -60,6 +85,10 @@ export const ProjectItem = ({ project }: { project: ProjectProps }) => {
                                                 leading-tight text-slate-200 hover:text-teal-300
                                                 focus-visible:text-teal-300 group/link text-base"
                                 to={project.href + '/#' + project.label}
+                                onClick={(e) => {
+                                    const url = project.href + '/#' + project.label;
+                                    return handleNavClick(e, url);
+                                }}
                                 target="_self"
                                 rel="noreferrer noopener"
                                 aria-label={project.label || 'View project'}
