@@ -1,199 +1,4 @@
 {
-    "work": [
-        {
-            "id": "0",
-            "date": "december 2024 - present",
-            "position": [
-                "Full Stack Developer Intern"
-            ],
-            "company": "Cost-effective solutions",
-            "website": "https://costeffective.software/",
-            "description": [
-                "Building a scraper software for NGO organization",
-                "Working in a team of 8 individuals under the supervision of a technical lead",
-                "Focus on backend with Node, Express, postgreSQL, Prisma",
-                "Following best practices for clean code"
-            ],
-            "skills": [
-                {
-                    "id": "0",
-                    "name": "Node"
-                },
-                {
-                    "id": "1",
-                    "name": "Express"
-                },
-                {
-                    "id": "2",
-                    "name": "TypeScript"
-                },
-                {
-                    "id": "3",
-                    "name": "postgreSQL"
-                },
-                {
-                    "id": "4",
-                    "name": "Prisma"
-                },
-                {
-                    "id": "5",
-                    "name": "React"
-                },
-                {
-                    "id": "6",
-                    "name": "Pupettier"
-                }
-            ]
-        },
-        {
-            "id": "1",
-            "date": "march - december 2024",
-            "position": [
-                "Software Developer Intern"
-            ],
-            "company": "Humble Software Ltd",
-            "website": "",
-            "description": [
-                "Building internal libraries based on React Admin",
-                "Participated in development of a open source library",
-                "Collaborating closely with a technical lead",
-                "Leveraged technologies such as React, TypeScript, and Material-UI"
-            ],
-            "skills": [
-                {
-                    "id": "0",
-                    "name": "React Admin"
-                },
-                {
-                    "id": "1",
-                    "name": "React"
-                },
-                {
-                    "id": "2",
-                    "name": "TypeScript"
-                },
-                {
-                    "id": "3",
-                    "name": "Material-UI"
-                },
-                {
-                    "id": "4",
-                    "name": "Clean code"
-                }
-            ]
-        },
-        {
-            "id": "2",
-            "date": "2021 - 2023",
-            "position": [
-                "BIM Architect",
-                "Junior Architect"
-            ],
-            "company": "IPA",
-            "website": "https://www.ip-arch.com/en",
-            "description": [
-                "Delivered over 10 architectural projects",
-                "Managed three junior architects while working with other teams",
-                "Being the go-to architect for assignments with short deadlines",
-                "Actively coordinating project requirements and issues with engineers in different departments (HVAC, Electrical, Water Supply, Design etc.)",
-                "Promoted to be the BIM architect on the team",
-                "Won monthly award for best BIM architect"
-            ],
-            "skills": [
-                {
-                    "id": "0",
-                    "name": "Revit"
-                },
-                {
-                    "id": "1",
-                    "name": "3D Visualization"
-                },
-                {
-                    "id": "2",
-                    "name": "Photoshop"
-                },
-                {
-                    "id": "3",
-                    "name": "Indesign"
-                },
-                {
-                    "id": "4",
-                    "name": "Project Management"
-                },
-                {
-                    "id": "5",
-                    "name": "Enscape"
-                },
-                {
-                    "id": "6",
-                    "name": "BIM"
-                }
-            ]
-        },
-        {
-            "id": "3",
-            "date": "2017 - 2018",
-            "position": [
-                "Junior Architect",
-                "Intern"
-            ],
-            "company": "Integra Consult Project",
-            "website": "https://integracp.wixsite.com/website",
-            "description": [
-                "Delivered high quality architectural drawings for assignments with short deadlines",
-                "Attended investors meetings to discuss project requirements",
-                "Proven expertise in 3D visualization and 3D modelling",
-                "Introduced BIM methodology to the team and designed templates for projects",
-                "Build the company website with WIX"
-            ],
-            "skills": [
-                {
-                    "id": "0",
-                    "name": "Archicad"
-                },
-                {
-                    "id": "1",
-                    "name": "Photoshop"
-                },
-                {
-                    "id": "2",
-                    "name": "3D Visualization"
-                },
-                {
-                    "id": "3",
-                    "name": "Autocad"
-                }
-            ]
-        },
-        {
-            "id": "4",
-            "date": "2014 - 2015",
-            "position": [
-                "Manual QA"
-            ],
-            "website": "https://www.gameloft.com/",
-            "company": "Gameloft",
-            "description": [
-                "Developed 100+ unique test cases and processes to remove issues for product launches",
-                "Assisted other teams during overtime to resolve major issues",
-                "Consistently giving feedback to the development team"
-            ],
-            "skills": [
-                {
-                    "id": "0",
-                    "name": "Quality Assurance"
-                },
-                {
-                    "id": "1",
-                    "name": "Bug tracking"
-                },
-                {
-                    "id": "2",
-                    "name": "Manual testing"
-                }
-            ]
-        }
-    ],
     "certificates": [
         {
             "name": "Diploma Front-End Developer",
@@ -265,35 +70,21 @@
     "projects": [
         {
             "id": "0",
-            "label": "Mini-Finance-Innovations",
-            "title": "Mini Finance Innovations",
-            "description": "This is the project I completed for the Softuniada 2024 programming Olympiad. In short, it is a responsive platform that simulates online banking, offering features such as top-up, add friends, transactions, history, and more.",
-            "image": "https://res.cloudinary.com/dzh01qrmx/image/upload/v1729501409/newLogoPng_brnw5j.png",
-            "href": "/mini-finance",
-            "readme": "https://raw.githubusercontent.com/batanoffs/mini-finance/main/README.md",
-            "links": {
-                "live": "https://mini-finance.onrender.com",
-                "github": "https://github.com/batanoffs/mini-finance"
-            },
-            "video": "/mini-finance-demo.mp4",
-            "badges": [
-                {
-                    "type": "Top 10",
-                    "link": "https://img.shields.io/badge/Softuniada2024-TOP10-blue"
-                },
-                {
-                    "type": "Licence",
-                    "link": "https://img.shields.io/badge/Licence-MIT-teal"
-                },
-                {
-                    "type": "styled with prettier",
-                    "link": "https://img.shields.io/badge/styled_with-prettier-teal"
-                },
-                {
-                    "type": "styled with prettier",
-                    "link": "https://img.shields.io/badge/Finance-web_app-teal"
-                }
+            "label": "Za-Zemiata",
+            "title": "Za Zemiata Data Scraper",
+            "description": "In my current role as a full-stack developer I am working on this project that periodically scrapes data from provided urls, validates the data according given rules if data is found alert all parties via email and saves the data. The client displays the data to the auth users and holds the functionality to config the scraper.",
+            "bullets": [
+                "Features include an admin panel, filtering capabilities, sorting options, data export functionality, and user authentication."
             ],
+            "image": "/za-zemiata1.png",
+            "href": "",
+            "readme": "https://raw.githubusercontent.com/ZaZemiata/main/README.md",
+            "links": {
+                "live": "",
+                "github": "https://github.com/ZaZemiata"
+            },
+            "video": "",
+            "badges": [],
             "tags": [
                 {
                     "id": "0",
@@ -301,23 +92,31 @@
                 },
                 {
                     "id": "1",
-                    "name": "Responsive Web App"
+                    "name": "React Query"
                 },
                 {
                     "id": "2",
-                    "name": "mobile first approach"
+                    "name": "Node.js"
                 },
                 {
                     "id": "3",
-                    "name": "MUI"
+                    "name": "Express"
                 },
                 {
                     "id": "4",
-                    "name": "Backendless"
+                    "name": "PostgreSQL"
                 },
                 {
                     "id": "5",
-                    "name": "Vite"
+                    "name": "Prisma"
+                },
+                {
+                    "id": "6",
+                    "name": "Puppeteer"
+                },
+                {
+                    "id": "7",
+                    "name": "TypeScript"
                 }
             ]
         },
@@ -429,43 +228,43 @@
                 },
                 {
                     "id": "2",
-                    "name": "SCSS"
-                },
-                {
-                    "id": "3",
-                    "name": "Vite"
-                },
-                {
-                    "id": "4",
-                    "name": "Material UI"
-                },
-                {
-                    "id": "5",
-                    "name": "NodeJS"
-                },
-                {
-                    "id": "6",
-                    "name": "MongoDB"
-                },
-                {
-                    "id": "7",
-                    "name": "Express"
-                },
-                {
-                    "id": "8",
-                    "name": "React Admin framework"
-                },
-                {
-                    "id": "9",
-                    "name": "Slick-Carousel"
-                },
-                {
-                    "id": "10",
                     "name": "Zustand"
                 },
                 {
+                    "id": "3",
+                    "name": "Node"
+                },
+                {
+                    "id": "4",
+                    "name": "Express"
+                },
+                {
+                    "id": "5",
+                    "name": "Mongo"
+                },
+                {
+                    "id": "6",
+                    "name": "Mongoose"
+                },
+                {
+                    "id": "7",
+                    "name": "Stripe"
+                },
+                {
+                    "id": "8",
+                    "name": "Cloudinary"
+                },
+                {
+                    "id": "9",
+                    "name": "React-admin"
+                },
+                {
+                    "id": "10",
+                    "name": "MUI"
+                },
+                {
                     "id": "11",
-                    "name": "React Hook Form"
+                    "name": "React-hook-form"
                 },
                 {
                     "id": "12",
@@ -476,12 +275,8 @@
                     "name": "Axios"
                 },
                 {
-                    "id": "14",
-                    "name": "Mongoose"
-                },
-                {
                     "id": "15",
-                    "name": "FilePond"
+                    "name": "SCSS"
                 },
                 {
                     "id": "16",
@@ -490,11 +285,73 @@
                 {
                     "id": "17",
                     "name": "Cors"
+                },
+                {
+                    "id": "18",
+                    "name": "Multer"
                 }
             ]
         },
         {
             "id": "3",
+            "label": "Mini-Finance-Innovations",
+            "title": "Mini Finance Innovations",
+            "description": "This is the project I completed for the Softuniada 2024 programming Olympiad. In short, it is a responsive platform that simulates online banking, offering features such as top-up, add friends, transactions, history, and more.",
+            "image": "https://res.cloudinary.com/dzh01qrmx/image/upload/v1729501409/newLogoPng_brnw5j.png",
+            "href": "/mini-finance",
+            "readme": "https://raw.githubusercontent.com/batanoffs/mini-finance/main/README.md",
+            "links": {
+                "live": "https://mini-finance.onrender.com",
+                "github": "https://github.com/batanoffs/mini-finance"
+            },
+            "video": "/mini-finance-demo.mp4",
+            "badges": [
+                {
+                    "type": "Top 10",
+                    "link": "https://img.shields.io/badge/Softuniada2024-TOP10-blue"
+                },
+                {
+                    "type": "Licence",
+                    "link": "https://img.shields.io/badge/Licence-MIT-teal"
+                },
+                {
+                    "type": "styled with prettier",
+                    "link": "https://img.shields.io/badge/styled_with-prettier-teal"
+                },
+                {
+                    "type": "styled with prettier",
+                    "link": "https://img.shields.io/badge/Finance-web_app-teal"
+                }
+            ],
+            "tags": [
+                {
+                    "id": "0",
+                    "name": "React"
+                },
+                {
+                    "id": "1",
+                    "name": "Responsive Web App"
+                },
+                {
+                    "id": "2",
+                    "name": "mobile first approach"
+                },
+                {
+                    "id": "3",
+                    "name": "MUI"
+                },
+                {
+                    "id": "4",
+                    "name": "Backendless"
+                },
+                {
+                    "id": "5",
+                    "name": "Vite"
+                }
+            ]
+        },
+        {
+            "id": "4",
             "label": "Ai Webpage Builder",
             "title": "Ai Webpage Builder",
             "description": "This is a full stack application that uses OpenAI API to generate code, combine and display it into a working web page.",
@@ -556,7 +413,7 @@
             ]
         },
         {
-            "id": "4",
+            "id": "5",
             "label": "Crops Info",
             "title": "Crops Info",
             "description": "This is plants/crops wiki where users can find information about growing crops and different types of plants. Also be able to add or edit current data about the crops.",
@@ -638,7 +495,7 @@
             ]
         },
         {
-            "id": "5",
+            "id": "6",
             "label": "Mila's Photography",
             "title": "Mila's Photography Website",
             "description": "This is Mila's personal portfolio website.",
