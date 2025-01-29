@@ -25,12 +25,24 @@ export default {
                 },
                 writing: {
                     '0%': {
-                        height: '0%',
-                        width: '0',
+                        width: '0%',
+                        opacity: '0',
+                    },
+                    '30%': {
+                        width: '30%',
+                        opacity: '0.3',
+                    },
+                    '60%': {
+                        width: '60%',
+                        opacity: '0.6',
+                    },
+                    '90%': {
+                        width: '90%',
+                        opacity: '0.9',
                     },
                     '100%': {
-                        height: '100%',
                         width: '100%',
+                        opacity: '1',
                     },
                 },
                 flip2: {
@@ -83,7 +95,7 @@ export default {
             animation: {
                 watering: 'wiggle 1.2s linear infinite',
                 pulse: 'pulse 1.5s infinite',
-                writing: 'writing 0.5s 0s 1 normal both',
+                writing: 'writing 0.4s cubic-bezier(0.4, 0, 0.2, 1) 1 normal both',
                 flip2: 'flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite',
                 flip3: 'flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite',
                 flip4: 'flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite',

@@ -12,7 +12,7 @@
 import { skillsList, technologies, toolsList } from './data';
 
 // Define the type for the configuration object
-type ConfigType = {
+type ConfigStyles = {
     [key: string]: {
         items: string[];
         backgroundColor: string;
@@ -20,7 +20,7 @@ type ConfigType = {
 };
 
 // Define the configuration for each skill category like the items and the background color
-const config: ConfigType = {
+const config: ConfigStyles = {
     technologies: {
         items: technologies,
         backgroundColor: 'bg-cyan-400/30',
@@ -49,14 +49,27 @@ export const SkillList = ({ category, isVisible }: { category: string; isVisible
     const { items, backgroundColor } = config[category] || { items: [], backgroundColor: '' };
 
     return (
-        <div
-            className={`flex flex-wrap gap-2 whitespace-nowrap animate-writing  ${
-                isVisible ? 'flex' : 'hidden'
-            }`}
+        <div 
+            className={`overflow-hidden ${isVisible ? 'block' : 'hidden'}`}
+            style={{ 
+                minHeight: '130px',
+                maxHeight: '130px'
+            }}
         >
-            {items.map((item) => (
-                <SkillItem key={item} item={item} backgroundColor={backgroundColor} />
-            ))}
+            <div
+                className={`flex flex-wrap gap-2 whitespace-nowrap ${
+                    isVisible ? 'animate-writing' : ''
+                }`}
+                style={{ 
+                    alignContent: 'flex-start',
+                    width: '100%',
+                    height: '100%'
+                }}
+            >
+                {items.map((item) => (
+                    <SkillItem key={item} item={item} backgroundColor={backgroundColor} />
+                ))}
+            </div>
         </div>
     );
 };
