@@ -9,8 +9,8 @@
  * @returns {JSX.Element} The rendered Projects section.
  */
 
-import { ProjectListProps } from './project.interface';
-import { ProjectList } from './ProjectsList';
+import { ProjectListProps, ProjectProps } from './types/project.interface';
+import { ProjectItem } from './ProjectItem';
 
 export const Projects = ({ projects, styles }: ProjectListProps) => {
     return (
@@ -26,7 +26,12 @@ export const Projects = ({ projects, styles }: ProjectListProps) => {
                 </h2>
             </div>
             <div>
-                <ProjectList projects={projects} />
+                {/* Projects List */}
+                <ul className="group/list">
+                    {projects?.map((project: ProjectProps) => (
+                        <ProjectItem key={project.id} {...project} />
+                    ))}
+                </ul>
             </div>
         </section>
     );
