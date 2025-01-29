@@ -14,7 +14,7 @@
  * @returns {JSX.Element} A JSX element representing the MainContent component.
  */
 
-import { Certificates, About, Experience, Projects } from '../index';
+import { Certificates, About, Projects } from '../index';
 import { MainContentProps } from './main.interface';
 
 export const MainContent = ({ data }: MainContentProps) => {
@@ -27,10 +27,10 @@ export const MainContent = ({ data }: MainContentProps) => {
             />
 
             {/* The Experience component renders the Experience section of the page */}
-            <Experience
+            {/* <Experience
                 styles="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
                 experience={data.work}
-            />
+            /> */}
 
             {/* The Projects component renders the Projects section of the page */}
             <Projects
