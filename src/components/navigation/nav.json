@@ -6,16 +6,11 @@
     },
     {
         "id": "1",
-        "name": "Experience",
-        "href": "/#experience"
-    },
-    {
-        "id": "2",
         "name": "Projects",
         "href": "/#projects"
     },
     {
-        "id": "3",
+        "id": "2",
         "name": "Certificates",
         "href": "/#certificates"
     }
