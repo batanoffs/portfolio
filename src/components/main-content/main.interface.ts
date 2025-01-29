@@ -1,17 +1,17 @@
 export interface MainContentProps {
     data: {
-        work: Array<{
-            id: string;
-            date: string;
-            position: string[];
-            company: string;
-            website: string;
-            description: string[];
-            skills: Array<{
-                id: string;
-                name: string;
-            }>;
-        }>;
+        // work: Array<{
+        //     id: string;
+        //     date: string;
+        //     position: string[];
+        //     company: string;
+        //     website: string;
+        //     description: string[];
+        //     skills: Array<{
+        //         id: string;
+        //         name: string;
+        //     }>;
+        // }>;
         projects: Array<{
             id: string;
             label: string;
