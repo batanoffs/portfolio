@@ -14,7 +14,7 @@
  * @returns {JSX.Element} A JSX element representing the Certificates component.
  */
 
-import { ProjectProps } from './projects/project.interface';
+import { ProjectProps } from './projects/types/project.interface';
 import { JSX } from 'react';
 
 export const ProjectLinks = (links: ProjectProps['links']): JSX.Element => {

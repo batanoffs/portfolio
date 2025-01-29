@@ -16,7 +16,7 @@ import ReactPlayer from 'react-player';
 
 import { useFetchReadme } from './useFetchReadme';
 import { ProjectLinks } from './ProjectLinks';
-import { ProjectProps } from './projects/project.interface';
+import { ProjectProps } from './projects/types/project.interface';
 import { DEMO_URLS } from '../../constants/common';
 import { CodeSnippet, Loading } from '../../utils';
 
