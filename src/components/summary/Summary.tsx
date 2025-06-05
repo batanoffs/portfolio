@@ -20,10 +20,16 @@ export const Summary = ({ name, className }: SummaryProps) => {
             <p className="mb-4">{content.small.p1}</p>
         </>
     );
-    const full = <p className="mb-4">{content.full}</p>;
-    const long = (
+    const full = (
         <>
-            <p className="mb-4">{content.long.p}</p>
+            <p className="mb-4">{content.full.p1}</p>
+            <p className="mb-4">{content.full.p2}</p>
+        </>
+    );
+
+    const long = (
+       <>
+            <p className="mb-4">{content.long.p1}</p>
             <p className="mb-4">
                 {content.long.p2}
                 <a
@@ -33,7 +39,7 @@ export const Summary = ({ name, className }: SummaryProps) => {
                     rel="noreferrer noopener"
                     aria-label="software university (opens in a new tab)"
                 >
-                    {content.long.a}
+                    {content.long.a1}
                 </a>
                 {content.long.p3}
                 <a
