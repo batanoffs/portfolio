@@ -84,13 +84,13 @@ export const Footer = () => {
                 </a>
                 , deployed with{' '}
                 <a
-                    href="https://www.netlify.com/"
+                    href="https://render.com/"
                     className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
                     target="_blank"
                     rel="noreferrer noopener"
                     aria-label="Netlify (opens in a new tab)"
                 >
-                    Netlify
+                    Render
                 </a>
                 . All text is set in the
                 <a
