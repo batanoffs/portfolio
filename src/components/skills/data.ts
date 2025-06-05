@@ -1,11 +1,15 @@
 export const technologies = [
-    'React',
     'TypeScript',
+    'JS ES6+',
     'Node',
     'Express',
-    'MongoDB',
+    'Redis',
+    'PostgreSQL',
     'SQL',
-    'JS ES6+',
+    'MongoDB',
+    'RabbitMQ',
+    'React',
+    'Angular',
     'HTML5',
     'CSS3',
     'SASS',
@@ -13,6 +17,7 @@ export const technologies = [
     'Mongoose',
     'Handlebars',
     'Playwright',
+    'Jest',
     'Mocha-Chai',
     'Bootstrap',
     'AntDesign',
@@ -20,10 +25,11 @@ export const technologies = [
 ];
 
 export const toolsList = [
+    'Docker',
+    'Prisma ORM',
+    'MySQL',
     'Git',
     'Vite',
-    'NPM',
-    'Yarn',
     'Prettier',
     'ESLint',
     'Postman',
@@ -35,12 +41,16 @@ export const toolsList = [
 ];
 
 export const skillsList = [
-    'Unit Testing',
-    'REST APIs',
     'Scrapers',
-    'Cloudinary API',
-    'Stripe API',
+    'REST APIs',
+    'Message Queues',
+    'Stripe integration',
+    'Cloudinary integration',
     'Responsive Design',
     'JsonWebToken',
-    'Backendless',
+    'Unit Testing',
+    'Integration Testing',
+    'E2E Testing',
+    'Agile Methodologies',
+    'Backendless serverless architecture',
 ];
